@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Task 2
+        var countries = ["Israel", "Belarus", "Usa", "Russia", "Jordan", "Italy"];
+        var vegetables = ["Tomato", "Cucumber", "Eggplant", "Carrot", "Cabbage", "Onion"];
+        var fruits = ["Peach", "Apple", "Pear", "Banana", "Grapes", "Strawberry"];
+        var cars = ["Nissan", "Honda", "Toyota", "Subaru", "Lexus", "McLaren"];
+        var kitchenInstruments = ["Knife", "Fork", "Spoon", "Pan", "Hammer", "Pot"];
+
+        //Task 3
+        console.log(countries[1]);
+        console.log(vegetables[3]);
+        console.log(fruits[5]);
+        console.log(cars[4]);
+        console.log(kitchenInstruments[5]);
+
+        //Task 4
+        countries[0] = "Thailand";
+        vegetables[2] = "Garlic";
+        fruits[3] = "Blueberry";
+        cars[1] = "Maybach";
+        kitchenInstruments[kitchenInstruments.length] = "Meat Miner";
+
+        //Task 5
+        function printCountries() {
+            console.log(countries);
+        }
+        //Task 6
+        function printCountryPerLine() {
+            for(var i = 0; i < countries.length; i++){
+                console.log(countries[i]);
+            }
+        }
+        //Task 7
+        function addFruit(fruit){
+            fruits.push(fruit);
+        }
+        //Task 8
+        function findFruitInArr(fruit){
+            for(var i = 0; i < fruits.length; i++){
+                if(fruits[i] == fruit){
+                    console.log("The fruit is in the array!");
+                    return;
+                }
+            }
+            console.log("Oh no, fruit is not found in the array");
+        }
+        //Task 9
+        function compareKitchenArrLength(array){
+            if(array.length = kitchenInstruments.length){
+                console.log("The arrays are same length!");
+                return;
+            }
+            console.log("Arrays are not same length!");
+        }
+        //Task 10 
+        function addCountryIfBigger(num, country){
+            
+        }
+
+
+    </script>
+    
+</body>
+</html>

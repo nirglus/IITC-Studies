@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Task 1
+        var colorArr = ["Red", "Green", "Blue", "Yellow"];
+        var studentsArr = ["Nir", "Uriel", "Lirone", "Noa", "Shachaf"];
+        var animalArr = ["Dog", "Cat", "Giraffe", "Dolphin", "Ant"];
+        var citiesArr = ["Lod", "Ramla", "Tel-Aviv", "Ramat-Gan", "Netanya"];
+        console.log(colorArr[0]);
+        console.log(studentsArr[4]);
+        console.log(animalArr[2]);
+        console.log(citiesArr[1]);
+        function colorChange(){
+            var userColor = prompt("Enter a color: ");
+            if(colorArr[2] == "Blue"){
+                colorArr[2] == userColor;
+            }
+        }
+
+        //Task 2
+        var yearsArray = [1992, 1994, 1998, 2001, 2017];
+
+        function printEntryOfYears(){
+            for(var i = 0; i < yearsArray.length; i++){
+                console.log(yearsArray[i]);
+            }
+        }
+
+        function printHigherYear(){
+            for(var i = 0; i < yearsArray.length; i++){
+                if (yearsArray[i] > 1999){
+                    console.log(yearsArray[i]);
+                }
+            }
+        }
+        printHigherYear();
+
+        function findName(name){
+            for(var i = 0; i < studentsArr.length; i++){
+                if(studentsArr[i] == name){
+                    console.log("Exist");
+                    return;
+                }
+            }
+            console.log("Not existing");
+        }
+        findName("Nir");
+        //Task 3
+
+        function findParamInArr(param,array){
+            for(var i = 0; i < array.length; i++){
+                if (array[i] == param){
+                    console.log("Exists!");
+                    return;
+                }
+            }
+            console.log("Doesn't exist!");
+        }
+        findParamInArr("Nir", studentsArr);
+        findParamInArr("Yossi", studentsArr);
+
+        //Task 4
+        function createYourArray(){
+            var entries = +prompt("How many entries your array contains?");
+            var arr = [];
+            for(var i = 0; i < entries; i++){
+                arr[i] = +prompt("Enter a number: ");
+            }
+            console.log(arr);
+        }
+        createYourArray();
+
+        //Task 5
+        function createBigNumbersArray(){
+            var entry = +prompt("Enter a number:");
+            var array = [];
+            var i = 0;
+            while (entry >= 10){
+                array[i++] = entry;
+                entry = +prompt("Enter a number:");
+            }
+            console.log(array);
+        }
+        createBigNumbersArray();
+
+
+    </script>
+    
+</body>
+</html>
