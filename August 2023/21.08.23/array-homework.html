@@ -62,7 +62,11 @@
         }
         //Task 10 
         function addCountryIfBigger(num, country){
-            
+            if(num > 5){
+                countries.push(country);
+            }else{
+                countries.unshift(country);
+            }
         }
 
 
