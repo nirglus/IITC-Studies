@@ -183,10 +183,18 @@
         // filterSmallToBig([5,8,3,1,7]);
 
         //Task 25
-        function findMax(arr){
-            console.log(Math.max(...arr));
+        function getMax(arr){
+            return Math.max(...arr);
         }
-
+        
+        //Task 27
+        function getSum(arr){
+            var sum = 0;
+            for(var i = 0; i < arr.length; i++){
+               sum = sum + arr[i];
+            }
+             return sum;
+        }
 
 
 
