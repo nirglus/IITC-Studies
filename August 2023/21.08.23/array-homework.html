@@ -397,7 +397,7 @@
             var area = width * height;
             var circu = (width + height) * 2;
         }
-        
+
         //Task 51
         function checkOrder(){
             var num1 = +prompt("Enter a num: ");
@@ -410,9 +410,18 @@
             } else{
                 console.log("There is no order.");
             }
-
-
         }
+
+        //Task 52
+        function divideNumToDigs(num){
+            var temp = 0;
+            while(num > 0){
+                temp = num % 10;
+                console.log(temp);
+                num = Math.floor(num / 10);
+            }
+        }
+        divideNumToDigs(673);
 
 
     
