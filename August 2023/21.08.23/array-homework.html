@@ -188,7 +188,7 @@
         }
 
         //Task 26
-        function getMin(arr){
+        function getMinIndex(arr){
             var minNum = Math.min(...arr);
             return arr.indexOf(minNum);
         }
@@ -200,6 +200,13 @@
                sum = sum + arr[i];
             }
              return sum;
+        }
+
+        //Task 28
+        function maxMultipMin(arr){
+            var max = getMax(arr);
+            var min = arr[getMinIndex(arr)];
+            return max * min;
         }
 
 
