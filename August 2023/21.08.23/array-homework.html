@@ -264,6 +264,15 @@
             arr.push(num);
         }
 
+        //Task 35
+        function addNumIfMinOrMax(arr, num){
+            if(num > Math.max(...arr)){
+                arr.unshift(num);
+                return;
+            }
+            arr.push(num);
+        }
+
 
 
     
