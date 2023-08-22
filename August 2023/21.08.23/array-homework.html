@@ -391,9 +391,27 @@
 
         }
         //Task 50
-        function squareAreaAndCircumference(width, height){
+        function squareAreaAndCircumference(){
+            var width = +prompt("Enter width: ");
+            var height = +prompt("Enter height: ");
             var area = width * height;
             var circu = (width + height) * 2;
+        }
+        
+        //Task 51
+        function checkOrder(){
+            var num1 = +prompt("Enter a num: ");
+            var num2 = +prompt("Enter a num: ");
+            var num3 = +prompt("Enter a num: ");
+            if (num3 > num2 && num2 > num1){
+                console.log("It goes up.");
+            } else if (num1 > num2 && num2 > num3){
+                console.log("It goes down");
+            } else{
+                console.log("There is no order.");
+            }
+
+
         }
 
 
