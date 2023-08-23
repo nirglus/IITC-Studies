@@ -223,14 +223,21 @@
         function printMonth(){
             var userDate = prompt("Enter a date: ");
             var month = new Date();
-            console.log(month.getMonth());
+            return month.getMonth();
         }
 
         //Task 25
         function printHour(){
             var userDate = prompt("Enter a date: ");
             var hour = new Date();
-            console.log(hour.getHours());           
+            return hour.getHours();           
+        }
+
+        //Task 26
+        function printYear(){
+            var userDate = prompt("Enter a date: ");
+            var year = new Date();
+            return year.getFullYear();  
         }
 
          
