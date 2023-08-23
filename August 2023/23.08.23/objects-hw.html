@@ -163,6 +163,21 @@
         console.log(upperCaseChar("encyclopedia"));
         console.log(upperCaseChar("incomprehensibilities"));
 
+        //Task 18
+        function compareNames(){
+            var name1 = prompt("Enter a name: ");
+            var name2 = prompt("Enter another name: ");
+            var age1 = +prompt("Enter first age:");
+            var age2 = +prompt("Enter second age: ");
+            var randomNum = randomNumTillTen();
+            if(name1.charAt(0) == name2.charAt(0)){
+                console.log(randomNum);
+            }else if (name1.charAt(name1.length - 1) == name2.charAt(name2.length -1)){
+                console.log(age1, age2);
+            }
+        }
+        compareNames();
+
          
 
 
