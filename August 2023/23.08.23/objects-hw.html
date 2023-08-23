@@ -65,6 +65,18 @@
             return userString.toUpperCase();
         }
         console.log(uppercaseString("how are you"));
+
+        //Task 7
+        function stringToArr(userString){
+            var arr = [];
+            for(var i = 0; i < userString.length; i++){
+                if(userString.charAt(i) / 1 != NaN && userString.charAt(i) / 1 > 0){
+                    arr.push(userString.charAt(i));
+                }
+            }
+            return arr;
+        }
+        console.log(stringToArr("4 , 5 , 7 , 8"));
     </script>
     
 </body>
