@@ -8,20 +8,34 @@
 <body>
     <script>
         //Task 1
-        function printLetters(string){
+        function printLetters(userString){
             for(var i = 0; i < string.length; i++){
                 console.log(string[i]);
             }
         }
 
         //Task 2
-        function getStringLetterIndex(string){
+        function getStringLetterIndex(userString){
             var newString = "";
-            for(var i = 0; i < string.length; i++){
-                newString = newString + " " + string.charAt(i) + ":" + i;
+            for(var i = 0; i < userString.length; i++){
+                newString = newString + " " + userString.charAt(i) + ":" + i;
             }
             return newString;
         }
+
+        //Task 3
+        function switchEvenIndex(userString){
+            var newString = "";
+            for(var i = 0; i < userString.length; i++){
+                if(i % 2 == 0){
+                    newString = newString + 2;
+                }else{
+                    newString = newString + userString.charAt(i);
+                }
+            }
+            return newString;
+        }
+        console.log(switchEvenIndex("Hello"));
     </script>
     
 </body>
