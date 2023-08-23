@@ -254,11 +254,25 @@
             userDate1 = new Date(userDate1);
             userDate2 = new Date(userDate2);
             if (userDate1.getTime() < userDate2.getTime()){
-                console.log(userDate2);
+                return userDate1;
             } else{
-                console.log(userDate2);
+                return userDate2;
             }
         }
+        checkEarlierDate();
+
+        //Task 29
+        function getAge(){
+            var userDate = prompt("Enter your date of birth: ");
+            userDate = new Date(userDate);
+            var todayDate = new Date();
+            var age = todayDate.getFullYear() - userDate.getFullYear();
+            if(todayDate.getMonth() < userDate.getMonth()){
+                return age - 1;
+            }
+            return age;
+        }
+        console.log(getAge());
 
 
          
