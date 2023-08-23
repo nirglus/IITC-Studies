@@ -247,6 +247,19 @@
             return minutes.getMinutes();
         }
 
+        //Task 28 
+        function checkEarlierDate(){
+            var userDate1 = prompt("Enter a date: ");
+            var userDate2 = prompt("Enter a second date: ");
+            userDate1 = new Date(userDate1);
+            userDate2 = new Date(userDate2);
+            if (userDate1.getTime() < userDate2.getTime()){
+                console.log(userDate2);
+            } else{
+                console.log(userDate2);
+            }
+        }
+
 
          
 
