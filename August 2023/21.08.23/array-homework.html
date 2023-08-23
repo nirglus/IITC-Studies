@@ -167,20 +167,20 @@
         }
 
         //Task 23
-        // function filterSmallToBig(arr){
-        //     var newArr = [];
-        //     for(var i = 0; i < arr.length; i++){
-        //         if (arr[i] < arr[i++] && arr[i] < arr[i--]){
-        //             newArr.unshift(arr[i]);
-        //         } else if (arr[i] > arr[i++] && arr[i] > arr[i--]){
-        //             newArr.push(arr[i]);
-        //         } else {
-        //             newArr.push(arr[i]);
-        //         }
-        //     }
-        //     console.log(newArr);
-        // }
-        // filterSmallToBig([5,8,3,1,7]);
+        function filterSmallToBig(arr){
+            var newArr = [];
+            for(var i = 0; i < arr.length; i++){
+                if (arr[i] < arr[i++] && arr[i] < arr[i--]){
+                    newArr.unshift(arr[i]);
+                } else if (arr[i] > arr[i++] && arr[i] > arr[i--]){
+                    newArr.push(arr[i]);
+                } else {
+                    newArr.push(arr[i]);
+                }
+            }
+            console.log(newArr);
+        }
+        filterSmallToBig([5,8,3,1,7]);
 
         //Task 25
         function getMax(arr){
@@ -386,9 +386,28 @@
         }
         console.log(arr);
 
-        //Task 49
-        function tenEvenNums(num){
+        //Task 48 another solution
+        var arr = ["Dog", 5, 2, "Plane", 4 , "James", 9];
+        for(var i = 0; i < arr.length; i++){
+            if(arr[i] / 1 == NaN){
+                arr[i] = "not_number";
+            }
+        }
+        console.log(arr);
 
+        //Task 49
+        function tenEvenNums(){
+            var numsArr = [];
+            var num;
+            for(var i = 0; i < 10; i++){
+                num = +prompt("Enter a number: ");
+                if (num % 2 == 0){
+                    numsArr.push(num);
+                } else{
+                    i--;
+                }
+            }
+            console.log(numsArr);
         }
         //Task 50
         function squareAreaAndCircumference(){
