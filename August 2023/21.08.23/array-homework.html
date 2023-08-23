@@ -170,9 +170,9 @@
         function filterSmallToBig(arr){
             var newArr = [];
             for(var i = 0; i < arr.length; i++){
-                if (arr[i] < arr[i++] && arr[i] < arr[i--]){
+                if (arr[i] < arr[i+1] && arr[i] < arr[i-1]){
                     newArr.unshift(arr[i]);
-                } else if (arr[i] > arr[i++] && arr[i] > arr[i--]){
+                } else if (arr[i] > arr[i+1] && arr[i] > arr[i-1]){
                     newArr.push(arr[i]);
                 } else {
                     newArr.push(arr[i]);
@@ -181,6 +181,14 @@
             console.log(newArr);
         }
         filterSmallToBig([5,8,3,1,7]);
+
+        function filterSmallToBig(arr){
+            var newArr = [];
+            for(var i = 0; i < arr.length; i++){
+                if(arr[i] < arr[i + 1] &&)
+            }
+
+        }
 
         //Task 25
         function getMax(arr){
@@ -219,6 +227,14 @@
             }
             var max = Math.max(...temp);
             console.log("The max even num is: "+ max + " and It's in the " + arr.indexOf(max) + " index." );
+        }
+
+        //Task 29 another solution
+        function findMaxEvenNum(arr){
+            var temp;
+            for(var i = 0; i < arr.length; i++){
+                
+            }
         }
 
         //Task 30
@@ -409,6 +425,19 @@
             }
             console.log(numsArr);
         }
+        // Another solution for 49
+        function tenEvenNums(){
+            var numsArr = [];
+            for(var i = 0; i < 10; i++){
+               var num = +prompt("Enter a number: ");
+                if (num % 2 == 0){
+                    numsArr.push(num);
+                } if(numsArr.length == 10){
+                    i = 10;
+                }
+            }
+        }
+
         //Task 50
         function squareAreaAndCircumference(){
             var width = +prompt("Enter width: ");
