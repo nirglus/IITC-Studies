@@ -77,7 +77,24 @@
             return arr; 
         }
         console.log(stringToArr("4 , 5 , 7 , 8"));
+        
+        //Another solution
+        var someStr = "12,3,455";
+        function changeStrToArray(strParam){
+            var newArr = [];
+            var psikIndex = strParam.indexOf(",");
+            var startIndex = 0;
+            var tempStr;
+            while(psikIndex > 0){
+                vtempStr = strParam.substring(startIndex, psikIndex);
+                newArray.push(+tempStr);
+                startIndex = psikIndex + 1;l
+                psikIndex = strParam.indexOf(",", startIndex);
+            }
+            newArray.push(+strParam.substring(startIndex));
 
+            return newArray;
+        }
         //Task 8
         function randomNumTillTen(){
             var num = Math.floor(Math.random()*11);
@@ -284,6 +301,15 @@
             }
         }
         checkAge();
+
+        //Task 31
+        function printLocation(){
+            var userDate = new Date();
+            console.log(userDate.toString());
+        }
+        printLocation();
+
+        
 
 
          
