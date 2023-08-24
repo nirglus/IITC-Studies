@@ -145,6 +145,34 @@
         }
         console.log(createCarObjectVar());
 
+        //Task 89
+        function createObjectByUser(){
+            var userObject = {}
+            for(var i = 0; i < 3; i++){
+                var userKey = prompt("Enter a key: ");
+                userObject[userKey] = prompt("Enter a value: ");
+            }
+            return userObject;
+        }
+        console.log(createObjectByUser());
+
+        //Task 90
+        function createArrPerUserNum(){
+            var objectNum = +prompt("How many objects you want to create?");
+            var keysNum = +prompt("How many keys you want per object?");
+            var objectArray = [];
+            for(var i = 0; i < objectNum; i++){
+                var userObject = {}
+                for(var j = 0; j < keysNum; j++){
+                    var userKey = prompt("Enter a key: ");
+                    userObject[userKey] = prompt("Enter a value: ");
+                }
+                objectArray.push(userObject);
+            }
+            return objectArray;
+        }
+        console.log(createArrPerUserNum());
+
         
 
         
