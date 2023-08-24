@@ -99,9 +99,9 @@
         printAllIds();
 
         //Task 86
-        function buildUserObject(){
+        function createUserObject(){
             var user1 = {
-                id : prompt("Enter ID: "),
+                id : +prompt("Enter ID: "),
                 fName: prompt("Enter first name"),
                 lName: prompt("Enter last name: "),
                 age: +prompt("Enter age:"),
@@ -109,7 +109,43 @@
             }
             console.log(user1);
         }
-        buildUserObject();
+        createUserObject();
+
+        //Task 87
+        function createObjectsArray(){
+            var objectArr = [];
+            for(var i = 0; i < 3; i++){
+                var newDog = {
+                    id: i,
+                    name: prompt("Enter your dog's name:"),
+                    age: +prompt("Enter dog's age: "),
+                    gender: prompt("Enter dog's gender: "),
+                    breed: prompt("Enter dog's breed: ")
+                }
+                objectArr.push(newDog);
+            }
+            return objectArr;
+        }
+        console.log(createObjectsArray());
+
+        //Task 88
+        function createCarObjectVar(){
+            var amount = +prompt("How many objects you want?");
+            var carsArray = [];
+            for(var i = 0; i < amount; i++){
+                var newCar = {
+                    id: i,
+                    color: prompt("Car color: "),
+                    wheels: +prompt("How many wheels it has? "),
+                    brand: prompt("Brand name: ")
+                }
+                carsArray.push(newCar);
+            }
+            return carsArray;
+        }
+        console.log(createCarObjectVar());
+
+        
 
         
 
