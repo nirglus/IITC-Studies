@@ -320,11 +320,23 @@
         createRandomDate();
 
         //Task 33
-        var keyValue = "car:wheels,door:house,key:key,lorem:ipsumisus"
+        var keyValue = "car:wheels,door:house,key:key,lorem:ipsumisus";
         function checkValueLength(keyValue){
-
-
+            var max = 0;
+            var temp;
+            var longestValue;
+            for(var i = 0; i < keyValue.length; i++){
+                if(keyValue[i] == ":"){
+                    temp = keyValue.substring(i+1 , keyValue.indexOf(","));
+                    if (temp.length > max){
+                        max = temp.length;
+                        longestValue = temp;
+                    }
+                }
+            }
+            console.log(longestValue, max);
         }
+        checkValueLength(keyValue);
 
         
 

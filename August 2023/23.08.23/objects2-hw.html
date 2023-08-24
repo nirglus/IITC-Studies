@@ -148,9 +148,9 @@
         //Task 89
         function createObjectByUser(){
             var userObject = {}
-            for(var i = 0; i < 3; i++){
-                var userKey = prompt("Enter a key: ");
-                userObject[userKey] = prompt("Enter a value: ");
+            var counter = +prompt("How many keys you want per object?");
+            for(var i = 0; i < counter; i++){
+                userObject[prompt("Enter a key: ")] = prompt("Enter a value: ");
             }
             return userObject;
         }
@@ -159,15 +159,9 @@
         //Task 90
         function createArrPerUserNum(){
             var objectNum = +prompt("How many objects you want to create?");
-            var keysNum = +prompt("How many keys you want per object?");
             var objectArray = [];
-            for(var i = 0; i < objectNum; i++){
-                var userObject = {}
-                for(var j = 0; j < keysNum; j++){
-                    var userKey = prompt("Enter a key: ");
-                    userObject[userKey] = prompt("Enter a value: ");
-                }
-                objectArray.push(userObject);
+            for(var j = 0; j < objectNum; j++){
+                objectArray.push(createObjectByUser());
             }
             return objectArray;
         }
