@@ -309,6 +309,16 @@
         }
         printLocation();
 
+        //Task 32
+        function createRandomDate(){
+            var randomYear = Math.floor(Math.random()*33 + 1990);
+            var randomMonth = Math.floor(Math.random()*12);
+            var randomDay = Math.floor(Math.random()*31);
+            var randomDate = new Date(randomYear, randomMonth, randomDay);
+            console.log(randomDate);
+        }
+        createRandomDate();
+
         
 
 
