@@ -448,6 +448,27 @@
         }
         console.log(getOChar(strParam));
 
+        //Task 56
+        function printFullName(){
+            var fullName = prompt("Enter your full name: ");
+            var fName = "";
+            var lName = "";
+            for(var i = 0; i < fullName.length; i++){
+                if(i == fullName.indexOf(" ")){
+                    fName = fullName.substring(0, i);
+                    lName = fullName.substring(i + 1, fullName.length);
+                    console.log("There are " + fullName.length + " characters, and there is space in the string.");
+                    console.log(fName);
+                    console.log(lName);
+                    return;
+                }
+            }
+            console.log("There are "+fullName.length+ " characters, there is no space between.");
+            console.log(fullName);
+            return;
+        }
+        printFullName();
+
 
 
 
