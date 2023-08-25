@@ -402,14 +402,9 @@
 
         //Task 46
         function getOChar(strParam){
-            var newStr = "";
-            for(var i = 0; i < strParam.length; i++){
-                if(strParam[i] == "o"){
-                    newStr = newStr + strParam[i]
-                }
-            }
-            return newStr;
+            return strParam.substr(strParam.indexOf("o"), strParam.length);
         }
+        console.log(getOChar(strParam));
 
         //Task 47
         function checkStringLength(strParam, charIndex){
