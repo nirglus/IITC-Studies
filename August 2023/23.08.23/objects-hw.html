@@ -396,16 +396,9 @@
         //Task 45
         var strParam = "sayonara";
         function getFourTimesY(strParam){
-            var newStr = "";
-            for(var i = 0; i < strParam; i++){
-                if(strParam[i] == "y"){
-                    for(var j = 0; j < 4; j++){
-                        newStr = newStr + strParam[i];
-                    }
-                    return newStr;
-                }
-            }
+            return strParam.substr(strParam.indexOf("y"), strParam.indexOf("y") + 3);
         }
+        console.log(getFourTimesY(strParam));
 
         //Task 46
         function getOChar(strParam){
