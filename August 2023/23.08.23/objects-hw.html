@@ -398,13 +398,24 @@
         function getFourTimesY(strParam){
             var newStr = "";
             for(var i = 0; i < strParam; i++){
-                if(strParam[i] == y){
+                if(strParam[i] == "y"){
                     for(var j = 0; j < 4; j++){
                         newStr = newStr + strParam[i];
                     }
                     return newStr;
                 }
             }
+        }
+
+        //Task 46
+        function getOChar(strParam){
+            var newStr = "";
+            for(var i = 0; i < strParam.length; i++){
+                if(strParam[i] == "o"){
+                    newStr = newStr + strParam[i]
+                }
+            }
+            return newStr;
         }
 
 
