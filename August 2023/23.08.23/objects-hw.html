@@ -496,6 +496,27 @@
             }
         }
 
+        //Task 60+61
+        function checkApiInName(fName, lName){
+            if(fName.includes("a") && lName.includes("api")){
+                console.log("First name includes 'a'");
+                console.log("Last name includes 'api'");
+            }else if(fName.includes("a") == false && lName.includes("api")){
+                console.log("First name does not include 'a'");
+                console.log("Last name includes 'api'");
+            }else if(fName.includes("a") && lName.includes("api") == false){
+                console.log("First name includes 'a'");
+                console.log("Last name does not include 'api'");
+            }else{
+                console.log("First name does not include 'a'");
+                console.log("Last name does not include 'api'");
+            }
+        }
+        checkApiInName("Dana","apinston");
+        checkApiInName("nir","niapi");
+        checkApiInName("maya","mayson");
+        checkApiInName("nir","nirson");
+
 
 
 
