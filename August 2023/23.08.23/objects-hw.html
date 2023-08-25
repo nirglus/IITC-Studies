@@ -354,8 +354,8 @@
                 if(strParam[i] == "a"){
                     return i;
                 }
-                return "not found";
             }
+            return "not found";
         }
 
         //Task 40
@@ -364,8 +364,8 @@
                 if(strParam[i] == "r"){
                     return true;
                 }
-                return false;
             }
+            return false;
         }
 
         //Task 41
@@ -375,8 +375,18 @@
                     return true;
                 }
             }
-            return false.
+            return false;
         }
+        //Task 42
+        function searchPringIndexChar(char, strParam){
+            var charContains = searchForChar(char,strParam);
+            if(charContains){
+                console.log(strParam.lastIndexOf(char));
+            } else{
+                console.log("The char cannot be found in the string.");
+            }
+        }
+        
 
         
 
