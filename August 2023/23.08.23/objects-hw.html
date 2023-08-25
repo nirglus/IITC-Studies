@@ -437,9 +437,16 @@
         //Task 51
         function getPartOfString(num1,num2,strParam){
             if(num1 >= 0 && num2 >= 0){
-                return strParam.substring(num1, num2)
+                return strParam.substr(num1, num2);
             }
         }
+
+        //Task 52
+        var strParam = "sayonara";
+        function getThreeFirstChars(strParam){
+            return strParam.substring(0,3);
+        }
+
 
 
 
