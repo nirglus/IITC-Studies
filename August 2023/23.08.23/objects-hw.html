@@ -470,13 +470,23 @@
         printFullName();
 
         //Task 57
-        function compareTwoString(str1, str2){
+        function compareTwoStringLower(str1, str2){
             if(str1.toLowerCase() == str2.toLowerCase()){
                 return true;
             }
             return false;
         }
-        compareTwoString("Nir","nIr");
+        compareTwoStringLower("Nir","nIr");
+
+        //Task 58
+        function compareTwoStringUpper(str1, str2){
+            if(str1.toUpperCase() == str2.toUpperCase()){
+                return true;
+            }
+            return false;
+        }
+        compareTwoStringUpper("nir","NiR");
+
 
 
 
