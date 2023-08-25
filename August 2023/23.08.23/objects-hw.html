@@ -534,8 +534,17 @@
                 return strParam;
             }
             return strParam.indexOf(char);
-
         }
+
+        //Task 65
+        function checkCharInStr(char, strParam){
+            if(strParam.includes(char)){
+                return strParam.indexOf(char);
+            }
+            return strParam;
+        }
+        checkCharInStr("n","nir");
+       
 
 
 
