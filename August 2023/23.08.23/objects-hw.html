@@ -570,7 +570,36 @@
             console.log("The character is not included in this name.");
         }
 
-        
+        //Task 70
+        function printUserName(userName){
+            var arr = [];
+            var fName = "";
+            var mName = "";
+            var lName = "";
+            if(userName.includes(" ") == false){
+                firstLetter = userName[0];
+                fNameLow = userName.substr(1, userName.length);
+                fName = firstLetter.toUpperCase() + fNameLow.toLowerCase();
+                return fName;
+            }
+            for(var i = 0; i < userName.length; i++){
+                if(i == userName.indexOf(" ")){
+                    fName = userName.substring(0, i);
+                    if(userName.lastIndexOf(" ") > userName.indexOf(" ")){
+                         mName = userName.substring(i+1, userName.lastIndexOf(" "));
+                         lName = userName.substr(userName.lastIndexOf(" ") + 1, userName.length);
+                         arr.push(fName, mName, lName);
+                    }else if(userName.lastIndexOf(" ") == userName.indexOf(" ")){
+                        mName = userName.substring(i + 1, userName.length);
+                        arr.push(fName, mName);
+                    }
+                }
+            }
+            console.log(arr);
+        }
+        printUserName("James Jeremy Jameson");
+
+
        
 
 
