@@ -550,6 +550,17 @@
             return fName[0] + "." + lName.toUpperCase();
         }
         getLNameUpperCase("Brian","Johnson");
+
+        //Task 68
+        function checkWhosShorter(lName1, lName2){
+            if(lName1.length > lName2.length){
+                console.log(lName2.toLowerCase());
+                return lName1;
+            }
+            console.log(lName1.toLowerCase());
+            return lName2;
+        }
+        checkWhosShorter("JACKSON", "LEVI");
        
 
 
