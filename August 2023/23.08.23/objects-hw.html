@@ -323,20 +323,32 @@
         var keyValue = "car:wheels,door:house,key:key,lorem:ipsumisus";
         function checkValueLength(keyValue){
             var max = 0;
-            var temp;
+            var psikIndex = 0;
+            var dotIndex = 0;
+            var temp = "";
             var longestValue;
             for(var i = 0; i < keyValue.length; i++){
                 if(keyValue[i] == ":"){
-                    temp = keyValue.substring(i+1 , keyValue.indexOf(","));
-                    if (temp.length > max){
+                    dotIndex = i;
+                }
+                if(keyValue[i] == ","){
+                    psikIndex = i;
+                    temp = keyValue.substring(dotIndex + 1, psikIndex);
+                    if(temp.length > max){
                         max = temp.length;
-                        longestValue = temp;
+                    }
+                } else if(dotIndex > psikIndex && keyValue[i] > dotIndex){
+                    temp = keyValue.substring(dotIndex + 1, keyValue.length);
+                    if(temp.length > max){
+                        max = temp.length;
                     }
                 }
             }
-            console.log(longestValue, max);
+            return max;
         }
-        checkValueLength(keyValue);
+        console.log(checkValueLength(keyValue));
+
+
         
 
 
