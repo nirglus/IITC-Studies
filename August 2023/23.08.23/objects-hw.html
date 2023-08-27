@@ -348,6 +348,29 @@
         }
         console.log(checkValueLength(keyValue));
 
+        //Task 34
+        var keyValue = "car:wheels,door:house,key:key,lorem:ipsumisus";
+        function getValueOfKey(keyValue, key){
+            var psikIndex = keyValue.indexOf(",");
+            var keyIndex = keyValue.indexOf(key);
+            var value = "";
+            for (var i = 0; i < keyValue.length; i++){
+                if (keyValue[i] == ","){
+                    psikIndex = i;
+                }
+                if(keyIndex < psikIndex){
+                    value = keyValue.substring(keyIndex + key.length + 1, psikIndex);
+                    return value;
+                }else if(keyIndex > keyValue.lastIndexOf(",")){
+                    value = keyValue.substring(keyIndex + key.length + 1, keyValue.length);
+                    return value;
+                }
+            }
+        }
+        console.log(getValueOfKey(keyValue, "lorem"));
+        console.log(getValueOfKey(keyValue, "door"));
+        
+
 
         
 
