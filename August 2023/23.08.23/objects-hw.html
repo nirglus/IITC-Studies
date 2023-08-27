@@ -370,27 +370,49 @@
         console.log(getValueOfKey(keyValue, "lorem"));
         console.log(getValueOfKey(keyValue, "door"));
 
+        
         //Task 35
         var keyValue = "car:wheels,door:house,key:key,lorem:ipsumisus";
         function countKeysLength(keyValue){
             var startIndex = 0;
+            var endIndex = keyValue.indexOf(":");
+            var key = keyValue.substring(startIndex, endIndex);
+            var keysLength = key.length;
+            for(var i = 0; i < keyValue.length; i++){
+                if(keyValue[i] == ","){
+                    endIndex = keyValue.indexOf(":", i)
+                    if(i == keyValue.lastIndexOf(",")){
+                        endIndex = keyValue.lastIndexOf(":");
+                    }
+                    startIndex = i + 1;
+                    key = keyValue.substring(startIndex, endIndex);
+                    keysLength = keysLength + key.length;
+                } 
+            }
+            return keysLength; 
+        }
+        console.log(countKeysLength(keyValue));
+        
+        //Task 36
+        var keyValue = "car:wheels,door:house,key:key,lorem:ipsumisus";
+        function countKeysLength(keyValue){
             var endIndex = 0;
-            var keysLength = 0;
-            var key;
+            var valuesLength = 0;
+            var value;
             for(var i = 0; i < keyValue.length; i++){
                 if(keyValue[i] == ":"){
                     endIndex = keyValue.indexOf(",", i);
                     if(endIndex == -1){
                         endIndex = keyValue.length;
                     }
-                    key = keyValue.substring(i + 1, endIndex);
-                    keysLength = keysLength + key.length;
-                    startIndex = endIndex + 1;
+                    value = keyValue.substring(i + 1, endIndex);
+                    valuesLength = valuesLength + value.length;
                 }
             }
-            return keysLength;
+            return valuesLength;
         }
         console.log(countKeysLength(keyValue));
+
 
         //Task 38
         function checkStringLength(strParm){
