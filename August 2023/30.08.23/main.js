@@ -229,3 +229,16 @@ for(let i = 0; i < carsArr.length; i++){
     document.getElementById("carsTBody").innerHTML +=
     `<tr><td>${carsArr[i].carName}</td><td>${carsArr[i].color}</td><td>${carsArr[i].forSale}</td></tr>`;
 }
+
+//Task 25
+var tdsArr = document.getElementsByTagName("td");
+for(let i = 0; i < tdsArr.length; i++){
+    tdsArr[i].style.padding = "50px";
+    tdsArr[i].style.backgroundColor = "yellow";
+}
+
+var thsArr = document.getElementsByTagName("th");
+for(let i = 0; i < thsArr.length; i++){
+    thsArr[i].style.padding = "20px";
+    thsArr[i].style.backgroundColor = "orange";
+}
