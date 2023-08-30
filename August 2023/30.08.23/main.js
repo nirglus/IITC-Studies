@@ -292,17 +292,28 @@
 //     document.body.innerHTML += `<p>${classObj.studsNames[i]}</p>`
 // }
 
-//Task 29
-var kidGarden ={
-    nannyName: "Shoshana Shosh",
-    kidsNum: 10,
-    kidsNames: ["Dan Danson", "Dave Daveson", "James Jameson", "Phill Graves", "John Price", 
-    "John MacTavish", "Simon Riley", "Carl Johnson", "Niko Bellic", "Claude Speed"]
-}
-for(let i = 0; i < kidGarden.kidsNames.length; i++){
-    document.body.innerHTML += `<p>${kidGarden.kidsNames[i]}</p>`
-}
-var userKey = prompt("Enter a key:");
-var userValue = kidGarden[userKey];
-document.body.innerHTML += `<p><b>${userKey}:</b> ${userValue}</p>`;
+// //Task 29
+// var kidGarden ={
+//     nannyName: "Shoshana Shosh",
+//     kidsNum: 10,
+//     kidsNames: ["Dan Danson", "Dave Daveson", "James Jameson", "Phill Graves", "John Price", 
+//     "John MacTavish", "Simon Riley", "Carl Johnson", "Niko Bellic", "Claude Speed"]
+// }
+// for(let i = 0; i < kidGarden.kidsNames.length; i++){
+//     document.body.innerHTML += `<p>${kidGarden.kidsNames[i]}</p>`
+// }
+// var userKey = prompt("Enter a key:");
+// var userValue = kidGarden[userKey];
+// document.body.innerHTML += `<p><b>${userKey}:</b> ${userValue}</p>`;
+
+//Task 30
+var cityObj = {}
+cityObj.cityName = prompt("City name:");
+cityObj.population = +prompt("Population:");
+cityObj.emblem = prompt("Emblem image link:");
+
+document.body.innerHTML += `<h1>City</h1>
+<p><b>City Name:</b>${cityObj.cityName}</p>
+<p><b>Population:</b>${cityObj.population}</p>
+<p><b>Emblem:</b><img src="${cityObj.emblem}">`;
 
