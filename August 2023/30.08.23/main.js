@@ -52,9 +52,20 @@
 // }
 // createUserTag();
 
-//Task 11
-function createUserInput(){
-    var userInput = prompt("Enter an input type:");
-    document.writeln("<input type="+ userInput +">");
+// //Task 11
+// function createUserInput(){
+//     var userInput = prompt("Enter an input type:");
+//     document.writeln("<input type="+ userInput +">");
+// }
+// createUserInput();
+
+//Task 12
+function changeTextOfClasses(){
+    var userClass = prompt("Enter a class name:");
+    var userText = prompt("Enter a text:");
+    var classesElem = document.getElementsByClassName(userClass);
+    for(var i = 0; i < classesElem.length; i++){
+        classesElem[i].innerText = userText; 
+    }
 }
-createUserInput();
+changeTextOfClasses();
