@@ -133,33 +133,47 @@
 // }
 // buildingObj();
 
-//Task 18
+// //Task 18
 
-function createStoreObj(){
-    var objNum = +prompt("Enter number of stores:");
-    var store = {};
-    var storeArr = [];
+// function createStoreObj(){
+//     var objNum = +prompt("Enter number of stores:");
+//     var store = {};
+//     var storeArr = [];
+//     for(let i = 0; i < objNum; i++){
+//         store.name = prompt("Enter store's name:");
+//         store.address = prompt("Enter store's address:");
+//         store.divisions = +prompt("Divisions number:");
+//         store.employees = +prompt("Employees amount:");
+//         if(store.employees > 10){
+//             document.body.innerHTML +=  `<h1>Store ${i + 1}</h1>
+//             <p><b>Store's name:</b> ${store.name}</p>
+//             <p><b>Store's address:</b> ${store.address}</p>
+//             <p><b>Total divisions:</b> ${store.divisions}</p>
+//             <p><b>Total employees:</b> ${store.employees}</p>`;
+//             storeArr.push(store);
+//         }
+//     }
+//     countPrintedObj(storeArr);
+// }
+// createStoreObj();
+
+
+// //Task 19
+// function countPrintedObj(storeArr){
+//     var printed = storeArr.length;
+//     console.log(`Amount of stores printed: ${printed}`);
+// }
+
+//Task 20
+function printContactName(){
+    var objNum = +prompt("Enter object amount: ");
+    var contact = {};
     for(let i = 0; i < objNum; i++){
-        store.name = prompt("Enter store's name:");
-        store.address = prompt("Enter store's address:");
-        store.divisions = +prompt("Divisions number:");
-        store.employees = +prompt("Employees amount:");
-        if(store.employees > 10){
-            document.body.innerHTML +=  `<h1>Store ${i + 1}</h1>
-            <p><b>Store's name:</b> ${store.name}</p>
-            <p><b>Store's address:</b> ${store.address}</p>
-            <p><b>Total divisions:</b> ${store.divisions}</p>
-            <p><b>Total employees:</b> ${store.employees}</p>`;
-            storeArr.push(store);
-        }
+        contact.fullName = prompt("Full name:");
+        contact.company = prompt("Company:");
+        contact.phone = prompt("Phone number:");
+        contact.email = prompt("Email:");
+        document.getElementById("personList").innerHTML += `<li>${contact.fullName}`;
     }
-    countPrintedObj(storeArr);
 }
-createStoreObj();
-
-
-//Task 19
-function countPrintedObj(storeArr){
-    var printed = storeArr.length;
-    console.log(`Amount of stores printed: ${printed}`);
-}
+printContactName();
