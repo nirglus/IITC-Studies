@@ -164,16 +164,32 @@
 //     console.log(`Amount of stores printed: ${printed}`);
 // }
 
-//Task 20
-function printContactName(){
+// //Task 20
+// function printContactName(){
+//     var objNum = +prompt("Enter object amount: ");
+//     var contact = {};
+//     for(let i = 0; i < objNum; i++){
+//         contact.fullName = prompt("Full name:");
+//         contact.company = prompt("Company:");
+//         contact.phone = prompt("Phone number:");
+//         contact.email = prompt("Email:");
+//         document.getElementById("personList").innerHTML += `<li>${contact.fullName}`;
+//     }
+// }
+// printContactName();
+
+//Task 21
+function createDocObject(){
     var objNum = +prompt("Enter object amount: ");
-    var contact = {};
+    var doctor = {};
     for(let i = 0; i < objNum; i++){
-        contact.fullName = prompt("Full name:");
-        contact.company = prompt("Company:");
-        contact.phone = prompt("Phone number:");
-        contact.email = prompt("Email:");
-        document.getElementById("personList").innerHTML += `<li>${contact.fullName}`;
+        doctor.fullName = prompt("Full name:");
+        doctor.prof = prompt("Profession:");
+        doctor.phone = prompt("Phone number:");
+        doctor.available = confirm("Is the doctor available?");
+        doctor.email = prompt("Email: ");
+        document.getElementsByTagName("tbody")[0].innerHTML += `<tr><td>${doctor.fullName}</td><td>${doctor.prof}</td>
+        <td>${doctor.phone}</td><td>${doctor.available}</td><td>${doctor.email}</td></tr>`;
     }
 }
-printContactName();
+createDocObject();
