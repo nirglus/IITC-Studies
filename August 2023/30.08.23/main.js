@@ -100,18 +100,35 @@
 // }
 // printMovieObj();
 
-//Task 16
-var workerObj = {}
-workerObj.fName = prompt("Enter first name:");
-workerObj.lName = prompt("Enter last name:");
-workerObj.email = prompt("Enter email:");
-workerObj.division = prompt("Enter division:");
+// //Task 16
+// var workerObj = {}
+// workerObj.fName = prompt("Enter first name:");
+// workerObj.lName = prompt("Enter last name:");
+// workerObj.email = prompt("Enter email:");
+// workerObj.division = prompt("Enter division:");
     
-document.body.innerHTML += `<h1>New Employee</h1>
-    <p><b>First name:</b> ${workerObj.fName}</p>
-    <p><b>Last name:</b> ${workerObj.lName}</p>
-    <p><b>Email:</b> ${workerObj.email}</p>
-    <p><b>Division:</b> ${workerObj.division}</p>`;
+// document.body.innerHTML += `<h1>New Employee</h1>
+//     <p><b>First name:</b> ${workerObj.fName}</p>
+//     <p><b>Last name:</b> ${workerObj.lName}</p>
+//     <p><b>Email:</b> ${workerObj.email}</p>
+//     <p><b>Division:</b> ${workerObj.division}</p>`;
 
 
 //Task 17
+function buildingObj(){
+    var objNum = +prompt("Enter number of builidngs:");
+    var building = {};
+    for(let i = 0; i < objNum; i++){
+        building.constractor = prompt("Enter constractor's name:");
+        building.company = prompt("Enter company name:");
+        building.floors = +prompt("Floors number:");
+        building.apartments = +prompt("Apartments per floor:");
+        document.body.innerHTML +=  `<h1>Building ${i + 1}</h1>
+        <p><b>Constractor's name:</b> ${building.constractor}</p>
+        <p><b>Company name:</b> ${building.company}</p>
+        <p><b>Total floors:</b> ${building.floors}</p>
+        <p><b>Apartments per floor:</b> ${building.apartments }</p>`;
+    
+    }
+}
+buildingObj();11
