@@ -306,14 +306,28 @@
 // var userValue = kidGarden[userKey];
 // document.body.innerHTML += `<p><b>${userKey}:</b> ${userValue}</p>`;
 
-//Task 30
-var cityObj = {}
-cityObj.cityName = prompt("City name:");
-cityObj.population = +prompt("Population:");
-cityObj.emblem = prompt("Emblem image link:");
+// //Task 30
+// var cityObj = {}
+// cityObj.cityName = prompt("City name:");
+// cityObj.population = +prompt("Population:");
+// cityObj.emblem = prompt("Emblem image link:");
 
-document.body.innerHTML += `<h1>City</h1>
-<p><b>City Name:</b>${cityObj.cityName}</p>
-<p><b>Population:</b>${cityObj.population}</p>
-<p><b>Emblem:</b><img src="${cityObj.emblem}">`;
+// document.body.innerHTML += `<h1>City</h1>
+// <p><b>City Name:</b>${cityObj.cityName}</p>
+// <p><b>Population:</b>${cityObj.population}</p>
+// <p><b>Emblem:</b><img src="${cityObj.emblem}">`;
+
+//Task 31
+var userObj = {};
+userObj.fName = prompt("First name:");
+userObj.lName = prompt("Last name:");
+userObj.pImg = prompt("Profile photo URL:");
+userObj.email = prompt("Email:");
+userObj.password = prompt("Password:");
+
+document.body.innerHTML += `<div id="fName">${userObj.fName}</div>
+<div id="lName">${userObj.lName}</div>
+<div id="userImg"><img src="${userObj.pImg}"></div>
+<div id="email">${userObj.email}</div>
+<div id="pass">${userObj.password}</div>`;
 
