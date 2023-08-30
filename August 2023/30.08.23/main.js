@@ -145,11 +145,11 @@
 //         store.divisions = +prompt("Divisions number:");
 //         store.employees = +prompt("Employees amount:");
 //         if(store.employees > 10){
-//             document.body.innerHTML +=  `<h1>Store ${i + 1}</h1>
-//             <p><b>Store's name:</b> ${store.name}</p>
-//             <p><b>Store's address:</b> ${store.address}</p>
-//             <p><b>Total divisions:</b> ${store.divisions}</p>
-//             <p><b>Total employees:</b> ${store.employees}</p>`;
+            // document.body.innerHTML +=  `<h1>Store ${i + 1}</h1>
+            // <p><b>Store's name:</b> ${store.name}</p>
+            // <p><b>Store's address:</b> ${store.address}</p>
+            // <p><b>Total divisions:</b> ${store.divisions}</p>
+            // <p><b>Total employees:</b> ${store.employees}</p>`;
 //             storeArr.push(store);
 //         }
 //     }
@@ -219,26 +219,39 @@
 // }
 // studentObj();
 
-//Task 24
-var carsArr = [
-    {carName:"McLaren", color:"Black", forSale:false},
-    {carName:"Lotus", color:"Yellow", forSale:true},
-    {carName:"Ferrari", color:"Red", forSale:false}
-];
-for(let i = 0; i < carsArr.length; i++){
-    document.getElementById("carsTBody").innerHTML +=
-    `<tr><td>${carsArr[i].carName}</td><td>${carsArr[i].color}</td><td>${carsArr[i].forSale}</td></tr>`;
-}
+// //Task 24
+// var carsArr = [
+//     {carName:"McLaren", color:"Black", forSale:false},
+//     {carName:"Lotus", color:"Yellow", forSale:true},
+//     {carName:"Ferrari", color:"Red", forSale:false}
+// ];
+// for(let i = 0; i < carsArr.length; i++){
+//     document.getElementById("carsTBody").innerHTML +=
+//     `<tr><td>${carsArr[i].carName}</td><td>${carsArr[i].color}</td><td>${carsArr[i].forSale}</td></tr>`;
+// }
 
-//Task 25
-var tdsArr = document.getElementsByTagName("td");
-for(let i = 0; i < tdsArr.length; i++){
-    tdsArr[i].style.padding = "50px";
-    tdsArr[i].style.backgroundColor = "yellow";
-}
+// //Task 25
+// var tdsArr = document.getElementsByTagName("td");
+// for(let i = 0; i < tdsArr.length; i++){
+//     tdsArr[i].style.padding = "50px";
+//     tdsArr[i].style.backgroundColor = "yellow";
+// }
 
-var thsArr = document.getElementsByTagName("th");
-for(let i = 0; i < thsArr.length; i++){
-    thsArr[i].style.padding = "20px";
-    thsArr[i].style.backgroundColor = "orange";
+// var thsArr = document.getElementsByTagName("th");
+// for(let i = 0; i < thsArr.length; i++){
+//     thsArr[i].style.padding = "20px";
+//     thsArr[i].style.backgroundColor = "orange";
+// }
+
+//Task 25.1
+var manager = {
+    fName: "Moti",
+    lName: "Luchim",
+    age: "55",
+    salary: "$45,000"
 }
+document.body.innerHTML +=  `<h1>Manager</h1>
+<p><b>First name:</b> ${manager.fName}</p>
+<p><b>Last name:</b> ${manager.lName}</p>
+<p><b>Age:</b> ${manager.age}</p>
+<p><b>Salary:</b> ${manager.salary}</p>`;
