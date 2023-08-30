@@ -44,10 +44,17 @@
 // }
 // printColorPerNum();
 
-//Task 10
-function createUserTag(){
-    var userTag = prompt("Enter a tag name:");
-    var userText = prompt("Enter text:");
-    document.writeln("<"+ userTag +">" + userText + "</" + userTag + ">");
+// //Task 10
+// function createUserTag(){
+//     var userTag = prompt("Enter a tag name:");
+//     var userText = prompt("Enter text:");
+//     document.writeln("<"+ userTag +">" + userText + "</" + userTag + ">");
+// }
+// createUserTag();
+
+//Task 11
+function createUserInput(){
+    var userInput = prompt("Enter an input type:");
+    document.writeln("<input type="+ userInput +">");
 }
-createUserTag();
+createUserInput();
