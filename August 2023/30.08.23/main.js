@@ -194,13 +194,27 @@
 // }
 // createDocObject();
 
-//Task 22
-function list4Colors (){
-    var color;
-    document.body.innerHTML += `<ol></ol>`;
-    for(let i = 0; i < 4; i++){
-        color = prompt("Enter a color:");
-        document.getElementsByTagName("ol")[0].innerHTML += `<li>${color}</li>`;
-    }
+// //Task 22
+// function list4Colors (){
+//     var color;
+//     document.body.innerHTML += `<ol></ol>`;
+//     for(let i = 0; i < 4; i++){
+//         color = prompt("Enter a color:");
+//         document.getElementsByTagName("ol")[0].innerHTML += `<li>${color}</li>`;
+//     }
+// }
+// list4Colors();
+
+//Task 23
+function studentObj(){
+    var student = {
+        fullName: prompt("Full name:"),
+        email: prompt("Email:"),
+        grade: +prompt("Grade:")
+    };
+    document.body.innerHTML += `<table>
+    <thead><th>Full Name</th><th>Email</th><th>Grade</th></thead>
+    <tbody><tr><td>${student.fullName}</td><td>${student.email}</td><td>${student.grade}</td></tr></tbody>
+    </table>`;
 }
-list4Colors();
+studentObj();
