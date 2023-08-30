@@ -270,13 +270,24 @@
 // <p><b>Email:</b> ${employee.email}</p>
 // <p><b>Address:</b> ${employee.address}</p>`;
 
-//Task 27
-var fruit = {
-    fName: "Peach",
-    color: "Orange",
-    fType: "Peachy"
+// //Task 27
+// var fruit = {
+//     fName: "Peach",
+//     color: "Orange",
+//     fType: "Peachy"
+// }
+// document.body.innerHTML +=  `<h1>Fruit</h1>
+// <p><b>Fruit name:</b> ${fruit.fName}</p>
+// <p><b>Color:</b> ${fruit.color}</p>
+// <p><b>Type:</b> ${fruit.fType}</p>`;
+
+
+//Task 28
+var classObj = {
+    classNum: 4,
+    students: 5,
+    studsNames: ["Freddie Mercury","Elvis Presly", "Michael Jackson", "Brain Johnson", "Bon Scott"]
 }
-document.body.innerHTML +=  `<h1>Fruit</h1>
-<p><b>Fruit name:</b> ${fruit.fName}</p>
-<p><b>Color:</b> ${fruit.color}</p>
-<p><b>Type:</b> ${fruit.fType}</p>`;
+for(let i = 0; i < classObj.studsNames.length; i++){
+    document.body.innerHTML += `<p>${classObj.studsNames[i]}</p>`
+}
