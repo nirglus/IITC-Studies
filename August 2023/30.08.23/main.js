@@ -86,3 +86,16 @@
 //     }
 // }
 // printUserStats();
+
+//Task 15
+function printMovieObj(){
+    var movName = prompt("Movie name:");
+    var viewsNum = +prompt("Number of views:");
+    var movYear = +prompt("Year:");
+    var movImg = prompt("Image URL:");
+    document.body.innerHTML = `<b>Movie name: </b>${movName}<br>
+    <b>Number of views: </b>${viewsNum}<br>
+    <b>Year: </b>${movYear}<br>
+    <b>Image: <img src="${movImg}">`
+}
+printMovieObj();
