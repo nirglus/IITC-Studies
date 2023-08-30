@@ -178,18 +178,29 @@
 // }
 // printContactName();
 
-//Task 21
-function createDocObject(){
-    var objNum = +prompt("Enter object amount: ");
-    var doctor = {};
-    for(let i = 0; i < objNum; i++){
-        doctor.fullName = prompt("Full name:");
-        doctor.prof = prompt("Profession:");
-        doctor.phone = prompt("Phone number:");
-        doctor.available = confirm("Is the doctor available?");
-        doctor.email = prompt("Email: ");
-        document.getElementsByTagName("tbody")[0].innerHTML += `<tr><td>${doctor.fullName}</td><td>${doctor.prof}</td>
-        <td>${doctor.phone}</td><td>${doctor.available}</td><td>${doctor.email}</td></tr>`;
+// //Task 21
+// function createDocObject(){
+//     var objNum = +prompt("Enter object amount: ");
+//     var doctor = {};
+//     for(let i = 0; i < objNum; i++){
+//         doctor.fullName = prompt("Full name:");
+//         doctor.prof = prompt("Profession:");
+//         doctor.phone = prompt("Phone number:");
+//         doctor.available = confirm("Is the doctor available?");
+//         doctor.email = prompt("Email: ");
+//         document.getElementsByTagName("tbody")[0].innerHTML += `<tr><td>${doctor.fullName}</td><td>${doctor.prof}</td>
+//         <td>${doctor.phone}</td><td>${doctor.available}</td><td>${doctor.email}</td></tr>`;
+//     }
+// }
+// createDocObject();
+
+//Task 22
+function list4Colors (){
+    var color;
+    document.body.innerHTML += `<ol></ol>`;
+    for(let i = 0; i < 4; i++){
+        color = prompt("Enter a color:");
+        document.getElementsByTagName("ol")[0].innerHTML += `<li>${color}</li>`;
     }
 }
-createDocObject();
+list4Colors();

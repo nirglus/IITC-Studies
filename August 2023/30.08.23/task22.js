@@ -6,16 +6,16 @@
 // }
 
 //Task 23
-// var teacher = {};
-// teacher.fullName = prompt("Enter full name:");
-// teacher.email = prompt("Enter email:");
-// teacher.profession = prompt("Enter profession:");
+var teacher = {};
+teacher.fullName = prompt("Enter full name:");
+teacher.email = prompt("Enter email:");
+teacher.profession = prompt("Enter profession:");
 
-// document.getElementById("container").innerHTML += 
-// `<table>
-// <thead><th>firstName</th><th>email</th><th>profession</th></thead>
-// <tbody><tr><td>${teacher.fullName}</td><td>${teacher.email}</td><td>${teacher.profession}</td></tr></tbody>
-// </table>`;
+document.getElementById("container").innerHTML += 
+`<table>
+<thead><th>firstName</th><th>email</th><th>profession</th></thead>
+<tbody><tr><td>${teacher.fullName}</td><td>${teacher.email}</td><td>${teacher.profession}</td></tr></tbody>
+</table>`;
 
 
 //Task 24
