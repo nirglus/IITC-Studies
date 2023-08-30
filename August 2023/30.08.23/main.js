@@ -243,15 +243,29 @@
 //     thsArr[i].style.backgroundColor = "orange";
 // }
 
-//Task 25.1
-var manager = {
-    fName: "Moti",
-    lName: "Luchim",
-    age: "55",
-    salary: "$45,000"
+// //Task 25.1
+// var manager = {
+//     fName: "Moti",
+//     lName: "Luchim",
+//     age: "55",
+//     salary: "$45,000"
+// }
+// document.body.innerHTML +=  `<h1>Manager</h1>
+// <p><b>First name:</b> ${manager.fName}</p>
+// <p><b>Last name:</b> ${manager.lName}</p>
+// <p><b>Age:</b> ${manager.age}</p>
+// <p><b>Salary:</b> ${manager.salary}</p>`;
+
+
+//Task 26
+var employee = {
+    fullName: "Java Scriptson",
+    birthYear: "1995",
+    email: "javascriptson@js.com",
+    address: "6th Java St. , Programston, USA"
 }
-document.body.innerHTML +=  `<h1>Manager</h1>
-<p><b>First name:</b> ${manager.fName}</p>
-<p><b>Last name:</b> ${manager.lName}</p>
-<p><b>Age:</b> ${manager.age}</p>
-<p><b>Salary:</b> ${manager.salary}</p>`;
+document.body.innerHTML +=  `<h1>Employee</h1>
+<p><b>Full name:</b> ${employee.fullName}</p>
+<p><b>Year of birth:</b> ${employee.birthYear}</p>
+<p><b>Email:</b> ${employee.email}</p>
+<p><b>Address:</b> ${employee.address}</p>`;
