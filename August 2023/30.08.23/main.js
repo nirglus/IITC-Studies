@@ -59,13 +59,19 @@
 // }
 // createUserInput();
 
-//Task 12
-function changeTextOfClasses(){
-    var userClass = prompt("Enter a class name:");
-    var userText = prompt("Enter a text:");
-    var classesElem = document.getElementsByClassName(userClass);
-    for(var i = 0; i < classesElem.length; i++){
-        classesElem[i].innerText = userText; 
-    }
+// //Task 12
+// function changeTextOfClasses(){
+//     var userClass = prompt("Enter a class name:");
+//     var userText = prompt("Enter a text:");
+//     var classesElem = document.getElementsByClassName(userClass);
+//     for(var i = 0; i < classesElem.length; i++){
+//         classesElem[i].innerText = userText; 
+//     }
+// }
+// changeTextOfClasses();
+
+//Task 13
+var pArr = document.getElementsByTagName("p");
+for(let i = 0; i < pArr.length; i++){
+    pArr[i].innerHTML = `<span>Some text</span>`;
 }
-changeTextOfClasses();
