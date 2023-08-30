@@ -205,16 +205,27 @@
 // }
 // list4Colors();
 
-//Task 23
-function studentObj(){
-    var student = {
-        fullName: prompt("Full name:"),
-        email: prompt("Email:"),
-        grade: +prompt("Grade:")
-    };
-    document.body.innerHTML += `<table>
-    <thead><th>Full Name</th><th>Email</th><th>Grade</th></thead>
-    <tbody><tr><td>${student.fullName}</td><td>${student.email}</td><td>${student.grade}</td></tr></tbody>
-    </table>`;
+// //Task 23
+// function studentObj(){
+//     var student = {
+//         fullName: prompt("Full name:"),
+//         email: prompt("Email:"),
+//         grade: +prompt("Grade:")
+//     };
+//     document.body.innerHTML += `<table>
+//     <thead><th>Full Name</th><th>Email</th><th>Grade</th></thead>
+//     <tbody><tr><td>${student.fullName}</td><td>${student.email}</td><td>${student.grade}</td></tr></tbody>
+//     </table>`;
+// }
+// studentObj();
+
+//Task 24
+var carsArr = [
+    {carName:"McLaren", color:"Black", forSale:false},
+    {carName:"Lotus", color:"Yellow", forSale:true},
+    {carName:"Ferrari", color:"Red", forSale:false}
+];
+for(let i = 0; i < carsArr.length; i++){
+    document.getElementById("carsTBody").innerHTML +=
+    `<tr><td>${carsArr[i].carName}</td><td>${carsArr[i].color}</td><td>${carsArr[i].forSale}</td></tr>`;
 }
-studentObj();
