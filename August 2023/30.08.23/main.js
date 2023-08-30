@@ -138,6 +138,7 @@
 function createStoreObj(){
     var objNum = +prompt("Enter number of stores:");
     var store = {};
+    var storeArr = [];
     for(let i = 0; i < objNum; i++){
         store.name = prompt("Enter store's name:");
         store.address = prompt("Enter store's address:");
@@ -149,7 +150,16 @@ function createStoreObj(){
             <p><b>Store's address:</b> ${store.address}</p>
             <p><b>Total divisions:</b> ${store.divisions}</p>
             <p><b>Total employees:</b> ${store.employees}</p>`;
+            storeArr.push(store);
         }
     }
+    countPrintedObj(storeArr);
 }
 createStoreObj();
+
+
+//Task 19
+function countPrintedObj(storeArr){
+    var printed = storeArr.length;
+    console.log(`Amount of stores printed: ${printed}`);
+}
