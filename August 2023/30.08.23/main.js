@@ -88,14 +88,30 @@
 // printUserStats();
 
 //Task 15
-function printMovieObj(){
-    var movName = prompt("Movie name:");
-    var viewsNum = +prompt("Number of views:");
-    var movYear = +prompt("Year:");
-    var movImg = prompt("Image URL:");
-    document.body.innerHTML = `<b>Movie name: </b>${movName}<br>
-    <b>Number of views: </b>${viewsNum}<br>
-    <b>Year: </b>${movYear}<br>
-    <b>Image: <img src="${movImg}">`
-}
-printMovieObj();
+// function printMovieObj(){
+//     var movName = prompt("Movie name:");
+//     var viewsNum = +prompt("Number of views:");
+//     var movYear = +prompt("Year:");
+//     var movImg = prompt("Image URL:");
+//     document.body.innerHTML = `<b>Movie name: </b>${movName}<br>
+//     <b>Number of views: </b>${viewsNum}<br>
+//     <b>Year: </b>${movYear}<br>
+//     <b>Image: <img src="${movImg}">`
+// }
+// printMovieObj();
+
+//Task 16
+var workerObj = {}
+workerObj.fName = prompt("Enter first name:");
+workerObj.lName = prompt("Enter last name:");
+workerObj.email = prompt("Enter email:");
+workerObj.division = prompt("Enter division:");
+    
+document.body.innerHTML += `<h1>New Employee</h1>
+    <p><b>First name:</b> ${workerObj.fName}</p>
+    <p><b>Last name:</b> ${workerObj.lName}</p>
+    <p><b>Email:</b> ${workerObj.email}</p>
+    <p><b>Division:</b> ${workerObj.division}</p>`;
+
+
+//Task 17
