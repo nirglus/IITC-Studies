@@ -60,18 +60,29 @@
 // createUserInput();
 
 // //Task 12
-// function changeTextOfClasses(){
-//     var userClass = prompt("Enter a class name:");
-//     var userText = prompt("Enter a text:");
+// function changeTextOfClasses(userClass, userText){
 //     var classesElem = document.getElementsByClassName(userClass);
 //     for(var i = 0; i < classesElem.length; i++){
 //         classesElem[i].innerText = userText; 
 //     }
 // }
-// changeTextOfClasses();
+// changeTextOfClasses("myHeadings", "Some text");
 
-//Task 13
-var pArr = document.getElementsByTagName("p");
-for(let i = 0; i < pArr.length; i++){
-    pArr[i].innerHTML = `<span>Some text</span>`;
-}
+// //Task 13
+// var pArr = document.getElementsByTagName("p");
+// for(let i = 0; i < pArr.length; i++){
+//     pArr[i].innerHTML = `<span>Some text</span>`;
+// }
+
+// //Task 14
+// function printUserStats(){
+//     var fName = prompt("Enter first name:");
+//     var lName = prompt("Enter last name:");
+//     var age = +prompt("Enter age:");
+//     if(age > 18){
+//         document.body.innerHTML = `First name: ${fName}, Last name: ${lName}, Age: ${age}, <input type="text">`;
+//     }else{
+//         document.body.innerHTML = `First name: ${fName}, Last name: ${lName}, Age: ${age}`;
+//     }
+// }
+// printUserStats();
