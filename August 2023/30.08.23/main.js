@@ -22,3 +22,14 @@ for(var i = 0; i < myHeadingsElem.length; i++){
 console.log(myHeadingsElem[1]);
 console.log(myHeadingsElem[2].innerText);
 
+
+//Task 7
+var myStrongsElem = document.getElementsByTagName("strong");
+console.log(myStrongsElem);
+
+//Task 8
+function printName(){
+    var userName = prompt("Enter your name:");
+    document.write("<h2>"+ userName + "</h2>");
+}
+printName();
