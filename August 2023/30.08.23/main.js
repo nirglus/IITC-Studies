@@ -257,15 +257,26 @@
 // <p><b>Salary:</b> ${manager.salary}</p>`;
 
 
-//Task 26
-var employee = {
-    fullName: "Java Scriptson",
-    birthYear: "1995",
-    email: "javascriptson@js.com",
-    address: "6th Java St. , Programston, USA"
+// //Task 26
+// var employee = {
+//     fullName: "Java Scriptson",
+//     birthYear: "1995",
+//     email: "javascriptson@js.com",
+//     address: "6th Java St. , Programston, USA"
+// }
+// document.body.innerHTML +=  `<h1>Employee</h1>
+// <p><b>Full name:</b> ${employee.fullName}</p>
+// <p><b>Year of birth:</b> ${employee.birthYear}</p>
+// <p><b>Email:</b> ${employee.email}</p>
+// <p><b>Address:</b> ${employee.address}</p>`;
+
+//Task 27
+var fruit = {
+    fName: "Peach",
+    color: "Orange",
+    fType: "Peachy"
 }
-document.body.innerHTML +=  `<h1>Employee</h1>
-<p><b>Full name:</b> ${employee.fullName}</p>
-<p><b>Year of birth:</b> ${employee.birthYear}</p>
-<p><b>Email:</b> ${employee.email}</p>
-<p><b>Address:</b> ${employee.address}</p>`;
+document.body.innerHTML +=  `<h1>Fruit</h1>
+<p><b>Fruit name:</b> ${fruit.fName}</p>
+<p><b>Color:</b> ${fruit.color}</p>
+<p><b>Type:</b> ${fruit.fType}</p>`;
