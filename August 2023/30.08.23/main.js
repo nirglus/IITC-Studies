@@ -302,3 +302,7 @@ var kidGarden ={
 for(let i = 0; i < kidGarden.kidsNames.length; i++){
     document.body.innerHTML += `<p>${kidGarden.kidsNames[i]}</p>`
 }
+var userKey = prompt("Enter a key:");
+var userValue = kidGarden[userKey];
+document.body.innerHTML += `<p><b>${userKey}:</b> ${userValue}</p>`;
+
