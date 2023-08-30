@@ -115,20 +115,41 @@
 
 
 //Task 17
-function buildingObj(){
-    var objNum = +prompt("Enter number of builidngs:");
-    var building = {};
-    for(let i = 0; i < objNum; i++){
-        building.constractor = prompt("Enter constractor's name:");
-        building.company = prompt("Enter company name:");
-        building.floors = +prompt("Floors number:");
-        building.apartments = +prompt("Apartments per floor:");
-        document.body.innerHTML +=  `<h1>Building ${i + 1}</h1>
-        <p><b>Constractor's name:</b> ${building.constractor}</p>
-        <p><b>Company name:</b> ${building.company}</p>
-        <p><b>Total floors:</b> ${building.floors}</p>
-        <p><b>Apartments per floor:</b> ${building.apartments }</p>`;
+// function buildingObj(){
+//     var objNum = +prompt("Enter number of builidngs:");
+//     var building = {};
+//     for(let i = 0; i < objNum; i++){
+//         building.constractor = prompt("Enter constractor's name:");
+//         building.company = prompt("Enter company name:");
+//         building.floors = +prompt("Floors number:");
+//         building.apartments = +prompt("Apartments per floor:");
+//         document.body.innerHTML +=  `<h1>Building ${i + 1}</h1>
+//         <p><b>Constractor's name:</b> ${building.constractor}</p>
+//         <p><b>Company name:</b> ${building.company}</p>
+//         <p><b>Total floors:</b> ${building.floors}</p>
+//         <p><b>Apartments per floor:</b> ${building.apartments }</p>`;
     
+//     }
+// }
+// buildingObj();
+
+//Task 18
+
+function createStoreObj(){
+    var objNum = +prompt("Enter number of stores:");
+    var store = {};
+    for(let i = 0; i < objNum; i++){
+        store.name = prompt("Enter store's name:");
+        store.address = prompt("Enter store's address:");
+        store.divisions = +prompt("Divisions number:");
+        store.employees = +prompt("Employees amount:");
+        if(store.employees > 10){
+            document.body.innerHTML +=  `<h1>Store ${i + 1}</h1>
+            <p><b>Store's name:</b> ${store.name}</p>
+            <p><b>Store's address:</b> ${store.address}</p>
+            <p><b>Total divisions:</b> ${store.divisions}</p>
+            <p><b>Total employees:</b> ${store.employees}</p>`;
+        }
     }
 }
-buildingObj();11
+createStoreObj();
