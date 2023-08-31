@@ -423,19 +423,40 @@
 // }
 // createCompObj(2);
 
-//Task 38
-function createTeacherObj(objNum){
+// //Task 38
+// function createTeacherObj(objNum){
+//     for(let i = 0; i < objNum; i++){
+//         var teacherObj = {
+//             fullName: prompt("Teacher full name:"),
+//             hourPay: +prompt("Salary per hour:"),
+//             email: prompt("Email:"),
+//             birthYear: +prompt("Year of birth:")
+//         };
+//         if(teacherObj.hourPay > 100 || teacherObj.birthYear < 1990){
+//             document.body.innerHTML += `<span>${teacherObj.fullName},
+//              ${teacherObj.hourPay}, ${teacherObj.email}, ${teacherObj.birthYear}</span>`
+//         }
+//     }
+// }
+// createTeacherObj(2);
+
+//Task 39
+function furnitObj(objNum){
     for(let i = 0; i < objNum; i++){
-        var teacherObj = {
-            fullName: prompt("Teacher full name:"),
-            hourPay: +prompt("Salary per hour:"),
-            email: prompt("Email:"),
-            birthYear: +prompt("Year of birth:")
+        var furnitObj = {
+            furName: prompt("Furniture name:"),
+            furBrand: prompt("Brand:"),
+            storesArr: [
+                prompt("Stores to buy:"),
+                prompt("Stores to buy:"),
+                prompt("Stores to buy:")
+            ],
+            furPrice: +prompt("Price:")
         };
-        if(teacherObj.hourPay > 100 || teacherObj.birthYear < 1990){
-            document.body.innerHTML += `<span>${teacherObj.fullName},
-             ${teacherObj.hourPay}, ${teacherObj.email}, ${teacherObj.birthYear}</span>`
+        document.body.innerHTML += `<h1>${furnitObj.furName}</h1>`
+        for(let i = 0; i < furnitObj.storesArr.length; i++ ){
+            document.body.innerHTML += `<p>${furnitObj.storesArr[i]}</p>`
         }
     }
 }
-createTeacherObj(2);
+furnitObj(2);
