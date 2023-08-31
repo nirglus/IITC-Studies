@@ -62,7 +62,7 @@
 
 // //Task 9
 // function lotto(){
-//     var randomNum = Math.floor(Math.random * 57);
+//     var randomNum = Math.floor(Math.random() * 57);
 //     var userNumArr = [];
 //     for(let i = 0; i < 5; i++){
 //         var userNum = +prompt("Enter a number between 0 to 56:");
@@ -82,14 +82,14 @@
 function lotto2(){
     var userNumArr = [];
     var randomNumArr = [];
-    var randomNum = Math.floor(Math.random * 57);
+    var randomNum = Math.floor(Math.random() * 57);
     for(let i = 0; i < 5; i++){
         var userNum = +prompt("Enter a number between 0 to 56:");
         document.body.innerHTML += `<p><b>Number ${i+1}:</b> ${userNum}<p>`;
         userNumArr.push(userNum);
     }
     for(let i = 0; i < 5; i++){
-        randomNum = Math.floor(Math.random * 57);
+        randomNum = Math.floor(Math.random() * 57);
         document.body.innerHTML += `<p><b>Random Number ${i+1}:</b> ${randomNum}<p>`;
         if(userNumArr[i] == randomNum){
             randomNumArr.push(randomNum);
