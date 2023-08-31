@@ -32,3 +32,15 @@ function printNameFromInput(){
     var userName = document.getElementById("task6").value;
     document.body.innerHTML += `<h1>${userName}</h1>`;
 }
+
+//Task 7
+function changeBgPerTime(){
+    var myDate = new Date();
+    if(myDate.getHours() < 12){
+        document.body.style = "background-color: yellow";
+        document.body.innerHTML += "<h2>Good Day</h2>";
+    }else{
+        document.body.style = "background-color: blue";
+        document.body.innerHTML += "<h2>Good Night</h2>";
+    }
+}
