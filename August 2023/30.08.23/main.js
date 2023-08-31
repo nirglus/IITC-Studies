@@ -389,20 +389,20 @@
 // }
 // createBugsObj();
 
-//Task 36
-function createKidsObj(){
-    var kidsObj = {};
-    var userNum = +prompt("How many objects you want?");
-    for(let i = 0; i < userNum; i++){
-        kidsObj.fName = prompt("Kid's full name:");
-        kidsObj.age = +prompt("Kid's age:");
-        kidsObj.kidGarden = confirm("Is the kid in Kidden Garden?");
-        if(kidsObj.age > 4){
-            document.body.innerHTML += `<p>${kidsObj.fName}, ${kidsObj.age }, ${kidsObj.kidGarden}`;
-        }
-    }
-}
-createKidsObj();
+// //Task 36
+// function createKidsObj(){
+//     var kidsObj = {};
+//     var userNum = +prompt("How many objects you want?");
+//     for(let i = 0; i < userNum; i++){
+//         kidsObj.fName = prompt("Kid's full name:");
+//         kidsObj.age = +prompt("Kid's age:");
+//         kidsObj.kidGarden = confirm("Is the kid in Kidden Garden?");
+//         if(kidsObj.age > 4){
+//             document.body.innerHTML += `<p>${kidsObj.fName}, ${kidsObj.age }, ${kidsObj.kidGarden}`;
+//         }
+//     }
+// }
+// createKidsObj();
 
 
 // //Task 37
@@ -422,3 +422,20 @@ createKidsObj();
 //     }
 // }
 // createCompObj(2);
+
+//Task 38
+function createTeacherObj(objNum){
+    for(let i = 0; i < objNum; i++){
+        var teacherObj = {
+            fullName: prompt("Teacher full name:"),
+            hourPay: +prompt("Salary per hour:"),
+            email: prompt("Email:"),
+            birthYear: +prompt("Year of birth:")
+        };
+        if(teacherObj.hourPay > 100 || teacherObj.birthYear < 1990){
+            document.body.innerHTML += `<span>${teacherObj.fullName},
+             ${teacherObj.hourPay}, ${teacherObj.email}, ${teacherObj.birthYear}</span>`
+        }
+    }
+}
+createTeacherObj(2);
