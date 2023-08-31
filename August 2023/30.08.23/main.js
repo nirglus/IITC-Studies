@@ -461,26 +461,50 @@
 // }
 // furnitObj(2);
 
-//Task 40
-function apartObj(objNum){
-    for(let i = 0; i < objNum; i++){
-        var apartmentObj = {
-            address: prompt("Apartment address:"),
-            rentPrice: +prompt("Rent price:"),
-            fullPrice: +prompt("Full price"),
-            buyersArr: [
-                prompt("Pot. buyer name:"),
-                prompt("Pot. buyer name:"),
-                prompt("Pot. buyer name:"),
+// //Task 40
+// function apartObj(objNum){
+//     for(let i = 0; i < objNum; i++){
+//         var apartmentObj = {
+//             address: prompt("Apartment address:"),
+//             rentPrice: +prompt("Rent price:"),
+//             fullPrice: +prompt("Full price"),
+//             buyersArr: [
+//                 prompt("Pot. buyer name:"),
+//                 prompt("Pot. buyer name:"),
+//                 prompt("Pot. buyer name:"),
+//             ],
+//             middleMan: confirm("Is there a middleman?")
+//         };
+//         if(apartmentObj.middleMan == false){
+//             document.body.innerHTML += `<p>${apartmentObj.address}</p>`;
+//             for(let i = 0; i < apartmentObj.buyersArr.length; i++ ){
+//                 document.body.innerHTML += `<p>${apartmentObj.buyersArr[i]}</p>`
+//             }
+//         }
+//     }
+// }
+// apartObj(2);
+
+//Task 41
+function countriesObj(){
+    var userNum = +prompt("How many objects you want?");
+    for (let i = 0; i < userNum; i++){
+        var countryObj ={
+            cName: prompt("Country name:"),
+            citizen: +prompt("Citizen:"),
+            citiesArr: [
+                prompt("City name:"),
+                prompt("City name:"),
+                prompt("City name:")
             ],
-            middleMan: confirm("Is there a middleman?")
+            habad: confirm("Is there Beit Habad in this country?")
         };
-        if(apartmentObj.middleMan == false){
-            document.body.innerHTML += `<p>${apartmentObj.address}</p>`;
-            for(let i = 0; i < apartmentObj.buyersArr.length; i++ ){
-                document.body.innerHTML += `<p>${apartmentObj.buyersArr[i]}</p>`
+        if(countryObj.habad){
+            document.body.innerHTML += `<h1>${countryObj.cName}</h1>`;
+            for(let i = 0; i < countryObj.citiesArr.length; i++ ){
+                document.body.innerHTML += `<p>${countryObj.citiesArr[i]}</p>`
             }
         }
     }
 }
-apartObj(2);
+countriesObj();
