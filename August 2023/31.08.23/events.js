@@ -28,4 +28,7 @@ function changeText(){
 }
 
 //Task 6
-function  
+function printNameFromInput(){
+    var userName = document.getElementById("task6").value;
+    document.body.innerHTML += `<h1>${userName}</h1>`;
+}
