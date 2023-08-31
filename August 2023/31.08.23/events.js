@@ -60,20 +60,44 @@
 //     document.body.style = `background-color: green`;
 // }
 
-//Task 9
-function lotto(){
-    var randomNum = Math.floor(Math.random * 57);
+// //Task 9
+// function lotto(){
+//     var randomNum = Math.floor(Math.random * 57);
+//     var userNumArr = [];
+//     for(let i = 0; i < 5; i++){
+//         var userNum = +prompt("Enter a number between 0 to 56:");
+//         document.body.innerHTML += `${userNum}`;
+//         userNumArr.push(userNum);
+//     }
+//     for(let i = 0; i < userNumArr.length; i++){
+//         if(userNumArr[i] == randomNum){
+//             document.body.innerHTML += `<h1>Success!</h1>`;
+//             return;
+//         }
+//     }
+//     document.body.innerHTML += `<h1>Uh oh! You lost!</h1>`;
+// }
+
+//Task 10
+function lotto2(){
     var userNumArr = [];
+    var randomNumArr = [];
+    var randomNum = Math.floor(Math.random * 57);
     for(let i = 0; i < 5; i++){
         var userNum = +prompt("Enter a number between 0 to 56:");
-        document.body.innerHTML += `${userNum}`;
+        document.body.innerHTML += `<p><b>Number ${i+1}:</b> ${userNum}<p>`;
         userNumArr.push(userNum);
     }
-    for(let i = 0; i < userNumArr.length; i++){
+    for(let i = 0; i < 5; i++){
+        randomNum = Math.floor(Math.random * 57);
+        document.body.innerHTML += `<p><b>Random Number ${i+1}:</b> ${randomNum}<p>`;
         if(userNumArr[i] == randomNum){
-            document.body.innerHTML += `<h1>Success!</h1>`;
-            return;
+            randomNumArr.push(randomNum);
         }
     }
-    document.body.innerHTML += `<h1>Uh oh! You lost!</h1>`;
+    if(randomNumArr.length > 0){
+        document.body.innerHTML += `<h1>Success!</h1>`;
+    }else{
+        document.body.innerHTML += `<h1>Uh oh! You lost!</h1>`;
+    }
 }
