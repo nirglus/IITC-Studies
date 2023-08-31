@@ -331,17 +331,29 @@
 // <div id="email">${userObj.email}</div>
 // <div id="pass">${userObj.password}</div>`;
 
-//Task 32
-var carsObj = {};
-document.body.innerHTML += `<table>
-<thead><th>Car Company</th><th>Color</th><th>CC</th><th>Year</th></thead>
-<tbody id="myTBody"></tbody></table>`;
-for(let i = 0; i < 4; i++){
-    carsObj.cName = prompt("Car name:");
-    carsObj.color = prompt("Car color:");
-    carsObj.cc = prompt("Engine CC:");
-    carsObj.year = +prompt("Model Year:");
-    document.getElementById("myTBody").innerHTML += `<tr><td>${carsObj.cName}</td>
-    <td>${carsObj.color}</td><td>${carsObj.cc}</td><td>${carsObj.year}</td></tr>`
-}
+// //Task 32
+// var carsObj = {};
+// document.body.innerHTML += `<table>
+// <thead><th>Car Company</th><th>Color</th><th>CC</th><th>Year</th></thead>
+// <tbody id="myTBody"></tbody></table>`;
+// for(let i = 0; i < 4; i++){
+//     carsObj.cName = prompt("Car name:");
+//     carsObj.color = prompt("Car color:");
+//     carsObj.cc = prompt("Engine CC:");
+//     carsObj.year = +prompt("Model Year:");
+//     document.getElementById("myTBody").innerHTML += `<tr><td>${carsObj.cName}</td>
+//     <td>${carsObj.color}</td><td>${carsObj.cc}</td><td>${carsObj.year}</td></tr>`
+// }
 
+//Task 33
+function createCatObj(){
+    var catObj = {};
+    for(let i = 0; i < 2; i++){
+        catObj.name = prompt("Cat's name:");
+        catObj.year = +prompt("Year of birth:");
+        catObj.breed = prompt("Breed:");
+        catObj.weight = +prompt("Cat's weight:");
+        document.body.innerHTML += `<h1>${catObj.name}, ${catObj.year}, ${catObj.breed}, ${catObj.weight}</h1>`
+    }
+}
+createCatObj();
