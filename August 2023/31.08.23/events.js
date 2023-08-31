@@ -45,17 +45,35 @@
 //     }
 // }
 
-//Task 8
-function setAge(){
-    var age = +prompt("What's your age?");
-    if(age > 18){
-        document.body.innerHTML += `<h1 id="welcome" onmouseover = "colorChangeHov()">Welcome!</h1>`;
-        document.body.style = `background-color: red`;
-    }else{
-        document.body.innerHTML += `<h1 id="welcome" onmouseover = "colorChangeHov()">Welcome!</h1>`;
-        document.body.style = `background-color: blue`;
+// //Task 8
+// function setAge(){
+//     var age = +prompt("What's your age?");
+//     if(age > 18){
+//         document.body.innerHTML += `<h1 id="welcome" onmouseover = "colorChangeHov()">Welcome!</h1>`;
+//         document.body.style = `background-color: red`;
+//     }else{
+//         document.body.innerHTML += `<h1 id="welcome" onmouseover = "colorChangeHov()">Welcome!</h1>`;
+//         document.body.style = `background-color: blue`;
+//     }
+// }
+// function colorChangeHov(){
+//     document.body.style = `background-color: green`;
+// }
+
+//Task 9
+function lotto(){
+    var randomNum = Math.floor(Math.random * 57);
+    var userNumArr = [];
+    for(let i = 0; i < 5; i++){
+        var userNum = +prompt("Enter a number between 0 to 56:");
+        document.body.innerHTML += `${userNum}`;
+        userNumArr.push(userNum);
     }
-}
-function colorChangeHov(){
-    document.body.style = `background-color: green`;
+    for(let i = 0; i < userNumArr.length; i++){
+        if(userNumArr[i] == randomNum){
+            document.body.innerHTML += `<h1>Success!</h1>`;
+            return;
+        }
+    }
+    document.body.innerHTML += `<h1>Uh oh! You lost!</h1>`;
 }
