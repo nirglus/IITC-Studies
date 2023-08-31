@@ -440,23 +440,47 @@
 // }
 // createTeacherObj(2);
 
-//Task 39
-function furnitObj(objNum){
+// //Task 39
+// function furnitObj(objNum){
+//     for(let i = 0; i < objNum; i++){
+//         var furnitObj = {
+//             furName: prompt("Furniture name:"),
+//             furBrand: prompt("Brand:"),
+//             storesArr: [
+//                 prompt("Stores to buy:"),
+//                 prompt("Stores to buy:"),
+//                 prompt("Stores to buy:")
+//             ],
+//             furPrice: +prompt("Price:")
+//         };
+//         document.body.innerHTML += `<h1>${furnitObj.furName}</h1>`
+//         for(let i = 0; i < furnitObj.storesArr.length; i++ ){
+//             document.body.innerHTML += `<p>${furnitObj.storesArr[i]}</p>`
+//         }
+//     }
+// }
+// furnitObj(2);
+
+//Task 40
+function apartObj(objNum){
     for(let i = 0; i < objNum; i++){
-        var furnitObj = {
-            furName: prompt("Furniture name:"),
-            furBrand: prompt("Brand:"),
-            storesArr: [
-                prompt("Stores to buy:"),
-                prompt("Stores to buy:"),
-                prompt("Stores to buy:")
+        var apartmentObj = {
+            address: prompt("Apartment address:"),
+            rentPrice: +prompt("Rent price:"),
+            fullPrice: +prompt("Full price"),
+            buyersArr: [
+                prompt("Pot. buyer name:"),
+                prompt("Pot. buyer name:"),
+                prompt("Pot. buyer name:"),
             ],
-            furPrice: +prompt("Price:")
+            middleMan: confirm("Is there a middleman?")
         };
-        document.body.innerHTML += `<h1>${furnitObj.furName}</h1>`
-        for(let i = 0; i < furnitObj.storesArr.length; i++ ){
-            document.body.innerHTML += `<p>${furnitObj.storesArr[i]}</p>`
+        if(apartmentObj.middleMan == false){
+            document.body.innerHTML += `<p>${apartmentObj.address}</p>`;
+            for(let i = 0; i < apartmentObj.buyersArr.length; i++ ){
+                document.body.innerHTML += `<p>${apartmentObj.buyersArr[i]}</p>`
+            }
         }
     }
 }
-furnitObj(2);
+apartObj(2);
