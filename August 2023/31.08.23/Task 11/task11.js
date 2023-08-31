@@ -26,7 +26,11 @@ function overAge(){
     for(let i = 0; i < 4; i++){
         var fName = prompt("Enter first name:");
         fNamesArr.push(fName);
-        document.getElementById("nameList").innerHTML += `<li>${fName} ${lName}</li`
+        document.getElementById("nameList").innerHTML += `<li>
+        <span>${fName}</span> ${lName}</li>`;
+        if(fName.charAt(0) == lName.charAt(0)){
+            document.getElementsByTagName("span").style.color = "red";
+        }
     }
 }
 

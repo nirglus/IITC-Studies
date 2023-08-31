@@ -372,31 +372,37 @@
 // }
 // createDogObj();
 
-// //Task 35
-// function createBugsObj(){
-//     var bugsObj = {};
-//     var userNum = +prompt("How many objects you want?");
-//     for(let i = 0; i < userNum; i++){
-//         bugsObj.name = prompt("Bug's name:");
-//         bugsObj.labName = prompt("Bug's labaratory name:");
-//         bugsObj.legNum = +prompt("Leg number:");
-//     }
-// }
-
-//Task 37
-function createCompObj(objNum){
-    var compObj = {};
-    var compObjArr = [];
-    for(let i = 0; i < objNum; i++){
-        compObj.company = prompt("Company:");
-        compObj.model = prompt("Model:");
-        compObj.weight = +prompt("Weight:");
-        compObj.inStock = confirm("Is this model in stock?");
-        compObjArr.push(compObj);
-        if(compObj[i].inStock && compObj[i].weight > 2){
-            document.body.innerHTML += `<p>${compObj[i].company}, ${compObj[i].model},
-             ${compObj[i].weight}, ${compObj[i].inStock}</p>`
+//Task 35
+function createBugsObj(){
+    var bugsObj = {};
+    var userNum = +prompt("How many objects you want?");
+    for(let i = 0; i < userNum; i++){
+        bugsObj.name = prompt("Bug's name:");
+        bugsObj.labName = prompt("Bug's labaratory name:");
+        bugsObj.legNum = +prompt("Leg number:");
+        bugsObj.wings = confirm("It has wings?");
+        if(bugsObj.wings){
+            document.body.innerHTML += `<h3>${bugsObj.name}, ${bugsObj.labName}, 
+            ${bugsObj.legNum }, ${bugsObj.wings}</h3>`;
         }
     }
 }
-createCompObj(2);
+createBugsObj();
+
+// //Task 37
+// function createCompObj(objNum){
+//     var compObj = {};
+//     var compObjArr = [];
+//     for(let i = 0; i < objNum; i++){
+//         compObj.company = prompt("Company:");
+//         compObj.model = prompt("Model:");
+//         compObj.weight = +prompt("Weight:");
+//         compObj.inStock = confirm("Is this model in stock?");
+//         compObjArr.push(compObj);
+//         if(compObj[i].inStock && compObj[i].weight > 2){
+//             document.body.innerHTML += `<p>${compObj[i].company}, ${compObj[i].model},
+//              ${compObj[i].weight}, ${compObj[i].inStock}</p>`
+//         }
+//     }
+// }
+// createCompObj(2);
