@@ -346,14 +346,28 @@
 // }
 
 //Task 33
-function createCatObj(){
-    var catObj = {};
-    for(let i = 0; i < 2; i++){
-        catObj.name = prompt("Cat's name:");
-        catObj.year = +prompt("Year of birth:");
-        catObj.breed = prompt("Breed:");
-        catObj.weight = +prompt("Cat's weight:");
-        document.body.innerHTML += `<h1>${catObj.name}, ${catObj.year}, ${catObj.breed}, ${catObj.weight}</h1>`
+// function createCatObj(){
+//     var catObj = {};
+//     for(let i = 0; i < 2; i++){
+//         catObj.name = prompt("Cat's name:");
+//         catObj.year = +prompt("Year of birth:");
+//         catObj.breed = prompt("Breed:");
+//         catObj.weight = +prompt("Cat's weight:");
+//         document.body.innerHTML += `<h1>${catObj.name}, ${catObj.year}, ${catObj.breed}, ${catObj.weight}</h1>`;
+//     }
+// }
+// createCatObj();
+
+//Task 34
+function createDogObj(){
+    var dogObj ={};
+    var userNum = +prompt("How many objects you want?");
+    for(let i = 0; i < userNum; i++){
+        dogObj.name = prompt("Dog's name:");
+        dogObj.age = +prompt("Dog's age:");
+        dogObj.breed = prompt("Breed:");
+        dogObj.owner = prompt("Owner's name:");
+        document.body.innerHTML += `<p>${dogObj.name}, ${dogObj.age}, ${dogObj.breed}, ${dogObj.owner}</p>`;
     }
 }
-createCatObj();
+createDogObj();
