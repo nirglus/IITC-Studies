@@ -372,22 +372,38 @@
 // }
 // createDogObj();
 
-//Task 35
-function createBugsObj(){
-    var bugsObj = {};
+// //Task 35
+// function createBugsObj(){
+//     var bugsObj = {};
+//     var userNum = +prompt("How many objects you want?");
+//     for(let i = 0; i < userNum; i++){
+//         bugsObj.name = prompt("Bug's name:");
+//         bugsObj.labName = prompt("Bug's labaratory name:");
+//         bugsObj.legNum = +prompt("Leg number:");
+//         bugsObj.wings = confirm("It has wings?");
+//         if(bugsObj.wings){
+//             document.body.innerHTML += `<h3>${bugsObj.name}, ${bugsObj.labName}, 
+//             ${bugsObj.legNum }, ${bugsObj.wings}</h3>`;
+//         }
+//     }
+// }
+// createBugsObj();
+
+//Task 36
+function createKidsObj(){
+    var kidsObj = {};
     var userNum = +prompt("How many objects you want?");
     for(let i = 0; i < userNum; i++){
-        bugsObj.name = prompt("Bug's name:");
-        bugsObj.labName = prompt("Bug's labaratory name:");
-        bugsObj.legNum = +prompt("Leg number:");
-        bugsObj.wings = confirm("It has wings?");
-        if(bugsObj.wings){
-            document.body.innerHTML += `<h3>${bugsObj.name}, ${bugsObj.labName}, 
-            ${bugsObj.legNum }, ${bugsObj.wings}</h3>`;
+        kidsObj.fName = prompt("Kid's full name:");
+        kidsObj.age = +prompt("Kid's age:");
+        kidsObj.kidGarden = confirm("Is the kid in Kidden Garden?");
+        if(kidsObj.age > 4){
+            document.body.innerHTML += `<p>${kidsObj.fName}, ${kidsObj.age }, ${kidsObj.kidGarden}`;
         }
     }
 }
-createBugsObj();
+createKidsObj();
+
 
 // //Task 37
 // function createCompObj(objNum){
