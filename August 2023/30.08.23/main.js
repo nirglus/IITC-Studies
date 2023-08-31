@@ -358,16 +358,45 @@
 // }
 // createCatObj();
 
-//Task 34
-function createDogObj(){
-    var dogObj ={};
-    var userNum = +prompt("How many objects you want?");
-    for(let i = 0; i < userNum; i++){
-        dogObj.name = prompt("Dog's name:");
-        dogObj.age = +prompt("Dog's age:");
-        dogObj.breed = prompt("Breed:");
-        dogObj.owner = prompt("Owner's name:");
-        document.body.innerHTML += `<p>${dogObj.name}, ${dogObj.age}, ${dogObj.breed}, ${dogObj.owner}</p>`;
+// //Task 34
+// function createDogObj(){
+//     var dogObj ={};
+//     var userNum = +prompt("How many objects you want?");
+//     for(let i = 0; i < userNum; i++){
+//         dogObj.name = prompt("Dog's name:");
+//         dogObj.age = +prompt("Dog's age:");
+//         dogObj.breed = prompt("Breed:");
+//         dogObj.owner = prompt("Owner's name:");
+//         document.body.innerHTML += `<p>${dogObj.name}, ${dogObj.age}, ${dogObj.breed}, ${dogObj.owner}</p>`;
+//     }
+// }
+// createDogObj();
+
+// //Task 35
+// function createBugsObj(){
+//     var bugsObj = {};
+//     var userNum = +prompt("How many objects you want?");
+//     for(let i = 0; i < userNum; i++){
+//         bugsObj.name = prompt("Bug's name:");
+//         bugsObj.labName = prompt("Bug's labaratory name:");
+//         bugsObj.legNum = +prompt("Leg number:");
+//     }
+// }
+
+//Task 37
+function createCompObj(objNum){
+    var compObj = {};
+    var compObjArr = [];
+    for(let i = 0; i < objNum; i++){
+        compObj.company = prompt("Company:");
+        compObj.model = prompt("Model:");
+        compObj.weight = +prompt("Weight:");
+        compObj.inStock = confirm("Is this model in stock?");
+        compObjArr.push(compObj);
+        if(compObj[i].inStock && compObj[i].weight > 2){
+            document.body.innerHTML += `<p>${compObj[i].company}, ${compObj[i].model},
+             ${compObj[i].weight}, ${compObj[i].inStock}</p>`
+        }
     }
 }
-createDogObj();
+createCompObj(2);
