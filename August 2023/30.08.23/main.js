@@ -509,22 +509,49 @@
 // }
 // countriesObj();
 
-//Task 42
-function creatMovObj(){
-    var userNum = +prompt("How many objects you want?");
-    for(let i = 0; i < userNum; i++){
-        var movObj = {
-            movName: prompt("Movie name:"),
-            views: +prompt("Views:"),
-            year: +prompt("Year:"),
+// //Task 42
+// function creatMovObj(){
+//     var userNum = +prompt("How many objects you want?");
+//     for(let i = 0; i < userNum; i++){
+//         var movObj = {
+//             movName: prompt("Movie name:"),
+//             views: +prompt("Views:"),
+//             year: +prompt("Year:"),
+//             image: prompt("Image URL:")
+//         }
+//         document.body.innerHTML += `<div class="movie">
+//             <h1>${movObj.movName}</h1>
+//             <p><b>Views: </b>${movObj.views}</p>
+//             <p><b>Year: </b>${movObj.year}</p>
+//             <img src="${movObj.image}" width="300">
+//         </div>`
+//     }
+// }
+// creatMovObj();
+
+//Task 43
+function creatUserObj(){
+    var userArr = [];
+    for(let i = 0; i < 2; i++){
+        var userObj = {
+            userName: prompt("User name:"),
+            email: prompt("Email:"),
+            password: prompt("Password:"),
             image: prompt("Image URL:")
         }
-        document.body.innerHTML += `<div class="movie">
-            <h1>${movObj.movName}</h1>
-            <p><b>Views: </b>${movObj.views}</p>
-            <p><b>Year: </b>${movObj.year}</p>
-            <img src="${movObj.image}" width="300">
-        </div>`
+        userArr.push(userObj);
+    }
+    if(userArr[0].email == userArr[1].email){
+        document.body.innerHTML += `The emails are the same`
+    }else{
+        for(let i = 0; i < 2; i++){
+            document.body.innerHTML += `<div class="user">
+                <h1>${userArr[i].userName}</h1>
+                <p><b>Email: </b>${userArr[i].email}</p>
+                <p><b>Password: </b>${userArr[i].password}</p>
+                <img src="${userArr[i].image}" width="300">
+            </div>`
+        }
     }
 }
-creatMovObj();
+creatUserObj();
