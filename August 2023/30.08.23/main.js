@@ -485,26 +485,46 @@
 // }
 // apartObj(2);
 
-//Task 41
-function countriesObj(){
+// //Task 41
+// function countriesObj(){
+//     var userNum = +prompt("How many objects you want?");
+//     for (let i = 0; i < userNum; i++){
+//         var countryObj ={
+//             cName: prompt("Country name:"),
+//             citizen: +prompt("Citizen:"),
+//             citiesArr: [
+//                 prompt("City name:"),
+//                 prompt("City name:"),
+//                 prompt("City name:")
+//             ],
+//             habad: confirm("Is there Beit Habad in this country?")
+//         };
+//         if(countryObj.habad){
+//             document.body.innerHTML += `<h1>${countryObj.cName}</h1>`;
+//             for(let i = 0; i < countryObj.citiesArr.length; i++ ){
+//                 document.body.innerHTML += `<p>${countryObj.citiesArr[i]}</p>`
+//             }
+//         }
+//     }
+// }
+// countriesObj();
+
+//Task 42
+function creatMovObj(){
     var userNum = +prompt("How many objects you want?");
-    for (let i = 0; i < userNum; i++){
-        var countryObj ={
-            cName: prompt("Country name:"),
-            citizen: +prompt("Citizen:"),
-            citiesArr: [
-                prompt("City name:"),
-                prompt("City name:"),
-                prompt("City name:")
-            ],
-            habad: confirm("Is there Beit Habad in this country?")
-        };
-        if(countryObj.habad){
-            document.body.innerHTML += `<h1>${countryObj.cName}</h1>`;
-            for(let i = 0; i < countryObj.citiesArr.length; i++ ){
-                document.body.innerHTML += `<p>${countryObj.citiesArr[i]}</p>`
-            }
+    for(let i = 0; i < userNum; i++){
+        var movObj = {
+            movName: prompt("Movie name:"),
+            views: +prompt("Views:"),
+            year: +prompt("Year:"),
+            image: prompt("Image URL:")
         }
+        document.body.innerHTML += `<div class="movie">
+            <h1>${movObj.movName}</h1>
+            <p><b>Views: </b>${movObj.views}</p>
+            <p><b>Year: </b>${movObj.year}</p>
+            <img src="${movObj.image}" width="300">
+        </div>`
     }
 }
-countriesObj();
+creatMovObj();
