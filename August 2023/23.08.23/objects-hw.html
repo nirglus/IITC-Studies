@@ -306,7 +306,7 @@
         //Task 31
         function printLocation(){
             var userDate = new Date();
-            console.log(userDate.toString());
+            document.body.innerHTML += `${userDate.toString()}`;
         }
         printLocation();
 
@@ -316,7 +316,7 @@
             var randomMonth = Math.floor(Math.random()*12);
             var randomDay = Math.floor(Math.random()*31);
             var randomDate = new Date(randomYear, randomMonth, randomDay);
-            console.log(randomDate);
+            document.body.innerHTML += `${randomDate}`;
         }
         createRandomDate();
 
@@ -347,7 +347,7 @@
             }
             return max;
         }
-        console.log(checkValueLength(keyValue));
+        document.body.innerHTML += `${checkValueLength(keyValue)}`;
 
         //Task 34
         var keyValue = "car:wheels,door:house,key:key,lorem:ipsumisus";
