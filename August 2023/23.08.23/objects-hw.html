@@ -574,17 +574,21 @@
         //Task 60+61
         function checkApiInName(fName, lName){
             if(fName.includes("a") && lName.includes("api")){
-                console.log("First name includes 'a'");
-                console.log("Last name includes 'api'");
+                document.body.innerHTML += `
+                <p>First name includes 'a'</p>
+                <p>Last name includes 'api'</p>`;
             }else if(fName.includes("a") == false && lName.includes("api")){
-                console.log("First name does not include 'a'");
-                console.log("Last name includes 'api'");
+                document.body.innerHTML += `
+                <p>First name does not include 'a'</p>
+                <p>Last name includes 'api'</p>`;
             }else if(fName.includes("a") && lName.includes("api") == false){
-                console.log("First name includes 'a'");
-                console.log("Last name does not include 'api'");
+                document.body.innerHTML += `
+                <p>First name includes 'a'</p>
+                <p>Last name does not include 'api'</p>`;
             }else{
-                console.log("First name does not include 'a'");
-                console.log("Last name does not include 'api'");
+                document.body.innerHTML += `
+                <p>First name does not include 'a'</p>
+                <p>Last name does not include 'api'</p>`;
             }
         }
         checkApiInName("Dana","apinston");
