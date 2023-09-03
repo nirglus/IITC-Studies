@@ -515,13 +515,13 @@
         function getFourCharsAfterY(strParam){
             return strParam.substring(strParam.indexOf("y"), strParam.indexOf("y") + 5);
         }
-        console.log(getFourCharsAfterY(strParam));
+        document.body.innerHTML += `${getFourCharsAfterY(strParam)}`;
 
         //Task 55
         function getOChar(strParam){
             return strParam.substring(strParam.indexOf("o"), strParam.length + 1);
         }
-        console.log(getOChar(strParam));
+        document.body.innerHTML += `${getOChar(strParam)}`;
 
         //Task 56
         function printFullName(){
