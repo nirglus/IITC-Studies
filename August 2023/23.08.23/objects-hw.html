@@ -9,10 +9,11 @@
     <script>
         //Task 1
         function printLetters(userString){
-            for(var i = 0; i < string.length; i++){
-                console.log(string[i]);
+            for(var i = 0; i < userString.length; i++){
+                document.body.innerHTML += `${userString[i]}<br>`
             }
         }
+        printLetters("hello there");
 
         //Task 2
         function getStringLetterIndex(userString){

@@ -34,9 +34,25 @@ function overAge(){
             document.getElementById(spanId).style.color = "red";
         }
     }
+    buttonForSearch();
 }
 
 
 function colorChangeHov(){
     document.getElementById("welcome").style = `color: green`;
 }
+
+function createSearchInput(){
+    document.body.innerHTML += `
+    <input type = "text" id="search" oninput="getSearchValue()">`
+}
+function getSearchValue(){
+    var userValue = document.getElementById("search").value;
+    document.body.innerHTML += `<p>${userValue}</p>`;
+}
+
+function buttonForSearch(){
+    document.body.innerHTML += `
+    <button id="searchBtn" onclick="createSearchInput()">Click for search</button>`
+}
+
