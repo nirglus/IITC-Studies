@@ -473,13 +473,13 @@
         function getFourCharsAfterY(strParam){
             return strParam.substr(strParam.indexOf("y"), strParam.indexOf("y") + 3);
         }
-        console.log(getFourCharsAfterY(strParam));
+        document.body.innerHTML += `${getFourCharsAfterY(strParam)}`;
 
         //Task 46
         function getOChar(strParam){
             return strParam.substr(strParam.indexOf("o"), strParam.length);
         }
-        console.log(getOChar(strParam));
+        document.body.innerHTML += `${getOChar(strParam)}`;
 
         //Task 47
         function checkStringLength(strParam, charIndex){
