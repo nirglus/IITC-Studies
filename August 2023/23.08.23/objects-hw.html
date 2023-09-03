@@ -629,20 +629,20 @@
         //Task 68
         function checkWhosShorter(lName1, lName2){
             if(lName1.length > lName2.length){
-                console.log(lName2.toLowerCase());
+                document.body.innerHTML += `${lName2.toLowerCase()}`;
                 return lName1;
             }
-            console.log(lName1.toLowerCase());
+            document.body.innerHTML += `${lName1.toLowerCase()}`;
             return lName2;
         }
-        checkWhosShorter("JACKSON", "LEVI");
+        document.body.innerHTML += `${"JACKSON", "LEVI"}`;
 
         //Task 69
         function checkIfCharIncluded(char, strParam){
             if(strParam.includes(char)){
                 return strParam;
             }
-            console.log("The character is not included in this name.");
+            document.body.innerHTML += `${"The character is not included in this name."}`;
         }
 
         //Task 70
