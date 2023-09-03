@@ -53,9 +53,9 @@
         function lastNameYesNo(lastName){
             var i = lastName.length - 1;
             if(lastName.charAt(i) == "E"){
-                console.log("Yes");
+                document.body.innerHTML += "Yes";
             }else{
-                console.log("No");
+                document.body.innerHTML += "No";
             }
         }
         lastNameYesNo("Gluskin");
