@@ -7,3 +7,4 @@ var imgArr = [
     "https://media.contentapi.ea.com/content/dam/ea/f1/f1-23/common/articles/patch-note-v109/pj-f123-bel-w01-rus.jpg.adapt.1456w.jpg"
 
 ];
+document.body.innerHTML += `<img src="${imgArr[0]}">`
