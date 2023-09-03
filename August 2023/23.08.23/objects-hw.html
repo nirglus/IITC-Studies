@@ -532,14 +532,14 @@
                 if(i == fullName.indexOf(" ")){
                     fName = fullName.substring(0, i);
                     lName = fullName.substring(i + 1, fullName.length);
-                    console.log("There are " + fullName.length + " characters, and there is space in the string.");
-                    console.log(fName);
-                    console.log(lName);
+                    document.body.innerHTML += `There are ${fullName.length} characters, and there is space in the string.`;
+                    document.body.innerHTML += `${fName}`;
+                    document.body.innerHTML += `${lName}`;
                     return;
                 }
             }
-            console.log("There are "+fullName.length+ " characters, there is no space between.");
-            console.log(fullName);
+            document.body.innerHTML += `There are ${fullName.length} characters, there is no space between.`;
+            document.body.innerHTML += `${fullName}`;
             return;
         }
         printFullName();
