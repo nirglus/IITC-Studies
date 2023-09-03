@@ -456,9 +456,9 @@
         function searchPringIndexChar(char, strParam){
             var charContains = searchForChar(char,strParam);
             if(charContains){
-                console.log(strParam.lastIndexOf(char));
+                document.body.innerHTML += `${strParam.lastIndexOf(char)}`;
             } else{
-                console.log("The char cannot be found in the string.");
+                document.body.innerHTML += `The char cannot be found in the string.`;
             }
         }
 
