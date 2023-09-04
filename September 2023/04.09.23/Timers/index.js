@@ -43,3 +43,11 @@ function changeColor(){
     <h1 style="color:red">Task 5</h1>`;
 }
 setTimeout(changeColor, 3000);
+
+// ------------------ setInterval Tasks -----------------
+
+//Task 1
+function printTimer(){
+    document.body.innerHTML += `timer`;
+}
+setInterval(printTimer, 4000);
