@@ -51,3 +51,10 @@ function printTimer(){
     document.body.innerHTML += `timer`;
 }
 setInterval(printTimer, 4000);
+
+//Task 2
+var counter = 0;
+function printCounter(){
+    document.body.innerHTML = `${counter++}`;
+}
+setInterval(printCounter, 6000);
