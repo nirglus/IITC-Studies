@@ -16,3 +16,10 @@ var currentTime = document.getElementById("timeDiv");
 currentTime.addEventListener("mouseover", function(){
     currentTime.innerHTML = `${hours}:${min}:${sec}`;
 });
+
+//Task 3
+document.body.innerHTML += `
+<h3>This is h3</h3>`;
+document.getElementsByTagName("h3")[0].addEventListener("mouseover", function(){
+    document.getElementsByTagName("h3")[0].style.color = "purple";
+})
