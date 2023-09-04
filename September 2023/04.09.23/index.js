@@ -23,11 +23,3 @@ document.body.innerHTML += `
 document.getElementsByTagName("h3")[0].addEventListener("mouseover", function(){
     document.getElementsByTagName("h3")[0].style.color = "purple";
 })
-
-//Task 4
-document.body.innerHTML += `
-<button id="myBtn">Button</button>
-<p id="myPara">Hover me to make button wider</p>`;
-document.getElementById("myPara").addEventListener("mouseover", function(){
-    document.getElementById("myBtn").style = "width: 600px";
-})
