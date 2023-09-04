@@ -70,12 +70,23 @@
 //     clearTimeout(cancel);
 // }
 
-//Task 4
-function printTime(){
-    var date = new Date();
-    var hours = date.getHours();
-    var min = date.getMinutes();
-    var sec = date.getSeconds();
-    document.body.innerHTML = `${hours}:${min}:${sec}`;
+// //Task 4
+// function printTime(){
+//     var date = new Date();
+//     var hours = date.getHours();
+//     var min = date.getMinutes();
+//     var sec = date.getSeconds();
+//     document.body.innerHTML = `${hours}:${min}:${sec}`;
+// }
+// setInterval(printTime, 1000);
+
+//Task 5
+document.body.innerHTML = `<input id="min" type="number" placeholder="Enter minutes"
+onchange="getUserMin(value)">`
+function getUserMin(userMin){
+    return userMin;
 }
-setInterval(printTime, 1000);
+
+function createTimer(){
+
+}
