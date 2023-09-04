@@ -59,13 +59,23 @@
 // }
 // setInterval(printCounter, 6000);
 
-//Task 3
-document.body.innerHTML += `
-<button onclick="cancelPrint()">Cancel</button>`;
-function printLove(){
-    document.body.innerHTML += `I love timers`
+// //Task 3
+// document.body.innerHTML += `
+// <button onclick="cancelPrint()">Cancel</button>`;
+// function printLove(){
+//     document.body.innerHTML += `I love timers`
+// }
+// var cancel = setInterval(printLove, 5000);
+// function cancelPrint(){
+//     clearTimeout(cancel);
+// }
+
+//Task 4
+function printTime(){
+    var date = new Date();
+    var hours = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+    document.body.innerHTML = `${hours}:${min}:${sec}`;
 }
-var cancel = setInterval(printLove, 5000);
-function cancelPrint(){
-    clearTimeout(cancel);
-}
+setInterval(printTime, 1000);
