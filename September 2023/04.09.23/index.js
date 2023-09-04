@@ -23,3 +23,5 @@ document.body.innerHTML += `
 document.getElementsByTagName("h3")[0].addEventListener("mouseover", function(){
     document.getElementsByTagName("h3")[0].style.color = "purple";
 })
+
+console.log("Test");
