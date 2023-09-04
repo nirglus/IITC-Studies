@@ -13,3 +13,13 @@ function printHello(){
 setTimeout(printHello, 5000);
 document.body.innerHTML = `
 <h1>Bye</h1>`;
+
+//Task 3
+function printTime(){
+    var date = new Date();
+    var hours = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+    document.body.innerHTML = `${hours},${min},${sec}`;
+}
+setTimeout(printTime, 90000);
