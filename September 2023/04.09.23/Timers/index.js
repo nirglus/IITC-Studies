@@ -34,3 +34,12 @@ var cancel = setTimeout(printLove, 10000);
 function cancelPrint(){
     clearTimeout(cancel);
 }
+
+//Task 5
+document.body.innerHTML = `
+<h1 style="color:blue">Task 5</h1>`;
+function changeColor(){
+    document.body.innerHTML = `
+    <h1 style="color:red">Task 5</h1>`;
+}
+setTimeout(changeColor, 3000);
