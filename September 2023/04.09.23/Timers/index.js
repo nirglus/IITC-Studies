@@ -80,27 +80,64 @@
 // }
 // setInterval(printTime, 1000);
 
-//Task 5
-document.body.innerHTML = `<input id="min" type="number" placeholder="Enter minutes"
-onchange="getUserMin(value)">
-<button id="start">Start</button>`
-function getUserMin(userMin){
-    return userMin;
-}
-var counter = 0;
-var userMin = getUserMin(value);
-function createTimer(){
-    counter = 60;
-    document.body.innerHTML = `${userMin}:${--counter}`
-    if(counter == 0){
-        counter = 60;
-        --userMin;
-    } else if(userMin == 0 && counter == 0){
-        document.body.innerHTML = `TIME IS OVER!`
-    }
+// //Task 5
+// document.body.innerHTML = `<input id="min" type="number" placeholder="Enter minutes"
+// onchange="getUserMin(value)">
+// <button id="start">Start</button>`
+// function getUserMin(userMin){
+//     return userMin;
+// }
+// var counter = 0;
+// var userMin = getUserMin(value);
+// function createTimer(){
+//     counter = 60;
+//     document.body.innerHTML = `${userMin}:${--counter}`
+//     if(counter == 0){
+//         counter = 60;
+//         --userMin;
+//     } else if(userMin == 0 && counter == 0){
+//         document.body.innerHTML = `TIME IS OVER!`
+//     }
+// }
+// var startBtn = document.getElementById("start");
+// startBtn.addEventListener("click", function(){
+//     setInterval(createTimer, 1000);
+// })
+
+//Task 8
+var names = [
+    "Nir",
+    "Lirone",
+    "Uriel",
+    "Ron",
+    "Noa",
+    "Maya",
+    "Itzhak",
+    "Hila",
+    "Ohad",
+    "Nitzan",
+    "Ramin",
+    "Yuval"
+]
+document.body.innerHTML += `
+<button id="start">Print names</button>
+<button id="stop">Stop</button>
+<div id="namesDiv"></div>`
+
+var intervalId;
+function printNames(){
+    var randomNum = Math.floor(Math.random() * names.length);
+    document.getElementById("namesDiv").innerHTML += 
+    `<p>${names[randomNum]}</p>`
 }
 var startBtn = document.getElementById("start");
+var stopBtn = document.getElementById("stop");
 startBtn.addEventListener("click", function(){
-    setInterval(createTimer, 1000);
+    intervalId = setInterval(printNames, 4000);
 })
+
+stopBtn.addEventListener("click", function(){
+    clearInterval(intervalId);
+})
+
 
