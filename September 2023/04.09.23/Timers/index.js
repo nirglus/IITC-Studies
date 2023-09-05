@@ -106,7 +106,8 @@
 
 
 //Task 7
-document.body.innerHTML += `<button id="btn">Click me</button>
+document.body.innerHTML += `<button id="btn">Start/Stop</button>
+<button id="reset">Reset</button>
 <div id="task7"></div>`
 var intervalId;
 var counter = 0;
@@ -114,9 +115,21 @@ function printTime(){
     document.getElementById("task7").innerHTML = `
     <p> You are in the website for ${++counter} seconds.`
 }
+var isBtnActive = false;
 var startBtn = document.getElementById("btn");
 startBtn.addEventListener("click", function(){
-    intervalId = setInterval(printTime, 1000)
+    if(isBtnActive){
+        clearInterval(intervalId);
+    }else{
+        intervalId = setInterval(printTime, 1000)
+    }
+    isBtnActive = !isBtnActive;
+})
+var resetBtn = document.getElementById("reset");
+resetBtn.addEventListener("click", function(){
+    counter = 0;
+    document.getElementById("task7").innerHTML = `
+    <p> You are in the website for ${counter} seconds.`
 })
 
 // //Task 8
