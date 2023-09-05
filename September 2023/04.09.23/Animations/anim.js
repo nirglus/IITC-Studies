@@ -32,8 +32,12 @@
 // }
 
 //Task 1
-document.body.innerHTML += `<div id="task1" style="width: 30vw; background-color: red; height:10vh"></div>
-<button id="start">Start</button>`
+document.body.innerHTML += `
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+<div id="task1" style="width: 30vw; background-color: red; height:10vh"></div>
+`
+var intervalId;
 var counter = 10;
 var task1 = document.getElementById("task1");
 function getBigger(){
@@ -41,5 +45,9 @@ function getBigger(){
 }
 var startBtn = document.getElementById("start");
 startBtn.addEventListener("click", function(){
-    setInterval(getBigger,50);
+    intervalId = setInterval(getBigger,50);
+})
+var stopBtn = document.getElementById("stop");
+stopBtn.addEventListener("click", function(){
+    clearInterval(intervalId);
 })
