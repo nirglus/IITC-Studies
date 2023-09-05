@@ -86,10 +86,19 @@ document.body.innerHTML += `
 <input type="number" id="height" placeholder="Enter height" onchange="setSize()">
 <div id="task6" style="background-color: black;"></div>
 `;
+var task6 = document.getElementById("task6");
+var counter = 0
+var intervalId = setInterval(setSize, 1000);
 function setSize(){
     var width = document.getElementById("width").value;
     var height = document.getElementById("height").value;
-    var task6 = document.getElementById("task6");
-    task6.style.width = `${width}vw`;
-    task6.style.height = `${height}vh`;
+    if(counter < width || counter < height){
+        task6.style.width = `${++counter}vw`;
+        task6.style.height = `${counter}vh`;
+    }
 }
+document.addEventListener("keydown", function(event){
+    if(event.code == "Space"){
+        clearInterval(intervalId);
+    }
+})
