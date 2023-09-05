@@ -32,10 +32,14 @@
 // }
 
 //Task 1
-document.body.innerHTML += `<div id="task1" style="width:30vw; height:20vh; color=red"></div>`
-// var counter = 20;
-// var intervalId = setInterval(getBigger,1000);
-// var task1 = document.getElementById("task1");
-// function getBigger(){
-//     task1.style.height = `${++counter}vh`;
-// }
+document.body.innerHTML += `<div id="task1" style="width: 30vw; background-color: red; height:10vh"></div>
+<button id="start">Start</button>`
+var counter = 10;
+var task1 = document.getElementById("task1");
+function getBigger(){
+    task1.style.height = `${++counter}vh`;
+}
+var startBtn = document.getElementById("start");
+startBtn.addEventListener("click", function(){
+    setInterval(getBigger,50);
+})
