@@ -57,25 +57,39 @@
 //     }
 // })
 
-//Task 5
+// //Task 5
+// document.body.innerHTML += `
+// <div id="task5" style="width: 10vw; background-color: yellow; height:10vh"></div>`
+// function randomNum(){
+//     return Math.floor(Math.random()*256);
+// }
+
+// function randomColor(){
+//     document.getElementById("task5").style.backgroundColor = `rgb(${randomNum()},${randomNum()},${randomNum()})`
+// }
+
+// var intervalId;
+// var intervalActive = false;
+// var taskDiv = document.getElementById("task5");
+// taskDiv.addEventListener("click", function(){
+//     if(intervalActive){
+//         clearInterval(intervalId);
+//     }else{
+//         intervalId = setInterval(randomColor, 500);
+//     }
+//     intervalActive = !intervalActive;
+// });
+
+//Task 6
 document.body.innerHTML += `
-<div id="task5" style="width: 10vw; background-color: yellow; height:10vh"></div>`
-function randomNum(){
-    return Math.floor(Math.random()*256);
+<input type="number" id="width" placeholder="Enter width" onchange="setSize()">
+<input type="number" id="height" placeholder="Enter height" onchange="setSize()">
+<div id="task6" style="background-color: black;"></div>
+`;
+function setSize(){
+    var width = document.getElementById("width").value;
+    var height = document.getElementById("height").value;
+    var task6 = document.getElementById("task6");
+    task6.style.width = `${width}vw`;
+    task6.style.height = `${height}vh`;
 }
-
-function randomColor(){
-    document.getElementById("task5").style.backgroundColor = `rgb(${randomNum()},${randomNum()},${randomNum()})`
-}
-
-var intervalId;
-var intervalActive = false;
-var taskDiv = document.getElementById("task5");
-taskDiv.addEventListener("click", function(){
-    if(intervalActive){
-        clearInterval(intervalId);
-    }else{
-        intervalId = setInterval(randomColor, 500);
-    }
-    intervalActive = !intervalActive;
-});
