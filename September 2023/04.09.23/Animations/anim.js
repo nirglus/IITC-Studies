@@ -80,25 +80,70 @@
 //     intervalActive = !intervalActive;
 // });
 
-//Task 6
-document.body.innerHTML += `
-<input type="number" id="width" placeholder="Enter width" onchange="setSize()">
-<input type="number" id="height" placeholder="Enter height" onchange="setSize()">
-<div id="task6" style="background-color: black;"></div>
-`;
-var task6 = document.getElementById("task6");
-var counter = 0
-var intervalId = setInterval(setSize, 1000);
-function setSize(){
-    var width = document.getElementById("width").value;
-    var height = document.getElementById("height").value;
-    if(counter < width || counter < height){
-        task6.style.width = `${++counter}vw`;
-        task6.style.height = `${counter}vh`;
-    }
+// //Task 6
+// document.body.innerHTML += `
+// <input type="number" id="width" placeholder="Enter width" onchange="setSize()">
+// <input type="number" id="height" placeholder="Enter height" onchange="setSize()">
+// <div id="task6" style="background-color: black;"></div>
+// `;
+// var task6 = document.getElementById("task6");
+// var counter = 0
+// var intervalId = setInterval(setSize, 1000);
+// function setSize(){
+//     var width = document.getElementById("width").value;
+//     var height = document.getElementById("height").value;
+//     if(counter < width || counter < height){
+//         task6.style.width = `${++counter}vw`;
+//         task6.style.height = `${counter}vh`;
+//     }
+// }
+// document.addEventListener("keydown", function(event){
+//     if(event.code == "Space"){
+//         clearInterval(intervalId);
+//     }
+// })
+
+
+//Task 7
+document.body.innerHTML += `    
+<input type="color" id="color1" onchange="printLines()">
+<input type="color" id="color2" onchange="printLines()">
+<input type="color" id="color3" onchange="printLines()">
+<input type="color" id="color4" onchange="printLines()">
+<input type="color" id="color5" onchange="printLines()">
+<input type="text" id="userTxt" onchange="printLines()">
+<button id="startBtn">Print</button>
+<button id="stopBtn">Stop</button>
+<div id="output"></div>`
+
+var intervalId;
+function printLines(){
+    var colors = [
+        document.getElementById("color1").value,
+        document.getElementById("color2").value,
+        document.getElementById("color3").value,
+        document.getElementById("color4").value,
+        document.getElementById("color5").value
+    ]
+
+    var userText = document.getElementById("userTxt").value;
+    var randomNum = Math.floor(Math.random()*5);
+    document.getElementById("output").innerHTML += `
+    <p style="color:${colors[randomNum]}">${userText}</p>`
 }
+var startBtn = document.getElementById("startBtn");
+startBtn.addEventListener("click", function(){
+    intervalId = setInterval(printLines, 500);
+})
+
+var stopBtn = document.getElementById("stopBtn");
+stopBtn.addEventListener("click", function(){
+    clearInterval(intervalId);
+})
+
 document.addEventListener("keydown", function(event){
-    if(event.code == "Space"){
+    if(event.key == "Shift"){
         clearInterval(intervalId);
     }
 })
+
