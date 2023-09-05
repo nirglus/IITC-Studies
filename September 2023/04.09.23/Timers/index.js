@@ -104,40 +104,55 @@
 //     setInterval(createTimer, 1000);
 // })
 
-//Task 8
-var names = [
-    "Nir",
-    "Lirone",
-    "Uriel",
-    "Ron",
-    "Noa",
-    "Maya",
-    "Itzhak",
-    "Hila",
-    "Ohad",
-    "Nitzan",
-    "Ramin",
-    "Yuval"
-]
-document.body.innerHTML += `
-<button id="start">Print names</button>
-<button id="stop">Stop</button>
-<div id="namesDiv"></div>`
 
+//Task 7
+document.body.innerHTML += `<button id="btn">Click me</button>
+<div id="task7"></div>`
 var intervalId;
-function printNames(){
-    var randomNum = Math.floor(Math.random() * names.length);
-    document.getElementById("namesDiv").innerHTML += 
-    `<p>${names[randomNum]}</p>`
+var counter = 0;
+function printTime(){
+    document.getElementById("task7").innerHTML = `
+    <p> You are in the website for ${++counter} seconds.`
 }
-var startBtn = document.getElementById("start");
-var stopBtn = document.getElementById("stop");
+var startBtn = document.getElementById("btn");
 startBtn.addEventListener("click", function(){
-    intervalId = setInterval(printNames, 4000);
+    intervalId = setInterval(printTime, 1000)
 })
 
-stopBtn.addEventListener("click", function(){
-    clearInterval(intervalId);
-})
+// //Task 8
+// var names = [
+//     "Nir",
+//     "Lirone",
+//     "Uriel",
+//     "Ron",
+//     "Noa",
+//     "Maya",
+//     "Itzhak",
+//     "Hila",
+//     "Ohad",
+//     "Nitzan",
+//     "Ramin",
+//     "Yuval"
+// ]
+// document.body.innerHTML += `
+// <button id="start">Print names</button>
+// <button id="stop">Stop</button>
+// <div id="namesDiv"></div>`
+
+// var intervalId;
+// function printNames(){
+//     var randomNum = Math.floor(Math.random() * names.length);
+//     document.getElementById("namesDiv").innerHTML += 
+//     `<p>${names[randomNum]}</p>`
+// }
+// var startBtn = document.getElementById("start");
+// var stopBtn = document.getElementById("stop");
+// startBtn.addEventListener("click", function(){
+//     intervalId = setInterval(printNames, 4000);
+// })
+
+// stopBtn.addEventListener("click", function(){
+//     clearInterval(intervalId);
+// })
 
 
