@@ -51,3 +51,8 @@ var stopBtn = document.getElementById("stop");
 stopBtn.addEventListener("click", function(){
     clearInterval(intervalId);
 })
+document.addEventListener("keydown", function(event){
+    if(event.key == "Enter"){
+        clearInterval(intervalId);
+    }
+})
