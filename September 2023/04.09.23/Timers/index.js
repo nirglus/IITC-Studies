@@ -82,11 +82,25 @@
 
 //Task 5
 document.body.innerHTML = `<input id="min" type="number" placeholder="Enter minutes"
-onchange="getUserMin(value)">`
+onchange="getUserMin(value)">
+<button id="start">Start</button>`
 function getUserMin(userMin){
     return userMin;
 }
-
+var counter = 0;
+var userMin = getUserMin(value);
 function createTimer(){
-
+    counter = 60;
+    document.body.innerHTML = `${userMin}:${--counter}`
+    if(counter == 0){
+        counter = 60;
+        --userMin;
+    } else if(userMin == 0 && counter == 0){
+        document.body.innerHTML = `TIME IS OVER!`
+    }
 }
+var startBtn = document.getElementById("start");
+startBtn.addEventListener("click", function(){
+    setInterval(createTimer, 1000);
+})
+

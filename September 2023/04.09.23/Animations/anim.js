@@ -32,9 +32,10 @@
 // }
 
 //Task 1
-document.body.innerHTML += `<div id="task1" style="width:30vw; height:20vh; color="red"></div>`
-var counter = 0;
-var intervalId = 
-function getHigher(){
-    
-}
+document.body.innerHTML += `<div id="task1" style="width:30vw; height:20vh; color=red"></div>`
+// var counter = 20;
+// var intervalId = setInterval(getBigger,1000);
+// var task1 = document.getElementById("task1");
+// function getBigger(){
+//     task1.style.height = `${++counter}vh`;
+// }
