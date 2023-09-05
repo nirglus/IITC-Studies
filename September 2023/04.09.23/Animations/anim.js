@@ -32,27 +32,50 @@
 // }
 
 //Task 1
+// document.body.innerHTML += `
+// <button id="start">Start</button>
+// <button id="stop">Stop</button>
+// <div id="task1" style="width: 30vw; background-color: red; height:10vh"></div>
+// `
+// var intervalId;
+// var counter = 10;
+// var task1 = document.getElementById("task1");
+// function getBigger(){
+//     task1.style.height = `${++counter}vh`;
+// }
+// var startBtn = document.getElementById("start");
+// startBtn.addEventListener("click", function(){
+//     intervalId = setInterval(getBigger,50);
+// })
+// var stopBtn = document.getElementById("stop");
+// stopBtn.addEventListener("click", function(){
+//     clearInterval(intervalId);
+// })
+// document.addEventListener("keydown", function(event){
+//     if(event.key == "Enter"){
+//         clearInterval(intervalId);
+//     }
+// })
+
+//Task 5
 document.body.innerHTML += `
-<button id="start">Start</button>
-<button id="stop">Stop</button>
-<div id="task1" style="width: 30vw; background-color: red; height:10vh"></div>
-`
-var intervalId;
-var counter = 10;
-var task1 = document.getElementById("task1");
-function getBigger(){
-    task1.style.height = `${++counter}vh`;
+<div id="task5" style="width: 10vw; background-color: yellow; height:10vh"></div>`
+function randomNum(){
+    return Math.floor(Math.random()*256);
 }
-var startBtn = document.getElementById("start");
-startBtn.addEventListener("click", function(){
-    intervalId = setInterval(getBigger,50);
-})
-var stopBtn = document.getElementById("stop");
-stopBtn.addEventListener("click", function(){
-    clearInterval(intervalId);
-})
-document.addEventListener("keydown", function(event){
-    if(event.key == "Enter"){
+
+function randomColor(){
+    document.getElementById("task5").style.backgroundColor = `rgb(${randomNum()},${randomNum()},${randomNum()})`
+}
+
+var intervalId;
+var intervalActive = false;
+var taskDiv = document.getElementById("task5");
+taskDiv.addEventListener("click", function(){
+    if(intervalActive){
         clearInterval(intervalId);
+    }else{
+        intervalId = setInterval(randomColor, 500);
     }
-})
+    intervalActive = !intervalActive;
+});
