@@ -12,3 +12,6 @@ body{
 #workerForm input, #submitBtn{
     height: 3vh;
 }
+#workerForm input{
+    background-color: rgb(200, 199, 199);
+}

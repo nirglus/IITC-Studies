@@ -14,23 +14,23 @@ function validateForm(){
     }else{
         if(!isStartUppercase){
             firstName.style.border = "dotted 2px red";
-            fNameLbl.innerHTML += `<p style="color:red">*First name must start with an uppercase letter</p>`
+            fNameSpan.innerHTML = ` *First name must start with an uppercase letter`
         }
         if(!isBeneath20Char){
             lastName.style.border = "dotted 2px red";
-            lNameLbl.innerHTML += `<p style="color:red">*Last name must be under 20 characters</p>`
+            lNameSpan.innerHTML = ` *Last name must be under 20 characters`
         }
         if(!isOver16Under65){
             workerAge.style.border = "dotted 2px red";
-            ageLbl.innerHTML += `<p style="color:red">*Age must be between 16 and 65</p>`
+            ageSpan.innerHTML = ` *Age must be between 16 and 65`
         }
         if(!isEndOnComIl){
             workerMail.style.border = "dotted 2px red";
-            mailLbl.innerHTML += `<p style="color:red">*Email must end with ".com" or "co.il"</p>`
+            mailSpan.innerHTML = ` *Email must end with ".com" or "co.il"`
         }
         if(!validatePhone){
             workerPhone.style.border = "dotted 2px red";
-            phoneLbl.innerHTML += `<p style="color:red">*Phone number must start with 0 and be less than 10 digits</p>`
+            phoneSpan.innerHTML = `*Phone number must start with 0 and be less than 10 digits`
         }
         counter++;
         console.log(counter);
@@ -51,7 +51,7 @@ function displayClock(){
 
 }
 var intervalId = setInterval(displayClock, 1000);
-var counter2 = 30;
+var counter2 = 5;
 
 function displayTimer(){
     if(counter2 > 0){
@@ -64,6 +64,15 @@ function displayTimer(){
         intervalId2 = null;
         submitBtn.disabled = false;
         failed.innerHTML = ``;
-        
+        firstName.style.border = "unset";
+        fNameSpan.innerHTML = ``
+        lastName.style.border = "unset";
+        lNameSpan.innerHTML = ``
+        workerAge.style.border = "unset";
+        ageSpan.innerHTML = ``;
+        workerMail.style.border = "unset";
+        mailSpan.innerHTML = ``;
+        workerPhone.style.border = "unset";
+        phoneSpan.innerHTML = ``;
     }
 }
