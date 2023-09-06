@@ -21,14 +21,17 @@ function whosBigger(){
     }
 }
 
-// //Task 3
-// function validateStr(){
-//     if(txt1.value == txt2.value){
-//         return true;
-//     }else{
-//         return false;
-//     }
-// }
+//Task 3
+function validateStr(){
+    if(txt1.value == txt2.value){
+        return true;
+    }else{
+        txt1.style.border = `solid 2px red`;
+        txt2.style.border = `solid 2px red`;
+        document.body.innerHTML += `<span style="color:red">The strings are not the same</span>`
+        return false;
+    }
+}
 
 // //Task 4
 // function validateLength(){
