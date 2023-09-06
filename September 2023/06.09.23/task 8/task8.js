@@ -3,7 +3,6 @@ function validateForm(){
     var isBeneath20Char = lastName.value.length < 20;
     var workerBirthYear = +workerAge.value.substr(0,4);
     var currentYear = new Date().getFullYear();
-    console.log(currentYear);
     var isOver16Under65 = currentYear - workerBirthYear > 16 && currentYear - workerBirthYear < 65;
     var isEndOnComIl = workerMail.value.lastIndexOf(".com") == workerMail.value.length - 4 ||
     workerMail.value.lastIndexOf("co.il") == workerMail.value.length - 5;
@@ -34,3 +33,22 @@ function validateForm(){
         return false;
     }
 }
+function displayClock(){
+    var currentDate = new Date();
+    var hours = currentDate.getHours();
+    var min = currentDate.getMinutes();
+    var sec = currentDate.getSeconds(); 
+    clock.innerHTML = `<h1 id="clockH1">${hours}:${min}:${sec}`
+}
+var intervalId = setInterval(displayClock, 1000);
+
+var counter = 0;
+submitBtn.addEventListener("click", function(){
+    if(!validateForm()){
+        counter++;
+        if(counter == 4){
+            submitBtn.disabled = true;
+            failed.innerHTML += `<h2 style="color:red">TOO MANY WRONG SUBMITS`
+        }
+    }
+});
