@@ -18,11 +18,16 @@
         <button id="submitBtn">Send</button>
     </form> -->
 
-    <form id="task7" onsubmit="validateForm()">
+    <form id="task7" onsubmit="return validate()">
+        <label for="userName" id="nameLbl">Username:</label>
         <input type="text" id="userName" placeholder="Full Name">
+        <label for="userMail" id="mailLbl">Email:</label>
         <input type="email" id="userMail" placeholder="Email">
+        <label for="userAge" id="ageLbl">Date of birth:</label>
         <input type="date" id="userAge" placeholder="Date of birth">
+        <label for="userPassword" id="passLbl">Password:</label>
         <input type="password" id="userPassword">
+        <label for="userConfirm" id="confirmLbl">Confirm password:</label>
         <input type="password" id="userConfirm">
         <button id="submitBtn">Submit</button>
     </form>
