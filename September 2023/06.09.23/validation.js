@@ -1,6 +1,15 @@
-//Task 1
-function validate(){
-    if(num1.value == num2.value){
+// //Task 1
+// function validate(){
+//     if(num1.value == num2.value){
+//         return true;
+//     }else{
+//         return false;
+//     }
+// }
+
+//Task 2
+function whosBigger(){
+    if(num1.value > num2.value){
         return true;
     }else{
         return false;
