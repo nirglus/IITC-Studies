@@ -33,25 +33,28 @@
 //     }
 // }
 
-//Task 4
-function validateLength(){
-    if(txt1.value.length == txt2.value.length){
-        return true;
-    }else {
-        txt1.style.border = `solid 2px red`;
-        txt2.style.border = `solid 2px red`;
-        document.body.innerHTML += `<span style="color:red">The strings are not the same length</span>`
-        return false;
-    }
-}
-
-// //Task 5
-// function validateFirstChar(){
-//     if(txt1.value[0] == txt2.value[0]){
+// //Task 4
+// function validateLength(){
+//     if(txt1.value.length == txt2.value.length){
 //         return true;
-//     }else{
+//     }else {
+//         txt1.style.border = `solid 2px red`;
+//         txt2.style.border = `solid 2px red`;
+//         document.body.innerHTML += `<span style="color:red">The strings are not the same length</span>`
 //         return false;
 //     }
 // }
+
+//Task 5
+function validateFirstChar(){
+    if(txt1.value[0] == txt2.value[0]){
+        return true;
+    }else{
+        txt1.style.border = `solid 2px red`;
+        txt2.style.border = `solid 2px red`;
+        document.body.innerHTML += `<span style="color:red">The first chars of each string are not the same.</span>`
+        return false;
+    }
+}
 
 //Task 6
