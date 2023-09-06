@@ -1,23 +1,25 @@
-//Task 1
-function validate(){
-    if(num1.value == num2.value){
-        return true;
-    }else{
-        num1.style.border = `solid 2px red`;
-        num2.style.border = `solid 2px red`;
-        document.body.innerHTML += `<span style="color:red">The numbers are not even</span>`
-        return false;
-    }
-}
-
-// //Task 2
-// function whosBigger(){
-//     if(num1.value > num2.value){
+// //Task 1
+// function validate(){
+//     if(num1.value == num2.value){
 //         return true;
 //     }else{
+//         num1.style.border = `solid 2px red`;
+//         num2.style.border = `solid 2px red`;
+//         document.body.innerHTML += `<span style="color:red">The numbers are not even</span>`
 //         return false;
 //     }
 // }
+
+//Task 2
+function whosBigger(){
+    if(num1.value > num2.value){
+        return true;
+    }else{
+        num1.style.border = `solid 2px red`;
+        document.body.innerHTML += `<span style="color:red">Number 1 is smaller than Number 2</span>`
+        return false;
+    }
+}
 
 // //Task 3
 // function validateStr(){
