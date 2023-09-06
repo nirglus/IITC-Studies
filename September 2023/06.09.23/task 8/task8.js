@@ -34,7 +34,7 @@ function validateForm(){
         }
         counter++;
         console.log(counter);
-        if (counter === 4 && intervalId2 === null) {
+        if (counter == 4 && intervalId2 == null) {
             clearInterval(intervalId2);
             intervalId2 = setInterval(displayTimer, 1000); 
         }

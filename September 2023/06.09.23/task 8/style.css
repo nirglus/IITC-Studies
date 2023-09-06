@@ -3,6 +3,32 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: hsl(217, 54%, 11%);
+    color: #fff;
+}
+#card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    box-shadow: 0px 9px 20px 15px rgba(0, 5, 31, 0.3);
+    padding: 4%;
+}
+#submitBtn{
+    border: none;
+    width: 15vw;
+    align-self: center;
+    margin-top: 3vh;
+    height: 4vh;
+    transition: 0.8s;
+}
+#submitBtn:disabled{
+    background-color: red;
+}
+#submitBtn:hover{
+    background-color: hsl(178, 100%, 50%);
+    cursor: pointer;
 
 }
 #workerForm{
@@ -11,7 +37,7 @@ body{
     width: 30vw;
     gap: 1vh;
 }
-#workerForm input, #submitBtn{
+#workerForm input{
     height: 3vh;
 }
 #workerForm input{
