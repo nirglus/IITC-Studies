@@ -51,7 +51,7 @@ function displayClock(){
 
 }
 var intervalId = setInterval(displayClock, 1000);
-var counter2 = 5;
+var counter2 = 30;
 
 function displayTimer(){
     if(counter2 > 0){
