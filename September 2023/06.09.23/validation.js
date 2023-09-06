@@ -25,11 +25,20 @@
 //     }
 // }
 
-//Task 4
-function validateLength(){
-    if(txt1.value.length == txt2.value.length){
+// //Task 4
+// function validateLength(){
+//     if(txt1.value.length == txt2.value.length){
+//         return true;
+//     }else {
+//         return false;
+//     }
+// }
+
+//Task 5
+function validateFirstChar(){
+    if(txt1.value[0] == txt2.value[0]){
         return true;
-    }else {
+    }else{
         return false;
     }
 }
