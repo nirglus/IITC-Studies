@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#workerForm{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    gap: 1vh;
+}
+#workerForm input, #submitBtn{
+    height: 3vh;
+}
