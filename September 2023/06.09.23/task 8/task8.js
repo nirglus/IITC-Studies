@@ -1,3 +1,5 @@
+var counter = 0;
+var intervalId2 = null;
 function validateForm(){
     var isStartUppercase = firstName.value[0] == firstName.value[0].toUpperCase();
     var isBeneath20Char = lastName.value.length < 20;
@@ -30,25 +32,38 @@ function validateForm(){
             workerPhone.style.border = "dotted 2px red";
             phoneLbl.innerHTML += `<p style="color:red">*Phone number must start with 0 and be less than 10 digits</p>`
         }
+        counter++;
+        console.log(counter);
+        if (counter === 4 && intervalId2 === null) {
+            clearInterval(intervalId2);
+            intervalId2 = setInterval(displayTimer, 1000); 
+        }
         return false;
     }
 }
+
 function displayClock(){
     var currentDate = new Date();
     var hours = currentDate.getHours();
     var min = currentDate.getMinutes();
     var sec = currentDate.getSeconds(); 
     clock.innerHTML = `<h1 id="clockH1">${hours}:${min}:${sec}`
+
 }
 var intervalId = setInterval(displayClock, 1000);
+var counter2 = 30;
 
-var counter = 0;
-submitBtn.addEventListener("click", function(){
-    if(!validateForm()){
-        counter++;
-        if(counter == 4){
-            submitBtn.disabled = true;
-            failed.innerHTML += `<h2 style="color:red">TOO MANY WRONG SUBMITS`
-        }
+function displayTimer(){
+    if(counter2 > 0){
+        failed.innerHTML = `<h4>Try again in ${--counter2} seconds.</h4>`;
+        submitBtn.disabled = true;
+    }else{
+        counter = 0;
+        counter2 = 30;
+        clearInterval(intervalId2);
+        intervalId2 = null;
+        submitBtn.disabled = false;
+        failed.innerHTML = ``;
+        
     }
-});
+}
