@@ -80,75 +80,75 @@
 // }
 // setInterval(printTime, 1000);
 
-//Task 5
-document.body.innerHTML = `<input id="min" type="number" placeholder="Enter minutes">
-<button id="start">Start/Stop</button>
-<div id="showTime"></div>`
-var intervalId;
-var counter = 59;
-function createTimer(){
-    var userMin = document.getElementById("min").value;
-    document.getElementById("showTime").innerHTML = `${--userMin}:${counter--}`
-    if(counter == 0){
-        counter = 60;
-        userMin--;
-    } else if(userMin == 0 && counter == 0){
-        clearInterval(intervalId);
-        document.getElementById("showTime").innerHTML `TIME IS OVER!`
-    }
-}
-var isBtnActive = false;
-var startBtn = document.getElementById("start");
-startBtn.addEventListener("click", function(){
-    if(isBtnActive){
-        clearInterval(intervalId);
-    }else{
-        intervalId = setInterval(createTimer, 1000);
-    }
-    isBtnActive = !isBtnActive;
-})
-
-// //Task 6
-// document.body.innerHTML = `
-// <input type="time" id="userTime" placeholder="When you want to get up?">
-// <button id="startBtn">Set/Stop</button>
-// <div id="timer"></div>`
+// //Task 5
+// document.body.innerHTML = `<input id="min" type="number" placeholder="Enter minutes">
+// <button id="start">Start/Stop</button>
+// <div id="showTime"></div>`
 // var intervalId;
-// function countTime(){
-//     var myDate = new Date();
-//     var hoursNow = myDate.getHours();
-//     var minNow = myDate.getMinutes();
-//     var userTime = document.getElementById("userTime").value;
-//     var splitHourMin = userTime.split(":");
-//     var userHours = parseInt(splitHourMin[0]);
-//     var userMin = parseInt(splitHourMin[1]);
-//     var hourCounter = userHours - hoursNow;
-//     var minCounter = userMin - minNow;
-//     document.getElementById("timer").innerHTML  = `
-//     ${hourCounter}:${minCounter} left till ring`
-//     if(userMin == 0){
-//         --hourCounter;
-//         userMin = 59;
-//     }else if(hourCounter == 0 && userMin == 0){
-//         document.getElementById("timer").innerHTML  = `
-//         TIME IS OVER`
-//     }else if(minCounter < 10 && minCounter > 0){
-//         document.getElementById("timer").innerHTML  = `
-//         ${hourCounter}:0${minCounter} left till ring`
-//     }else{
-//         --minCounter;
+// var counter = 59;
+// function createTimer(){
+//     var userMin = document.getElementById("min").value;
+//     document.getElementById("showTime").innerHTML = `${--userMin}:${counter--}`
+//     if(counter == 0){
+//         counter = 60;
+//         userMin--;
+//     } else if(userMin == 0 && counter == 0){
+//         clearInterval(intervalId);
+//         document.getElementById("showTime").innerHTML `TIME IS OVER!`
 //     }
 // }
 // var isBtnActive = false;
-// var startBtn = document.getElementById("startBtn");
+// var startBtn = document.getElementById("start");
 // startBtn.addEventListener("click", function(){
 //     if(isBtnActive){
 //         clearInterval(intervalId);
 //     }else{
-//         intervalId = setInterval(countTime, 1000)
+//         intervalId = setInterval(createTimer, 1000);
 //     }
 //     isBtnActive = !isBtnActive;
 // })
+
+//Task 6
+document.body.innerHTML = `
+<input type="time" id="userTime" placeholder="When you want to get up?">
+<button id="startBtn">Set/Stop</button>
+<div id="timer"></div>`
+var intervalId;
+function countTime(){
+    var myDate = new Date();
+    var hoursNow = myDate.getHours();
+    var minNow = myDate.getMinutes();
+    var userTime = document.getElementById("userTime").value;
+    var splitHourMin = userTime.split(":");
+    var userHours = parseInt(splitHourMin[0]);
+    var userMin = parseInt(splitHourMin[1]);
+    var hourCounter = userHours - hoursNow;
+    var minCounter = userMin - minNow;
+    document.getElementById("timer").innerHTML  = `
+    ${hourCounter}:${minCounter} left till ring`
+    if(userMin == 0){
+        --hourCounter;
+        userMin = 59;
+    }else if(hourCounter == 0 && userMin == 0){
+        document.getElementById("timer").innerHTML  = `
+        TIME IS OVER`
+    }else if(minCounter < 10 && minCounter > 0){
+        document.getElementById("timer").innerHTML  = `
+        ${hourCounter}:0${minCounter} left till ring`
+    }else{
+        --minCounter;
+    }
+}
+var isBtnActive = false;
+var startBtn = document.getElementById("startBtn");
+startBtn.addEventListener("click", function(){
+    if(isBtnActive){
+        clearInterval(intervalId);
+    }else{
+        intervalId = setInterval(countTime, 1000)
+    }
+    isBtnActive = !isBtnActive;
+})
 
 // //Task 7
 // document.body.innerHTML += `<button id="btn">Start/Stop</button>
@@ -197,20 +197,18 @@ startBtn.addEventListener("click", function(){
 // <button id="stop">Stop</button>
 // <div id="namesDiv"></div>`
 
-// var intervalId;
-// function printNames(){
-//     var randomNum = Math.floor(Math.random() * names.length);
-//     document.getElementById("namesDiv").innerHTML += 
-//     `<p>${names[randomNum]}</p>`
-// }
-// var startBtn = document.getElementById("start");
-// var stopBtn = document.getElementById("stop");
-// startBtn.addEventListener("click", function(){
-//     intervalId = setInterval(printNames, 4000);
-// })
+var intervalId;
+function printNames(){
+    var randomNum = Math.floor(Math.random() * names.length);
+    document.getElementById("namesDiv").innerHTML += 
+    `<p>${names[randomNum]}</p>`
+}
+var startBtn = document.getElementById("start");
+var stopBtn = document.getElementById("stop");
+startBtn.addEventListener("click", function(){
+    intervalId = setInterval(printNames, 4000);
+})
 
-// stopBtn.addEventListener("click", function(){
-//     clearInterval(intervalId);
-// })
-
-
+stopBtn.addEventListener("click", function(){
+    clearInterval(intervalId);
+})
