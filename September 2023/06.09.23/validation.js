@@ -45,16 +45,58 @@
 //     }
 // }
 
-//Task 5
-function validateFirstChar(){
-    if(txt1.value[0] == txt2.value[0]){
-        return true;
-    }else{
-        txt1.style.border = `solid 2px red`;
-        txt2.style.border = `solid 2px red`;
-        document.body.innerHTML += `<span style="color:red">The first chars of each string are not the same.</span>`
+// //Task 5
+// function validateFirstChar(){
+//     if(txt1.value[0] == txt2.value[0]){
+//         return true;
+//     }else{
+//         txt1.style.border = `solid 2px red`;
+//         txt2.style.border = `solid 2px red`;
+//         document.body.innerHTML += `<span style="color:red">The first chars of each string are not the same.</span>`
+//         return false;
+//     }
+// }
+
+//Task 7
+function validateUsername(){
+    if(userName.value.length < 10){
+        userName.style.border = `solid 2px red`;
+        document.body.innerHTML += `<p style="color:red">The username must be longer than 10 characters</p>`;
         return false;
     }
+    return true;
+}
+function validateEmail(){
+    if(userMail.value.lastIndexOf(".com") != userMail.value.length - 4){
+        userMail.style.border = `solid 2px red`;
+        document.body.innerHTML += `<p style="color:red">Email must end with ".com"</p>`;
+        return false;
+    }
+    return true;
 }
 
-//Task 6
+function validateAge(){
+    var currentYear = new Date().getFullYear();
+    var userYear = +userAge.value.substring(0,4);
+    if(currentYear - userYear < 18){
+        userAge.style.border = `solid 2px red`;
+        document.body.innerHTML += `<p style="color:red">Age must be over 18</p>`;
+        return false;
+    }
+    return true;
+}
+function validatePass(){
+    if(userPassword.value != userConfirm.value){
+        userPassword.style.border = `solid 2px red`;
+        userConfirm.style.border = `solid 2px red`;
+        document.body.innerHTML += `<p style="color:red">Password are not the same</p>`;
+        return false;
+    }
+    return true;
+}
+function validateForm(){
+    validateUsername();
+    validateEmail();
+    validateAge();
+    validatePass();
+}
