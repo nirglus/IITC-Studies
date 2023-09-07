@@ -47,31 +47,29 @@ function displayClock(){
     var min = currentDate.getMinutes();
     var sec = currentDate.getSeconds(); 
     clock.innerHTML = `<h1 id="clockH1">${hours}:${min}:${sec}`
-    
+
 }
 var intervalId = setInterval(displayClock, 1000);
 var counter2 = 30;
+var idNames = [firstName, lastName, workerAge, workerMail, workerPhone, workerPos];
+var idSpans = [failed, fNameSpan, lNameSpan, ageSpan, mailSpan, phoneSpan]
 
 function displayTimer(){
     if(counter2 > 0){
         failed.innerHTML = `<h4>Try again in ${--counter2} seconds.</h4>`;
-        submitBtn.disabled = true;
+        for(let i = 0; i < idNames.length; i++){
+            idNames[i].disabled = true;
+        }
     }else{
         counter = 0;
         counter2 = 30;
         clearInterval(intervalId2);
         intervalId2 = null;
+        for(let i = 0; i < idNames.length; i++){
+            idNames[i].disabled = false;
+            idNames[i].style.border = "unset";
+            idSpans[i].innerHTML = ``;
+        }
         submitBtn.disabled = false;
-        failed.innerHTML = ``;
-        firstName.style.border = "unset";
-        fNameSpan.innerHTML = ``
-        lastName.style.border = "unset";
-        lNameSpan.innerHTML = ``
-        workerAge.style.border = "unset";
-        ageSpan.innerHTML = ``;
-        workerMail.style.border = "unset";
-        mailSpan.innerHTML = ``;
-        workerPhone.style.border = "unset";
-        phoneSpan.innerHTML = ``;
     }
 }
