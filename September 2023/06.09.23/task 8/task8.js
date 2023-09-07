@@ -14,23 +14,23 @@ function validateForm(){
     }else{
         if(!isStartUppercase){
             firstName.style.border = "dotted 2px red";
-            fNameSpan.innerHTML = ` *First name must start with an uppercase letter`
+            fNameSpan.innerHTML = ` *First name must start with an uppercase letter`;
         }
         if(!isBeneath20Char){
             lastName.style.border = "dotted 2px red";
-            lNameSpan.innerHTML = ` *Last name must be under 20 characters`
+            lNameSpan.innerHTML = ` *Last name must be under 20 characters`;
         }
         if(!isOver16Under65){
             workerAge.style.border = "dotted 2px red";
-            ageSpan.innerHTML = ` *Age must be between 16 and 65`
+            ageSpan.innerHTML = ` *Age must be between 16 and 65`;
         }
         if(!isEndOnComIl){
             workerMail.style.border = "dotted 2px red";
-            mailSpan.innerHTML = ` *Email must end with ".com" or "co.il"`
+            mailSpan.innerHTML = ` *Email must end with ".com" or "co.il"`;
         }
         if(!validatePhone){
             workerPhone.style.border = "dotted 2px red";
-            phoneSpan.innerHTML = `*Phone number must start with 0 and be less than 10 digits`
+            phoneSpan.innerHTML = `*Phone number must start with 0 and be less than 10 digits`;
         }
         counter++;
         console.log(counter);
@@ -46,13 +46,12 @@ function displayClock(){
     var hours = currentDate.getHours();
     var min = currentDate.getMinutes();
     var sec = currentDate.getSeconds(); 
-    clock.innerHTML = `<h1 id="clockH1">${hours}:${min}:${sec}`
-
+    clock.innerHTML = `<h1 id="clockH1">${hours}:${min}:${sec}`;
 }
 var intervalId = setInterval(displayClock, 1000);
 var counter2 = 30;
 var idNames = [firstName, lastName, workerAge, workerMail, workerPhone, workerPos];
-var idSpans = [failed, fNameSpan, lNameSpan, ageSpan, mailSpan, phoneSpan]
+var idSpans = [failed, fNameSpan, lNameSpan, ageSpan, mailSpan, phoneSpan];
 
 function displayTimer(){
     if(counter2 > 0){
