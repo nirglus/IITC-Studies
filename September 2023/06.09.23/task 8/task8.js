@@ -34,8 +34,7 @@ function validateForm(){
         }
         counter++;
         console.log(counter);
-        if (counter == 4 && intervalId2 == null) {
-            clearInterval(intervalId2);
+        if (counter == 4){
             intervalId2 = setInterval(displayTimer, 1000); 
         }
         return false;
@@ -48,7 +47,7 @@ function displayClock(){
     var min = currentDate.getMinutes();
     var sec = currentDate.getSeconds(); 
     clock.innerHTML = `<h1 id="clockH1">${hours}:${min}:${sec}`
-
+    
 }
 var intervalId = setInterval(displayClock, 1000);
 var counter2 = 30;
