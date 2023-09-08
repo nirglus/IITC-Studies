@@ -38,6 +38,14 @@ body{
    margin-top: 3vh;
    background-color: #016A70;
    color: #fff;
+   transition: background-color 0.8s;
+}
+#loginBtn:hover{
+    cursor: pointer;
+    background-color: #001C30;
+}
+#loginBtn:active{
+    transform: translateY(2px);
 }
 form{
     display: flex;
