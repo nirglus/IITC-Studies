@@ -51,3 +51,14 @@ form{
     display: flex;
     flex-direction: column;
 }
+table{
+    border-spacing: 7px;
+    width: 50vw;
+}
+td{
+    background-color: #F4F2DE;
+    padding: 2%
+}
+#tableH1{
+    text-align: center;
+}
