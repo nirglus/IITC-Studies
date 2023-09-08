@@ -7,7 +7,7 @@ document.body.innerHTML = `<div id="loginDiv">
 
 function addTask(){
     formDiv.innerHTML = `
-    <form id="addTaskForm">
+    <form id="addTaskForm" onsubmit="return addRowToTable()">
     <label for="taskName">Task name:</label>
     <input type="text" id="taskName">
     <label for="whatToDo">What's needed to be done?</label>
@@ -16,7 +16,23 @@ function addTask(){
     <input type="date" id="tillWhen">
     <label for="isDone">Is the task done?</label>
     <input type="checkbox" id="isDone">
+    <button id="submitTask">Add</button>
     </form>` 
+}
+function addRowToTable(){
+    if(isDone.checked){
+        isDone.value = "Yes";
+    }else{
+        isDone.value = "No";
+    }
+    todoBody.innerHTML += `
+    <tr>
+    <td>${taskName.value}</td>
+    <td>${whatToDo.value}</td>
+    <td>${tillWhen.value}</td>
+    <td>${isDone.value}</td>
+    </tr>`
+    return false;
 }
 
 function welcomeMsg(){
@@ -28,7 +44,14 @@ function welcomeMsg(){
     console.log(userAge.value , userAge.value.substr(0,4));
     document.body.innerHTML = `<h1>Welcome back <span id="nameSpan">${userName.value}!</span></h1>
     <button id="newTaskBtn"> + Add new task</button>
-    <div id="formDiv"></div>`
+    <div id="formDiv"></div>
+    <div id="tableDiv">
+    <h1 id="tableH1">My ToDo List</h1>
+    <table id="todoTable">
+    <thead><th>Task Name</th><th>What to do?</th><th>Till when?</th><th>Is it done?</th></thead>
+    <tbody id="todoBody"></tbody>
+    </table>
+    </div>`
     newTaskBtn.addEventListener("click", addTask);
 }
 loginBtn.addEventListener("click", welcomeMsg);
