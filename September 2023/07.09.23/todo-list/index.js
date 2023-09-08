@@ -36,8 +36,20 @@ function addRowToTable(){
     <td>${isDone.value}</td>
     </tr>`
     taskNum++;
+    deleteRow();
     return false;
 }
+function deleteRow(){
+    if(taskNum > 0){
+        var rows = document.getElementsByTagName("tr");
+        for(let i = 0; i <= taskNum; i++){
+            rows[i].addEventListener("click", function(){
+                rows[i].remove();
+            })
+        }
+    }
+}   
+
 
 function welcomeMsg(){
     if(new Date().getFullYear() - +userAge.value.substr(0,4) < 18){
@@ -59,6 +71,7 @@ function welcomeMsg(){
     newTaskBtn.addEventListener("click", addTask);
 }
 loginBtn.addEventListener("click", welcomeMsg);
+
 
 // function stylePerTime(){
 //     if(new Date().getHours() < 17 && new Date().getHours > 6){
