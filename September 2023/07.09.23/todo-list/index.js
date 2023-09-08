@@ -40,11 +40,12 @@ function addRowToTable(){
     return false;
 }
 function deleteRow(){
-    if(taskNum > 0){
+    if(taskNum){
         var rows = document.getElementsByTagName("tr");
         for(let i = 0; i <= taskNum; i++){
             rows[i].addEventListener("click", function(){
                 rows[i].remove();
+                taskNum--;
             })
         }
     }
