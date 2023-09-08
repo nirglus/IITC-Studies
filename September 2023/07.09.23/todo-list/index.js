@@ -21,6 +21,7 @@ function addTask(){
     <button id="submitTask">Add</button>
     </form>` 
 }
+var taskNum = 0
 function addRowToTable(){
     if(isDone.checked){
         isDone.value = "Yes";
@@ -28,12 +29,13 @@ function addRowToTable(){
         isDone.value = "No";
     }
     todoBody.innerHTML += `
-    <tr>
+    <tr id="row${taskNum}">
     <td>${taskName.value}</td>
     <td>${whatToDo.value}</td>
     <td>${tillWhen.value}</td>
     <td>${isDone.value}</td>
     </tr>`
+    taskNum++;
     return false;
 }
 
