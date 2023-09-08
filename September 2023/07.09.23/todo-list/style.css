@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(#F8F0E5, #EADBC8);
+}
+#loginDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 15%;
+    border-radius: 20px;
+    background-color: #DAC0A3;
+}
