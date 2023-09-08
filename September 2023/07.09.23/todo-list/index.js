@@ -6,7 +6,7 @@ document.body.innerHTML = `<div id="loginDiv">
 </div>`
 
 function addTask(){
-    formDiv.innerHTML += `
+    formDiv.innerHTML = `
     <form id="addTaskForm">
     <label for="taskName">Task name:</label>
     <input type="text" id="taskName">
@@ -15,7 +15,7 @@ function addTask(){
     <label for="tillWhen">What's the deadline?</label>
     <input type="date" id="tillWhen">
     <label for="isDone">Is the task done?</label>
-    <input type="radio" id="isDone">
+    <input type="checkbox" id="isDone">
     </form>` 
 }
 
