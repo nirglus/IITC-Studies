@@ -1,7 +1,9 @@
 document.body.innerHTML = `<div id="loginDiv">
 <h1>Please log in</h1>
-<input type="text" id="userName" placeholder="Enter username:">
-<input type="date" id="userAge" placeholder="Date of birth:">
+<label for="userName">Username:</label>
+<input type="text" id="userName" placeholder="Enter username">
+<label for="userAge">Date of birth:</label>
+<input type="date" id="userAge" placeholder="Date of birth">
 <button id="loginBtn">Login</button>
 </div>`
 
