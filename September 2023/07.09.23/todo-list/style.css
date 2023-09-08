@@ -3,13 +3,16 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(#F8F0E5, #EADBC8);
+    background: linear-gradient(#016A70, #D2DE32);
 }
 #loginDiv{
     display: flex;
     flex-direction: column;
-    gap: 2vh;
-    padding: 15%;
+    gap: 3vh;
+    padding: 10%;
     border-radius: 20px;
-    background-color: #DAC0A3;
+    background:linear-gradient(#FFFFDD, #A2C579);
+}
+#loginDiv h1{
+    margin-bottom: 10vh;
 }
