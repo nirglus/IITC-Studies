@@ -12,5 +12,12 @@ loginBtn.addEventListener("click", function(){
         document.body.style.background = `linear-gradient(#ADC4CE, #96B6C5)`
     }
     console.log(userAge.value , userAge.value.substr(0,4));
-    document.body.innerHTML = `<h1>Welcome back <span id="nameSpan">${userName.value}!</span></h1>`
+    document.body.innerHTML = `<h1>Welcome back <span id="nameSpan">${userName.value}!</span></h1>
+    <button id="newTaskBtn"> + Add new task</button>`
 })
+
+// function stylePerTime(){
+//     if(new Date().getHours() < 17 && new Date().getHours > 6){
+
+//     }
+// }
