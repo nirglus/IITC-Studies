@@ -6,7 +6,7 @@ document.body.innerHTML = `<div id="loginDiv">
 <input type="date" id="userAge" placeholder="Date of birth">
 <button id="loginBtn">Login</button>
 </div>`
-
+var taskNum = 0;
 function addTask(){
     formDiv.innerHTML = `
     <form id="addTaskForm" onsubmit="return addRowToTable()">
@@ -21,7 +21,13 @@ function addTask(){
     <button id="submitTask">Add</button>
     </form>` 
 }
-var taskNum = 0;
+function checkIfLate(){
+    var userDate = new Date(tillWhen.value);
+    var currentDate = new Date();
+    if(userDate < currentDate){
+        return `style = "background-color: #ffea03"`;
+    }
+}
 function addRowToTable(){
     var rowColor;
     if(isDone.checked){
@@ -35,7 +41,7 @@ function addRowToTable(){
     <tr id="row${taskNum}">
     <td>${taskName.value}</td>
     <td>${whatToDo.value}</td>
-    <td>${tillWhen.value}</td>
+    <td ${checkIfLate()}>${tillWhen.value}</td>
     <td style="${rowColor}">${isDone.value}</td>
     </tr>`
     taskNum++;
@@ -53,8 +59,6 @@ function deleteRow(){
         }
     }
 }   
-
-
 function welcomeMsg(){
     if(new Date().getFullYear() - +userAge.value.substr(0,4) < 18){
         document.body.style.background = `linear-gradient(#ED7B7B, #836096)`
