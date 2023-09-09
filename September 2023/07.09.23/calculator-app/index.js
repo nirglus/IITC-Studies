@@ -12,7 +12,7 @@ document.body.innerHTML = `
     <button class="btn" id="num8">8</button>
     <button class="btn" id="num9">9</button>
     <button class="btn" id="num0">0</button>
-    <button class="btn" id="dot">.</button>
+    <button class="btn" id="num10">.</button>
     <button class="btn func" id="plus">+</button>
     <button class="btn func" id="minus">-</button>
     <button class="btn func" id="multiply">*</button>
@@ -24,10 +24,10 @@ document.body.innerHTML = `
 </div>`
 
 function buttonListeners(){
-    for(let i = 0; i < 10; i++){
+    for(let i = 0; i < 11; i++){
         document.getElementById(`num${i}`).addEventListener("click", function(){
             screenInput.value += document.getElementById(`num${i}`).innerHTML;
-            var num1 = screenInput.value;
+            var num1 = +screenInput.value;
             console.log(num1);
         })
     }
