@@ -1,6 +1,10 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 #numberBtns{
-    width: 20vw;
-    height: 40vh;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 20% 20% 20% 20% 20%;
@@ -9,7 +13,7 @@
     "num7 num8 num9 multip"
     "num4 num5 num6 minus"
     "num1 num2 num3 plus"
-    ". num0 dots even ";
+    "dots num0 even even ";
 }
 #num0{ grid-area: num0;}
 #num1{ grid-area: num1;}
