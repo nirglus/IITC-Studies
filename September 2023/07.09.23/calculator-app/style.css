@@ -27,6 +27,7 @@ body{
     width: 420px;
     background-color: #CBE4DE;
     border: 0;
+    color: #000;
 }
 #numberBtns{
     display: grid;

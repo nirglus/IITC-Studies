@@ -1,6 +1,6 @@
 document.body.innerHTML = `
 <div id="calculator">
-<div id="screen"><input type="text" id="screenInput"></div>
+<div id="screen"><input type="text" id="screenInput" disabled></div>
 <div id="numberBtns">
     <button class="btn" id="num1">1</button>
     <button class="btn" id="num2">2</button>
