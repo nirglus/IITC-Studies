@@ -22,6 +22,8 @@ document.body.innerHTML = `
     <button id="reset">RES</button>
 </div>
 </div>`
+var selectedOperator = "";
+var num1 = 0;
 function buttonListeners(){
     for(let i = 0; i < 11; i++){
         document.getElementById(`num${i}`).addEventListener("click", function(){
@@ -53,25 +55,41 @@ function divide(num1, num2){
 function operatorsListener(){
     for(let i = 0; i < document.getElementsByClassName("func").length; i++){
         document.getElementsByClassName("func")[i].addEventListener("click", getNum1);
-        document.getElementsByClassName("func")[i].addEventListener("click", selectedOperator);
+        document.getElementsByClassName("func")[i].addEventListener("click", function(){
+            selectedOperator = document.getElementsByClassName("func")[i].innerHTML;
+        });
     }
 }
-function selectedOperator(){
-    var userOperator = "";
-    selectedOperator = document.getElementsByClassName("func")[i].innerHTML;
-    console.log(userOperator)
-    return userOperator;
-}
 function getNum1(){
-    var num1 = +screenInput.value;
+    num1 = +screenInput.value;
     console.log(num1);
     screenInput.value = "";
     return num1;
 }
-// function calculate(){
-//     var num2 = +screenInput.value;
-//     if(){}
-// }
+function calculate(){
+    var num2 = +screenInput.value;
+    switch(selectedOperator){
+        case "+":
+            var result = add(num1, num2);
+            screenInput.value = result;
+            break;
+        case "-":
+            var result = subtract(num1, num2);
+            screenInput.value = result;
+            break;
+        case "*":
+            var result = multiply(num1, num2);
+            screenInput.value = result;
+            break;
+        case "/":
+            var result = divide(num1, num2);
+            screenInput.value = result;
+            break;
+        default:
+            break;
+    }
+}
 buttonListeners();
 resetBtn();
 operatorsListener();
+even.addEventListener("click", calculate);
