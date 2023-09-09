@@ -48,7 +48,11 @@ function multiply(num1, num2){
     return num1 * num2;
 }
 function divide(num1, num2){ 
+    if(num2 == 0){
+        return "CAN NOT DIVIDE BY 0";
+    }
    return num1 / num2;
+   
 }
 function modulos(num1, num2){
     return num1 % num2;
