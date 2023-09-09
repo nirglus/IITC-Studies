@@ -13,6 +13,7 @@ document.body.innerHTML = `
     <button class="btn" id="num9">9</button>
     <button class="btn" id="num0">0</button>
     <button class="btn" id="num10">.</button>
+    <button class="btn func" id="mod">%</button>
     <button class="btn func" id="plus">+</button>
     <button class="btn func" id="minus">-</button>
     <button class="btn func" id="multiply">*</button>

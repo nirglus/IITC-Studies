@@ -1,0 +1,40 @@
+#numberBtns{
+    width: 20vw;
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas: 
+    "res del mod divid "
+    "num7 num8 num9 multip"
+    "num4 num5 num6 minus"
+    "num1 num2 num3 plus"
+    ". num0 dots even ";
+}
+#num0{ grid-area: num0;}
+#num1{ grid-area: num1;}
+#num2{ grid-area: num2;}
+#num3{ grid-area: num3;}
+#num4{ grid-area: num4;}
+#num5{ grid-area: num5;}
+#num6{ grid-area: num6;}
+#num7{ grid-area: num7;}
+#num8{ grid-area: num8;}
+#num9{ grid-area: num9;}
+#num10{ grid-area: dots;}
+#even{ grid-area: even;}
+#plus{ grid-area: plus;}
+#minus{ grid-area: minus;}
+#multiply{ grid-area: multip;}
+#divide{ grid-area: divid;}
+#res{ grid-area: res;}
+#del{ grid-area: del;}
+#mod{ grid-area: mod;}
+
+
+
+
+
+
+
+
