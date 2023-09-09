@@ -27,8 +27,6 @@ function buttonListeners(){
     for(let i = 0; i < 11; i++){
         document.getElementById(`num${i}`).addEventListener("click", function(){
             screenInput.value += document.getElementById(`num${i}`).innerHTML;
-            var num1 = +screenInput.value;
-            console.log(num1);
         })
     }
 }
@@ -53,5 +51,15 @@ function divide(num1, num2){
         return num1 / num2;
     }
 }
+function operatorsListener(){
+    for(let i = 0; i < document.getElementsByClassName("func").length; i++){
+        document.getElementsByClassName("func")[i].addEventListener("click", function(){
+            var num1 = +screenInput.value;
+            console.log(num1);
+            screenInput.value = "";
+        })
+    }
+}
 buttonListeners();
 resetBtn();
+operatorsListener();
