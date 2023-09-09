@@ -2,16 +2,16 @@ document.body.innerHTML = `
 <div id="calculator">
 <div id="screen"><input type="text" id="screenInput"></div>
 <div id="numberBtns">
-    <button class="btn" id="1">1</button>
-    <button class="btn" id="2">2</button>
-    <button class="btn" id="3">3</button>
-    <button class="btn" id="4">4</button>
-    <button class="btn" id="5">5</button>
-    <button class="btn" id="6">6</button>
-    <button class="btn" id="7">7</button>
-    <button class="btn" id="8">8</button>
-    <button class="btn" id="9">9</button>
-    <button class="btn" id="0">0</button>
+    <button class="btn" id="num1">1</button>
+    <button class="btn" id="num2">2</button>
+    <button class="btn" id="num3">3</button>
+    <button class="btn" id="num4">4</button>
+    <button class="btn" id="num5">5</button>
+    <button class="btn" id="num6">6</button>
+    <button class="btn" id="num7">7</button>
+    <button class="btn" id="num8">8</button>
+    <button class="btn" id="num9">9</button>
+    <button class="btn" id="num0">0</button>
     <button class="btn" id="dot">.</button>
     <button class="btn" id="plus">+</button>
     <button class="btn" id="minus">-</button>
@@ -20,3 +20,13 @@ document.body.innerHTML = `
     <button class="btn" id="even">=</button>
 </div>
 </div>`
+
+function buttonListeners(){
+    for(let i = 0; i < 10; i++){
+        document.getElementById(`num${i}`).addEventListener("click", function(){
+            screenInput.value += document.getElementById(`num${i}`).innerHTML;
+            console.log(screenInput.value);
+        })
+    }
+}
+buttonListeners();
