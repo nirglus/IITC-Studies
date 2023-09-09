@@ -22,7 +22,6 @@ document.body.innerHTML = `
     <button id="reset">RES</button>
 </div>
 </div>`
-
 function buttonListeners(){
     for(let i = 0; i < 11; i++){
         document.getElementById(`num${i}`).addEventListener("click", function(){
@@ -53,13 +52,26 @@ function divide(num1, num2){
 }
 function operatorsListener(){
     for(let i = 0; i < document.getElementsByClassName("func").length; i++){
-        document.getElementsByClassName("func")[i].addEventListener("click", function(){
-            var num1 = +screenInput.value;
-            console.log(num1);
-            screenInput.value = "";
-        })
+        document.getElementsByClassName("func")[i].addEventListener("click", getNum1);
+        document.getElementsByClassName("func")[i].addEventListener("click", selectedOperator);
     }
 }
+function selectedOperator(){
+    var userOperator = "";
+    selectedOperator = document.getElementsByClassName("func")[i].innerHTML;
+    console.log(userOperator)
+    return userOperator;
+}
+function getNum1(){
+    var num1 = +screenInput.value;
+    console.log(num1);
+    screenInput.value = "";
+    return num1;
+}
+// function calculate(){
+//     var num2 = +screenInput.value;
+//     if(){}
+// }
 buttonListeners();
 resetBtn();
 operatorsListener();
