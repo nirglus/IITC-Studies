@@ -32,7 +32,7 @@ body{
     "num7 num8 num9 multip"
     "num4 num5 num6 minus"
     "num1 num2 num3 plus"
-    "dots num0 even even ";
+    "dots num0 even plus ";
     width: 400px;
     height: 300px;
     gap: 10px;
@@ -57,6 +57,18 @@ body{
 #del{ grid-area: del;}
 #mod{ grid-area: mod;}
 
+.btn{
+    background-color: #E6D5B8;
+    border: 0;
+    border-radius: 3px;
+    font-size: 20px;
+}
+.func{
+    background-color: #F0A500;
+}
+.delRes{
+    background-color: #E45826;
+}
 
 
 

@@ -19,8 +19,8 @@ document.body.innerHTML = `
     <button class="btn func" id="multiply">*</button>
     <button class="btn func" id="divide">/</button>
     <button class="btn" id="even">=</button>
-    <button id="del">DEL</button>
-    <button id="reset">RES</button>
+    <button class="btn delRes" id="del">DEL</button>
+    <button class="btn delRes" id="reset">RES</button>
 </div>
 </div>`
 var selectedOperator = "";
