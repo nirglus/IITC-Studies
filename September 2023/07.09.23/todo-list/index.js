@@ -21,19 +21,22 @@ function addTask(){
     <button id="submitTask">Add</button>
     </form>` 
 }
-var taskNum = 0
+var taskNum = 0;
 function addRowToTable(){
+    var rowColor;
     if(isDone.checked){
         isDone.value = "Yes";
+        rowColor = "background-color: #00ff0d"
     }else{
         isDone.value = "No";
+        rowColor = "background-color: #fd0000"
     }
     todoBody.innerHTML += `
     <tr id="row${taskNum}">
     <td>${taskName.value}</td>
     <td>${whatToDo.value}</td>
     <td>${tillWhen.value}</td>
-    <td>${isDone.value}</td>
+    <td style="${rowColor}">${isDone.value}</td>
     </tr>`
     taskNum++;
     deleteRow();
