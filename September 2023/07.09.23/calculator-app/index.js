@@ -18,6 +18,8 @@ document.body.innerHTML = `
     <button class="btn" id="multiply">*</button>
     <button class="btn" id="divide">/</button>
     <button class="btn" id="even">=</button>
+    <button id="del">DEL</button>
+    <button id="reset">RES</button>
 </div>
 </div>`
 
@@ -29,4 +31,10 @@ function buttonListeners(){
         })
     }
 }
+function resetBtn(){
+    reset.addEventListener("click", function(){
+        screenInput.value = "";
+    })
+}
 buttonListeners();
+resetBtn();
