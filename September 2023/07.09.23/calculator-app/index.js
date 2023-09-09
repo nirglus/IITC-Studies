@@ -85,6 +85,9 @@ function calculate(){
             break;
     }
 }
+del.addEventListener("click", function(){
+    screenInput.value = screenInput.value.substring(0,screenInput.value.length - 1);
+})
 buttonListeners();
 resetBtn();
 operatorsListener();
