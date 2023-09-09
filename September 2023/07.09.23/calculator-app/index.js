@@ -50,6 +50,9 @@ function multiply(num1, num2){
 function divide(num1, num2){ 
    return num1 / num2;
 }
+function modulos(num1, num2){
+    return num1 % num2;
+}
 function operatorsListener(){
     for(let i = 0; i < document.getElementsByClassName("func").length; i++){
         document.getElementsByClassName("func")[i].addEventListener("click", getNum1);
@@ -87,6 +90,11 @@ function calculate(){
             screenInput.value = result;
             resultsArr.push(result);
             break;
+        case "%":
+            var result = modulos(num1, num2);
+            screenInput.value = result;
+            resultsArr.push(result);
+           break;
         default:
             break;
     }
