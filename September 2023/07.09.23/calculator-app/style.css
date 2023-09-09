@@ -84,7 +84,11 @@ body{
 .delRes:hover{
     background-color: #ff4400;
 }
-
+@media (max-width:600px){
+    #calculator{
+        transform: scale(0.6);
+    }
+}
 
 
 
