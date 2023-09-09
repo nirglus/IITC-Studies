@@ -1,3 +1,7 @@
+@font-face {
+    font-family: digital;
+    src: url(../calculator-app/fonts/digital-7.ttf);
+}
 body{
     display: flex;
     justify-content: center;
@@ -19,6 +23,7 @@ body{
 #screenInput{
     height: 60px;
     font-size: 30px;
+    font-family: digital;
     width: 420px;
     background-color: #CBE4DE;
     border: 0;
