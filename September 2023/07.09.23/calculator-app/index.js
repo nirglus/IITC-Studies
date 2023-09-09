@@ -27,7 +27,8 @@ function buttonListeners(){
     for(let i = 0; i < 10; i++){
         document.getElementById(`num${i}`).addEventListener("click", function(){
             screenInput.value += document.getElementById(`num${i}`).innerHTML;
-            console.log(screenInput.value);
+            var num1 = screenInput.value;
+            console.log(num1);
         })
     }
 }
@@ -35,6 +36,9 @@ function resetBtn(){
     reset.addEventListener("click", function(){
         screenInput.value = "";
     })
+}
+function add(num1, num2){
+    return num1 + num2;
 }
 buttonListeners();
 resetBtn();
