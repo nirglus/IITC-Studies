@@ -62,12 +62,27 @@ body{
     border: 0;
     border-radius: 3px;
     font-size: 20px;
+    transition: background-color 0.1s, color 0.1s;
+}
+.btn:active{
+    transform: translateY(2px);
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #4A3933;
+    color: #fff;
 }
 .func{
     background-color: #F0A500;
 }
+.func:hover{
+    background-color: #ff8400;
+}
 .delRes{
     background-color: #E45826;
+}
+.delRes:hover{
+    background-color: #ff4400;
 }
 
 
