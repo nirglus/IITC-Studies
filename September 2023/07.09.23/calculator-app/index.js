@@ -24,6 +24,7 @@ document.body.innerHTML = `
 </div>`
 var selectedOperator = "";
 var num1 = 0;
+var resultsArr = [];
 function buttonListeners(){
     for(let i = 0; i < 11; i++){
         document.getElementById(`num${i}`).addEventListener("click", function(){
@@ -68,18 +69,22 @@ function calculate(){
         case "+":
             var result = add(num1, num2);
             screenInput.value = result;
+            resultsArr.push(result);
             break;
         case "-":
             var result = subtract(num1, num2);
             screenInput.value = result;
+            resultsArr.push(result);
             break;
         case "*":
             var result = multiply(num1, num2);
             screenInput.value = result;
+            resultsArr.push(result);
             break;
         case "/":
             var result = divide(num1, num2);
             screenInput.value = result;
+            resultsArr.push(result);
             break;
         default:
             break;
