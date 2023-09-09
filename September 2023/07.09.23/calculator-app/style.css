@@ -3,6 +3,25 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #F4EEE0;
+}
+#calculator{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #393646;
+    padding: 40px 35px 65px 35px;
+    border-radius: 10px;
+    box-shadow: 1px 4px 6px 1px #35304b;
+}
+#screenInput{
+    height: 60px;
+    font-size: 30px;
+    width: 420px;
+    background-color: #CBE4DE;
+    border: 0;
 }
 #numberBtns{
     display: grid;
@@ -14,6 +33,9 @@ body{
     "num4 num5 num6 minus"
     "num1 num2 num3 plus"
     "dots num0 even even ";
+    width: 400px;
+    height: 300px;
+    gap: 10px;
 }
 #num0{ grid-area: num0;}
 #num1{ grid-area: num1;}
