@@ -17,66 +17,78 @@ const IMG_ARR = ["https://pic1.calcalist.co.il/picserver3/crop_images/2022/04/12
 document.body.innerHTML += `<div id="imgs"></div>`;
 IMG_ARR.forEach((element) => imgs.innerHTML += `<img src="${element}">`);
 
+const LINK_ARR = [
+    "https://www.mobileye.com/",
+    "https://www.nvidia.com/en-us/",
+    "https://www.fiverr.com/",
+    "https://www.iai.co.il/",
+    "https://www.intel.com/",
+    "https://www.paypal.com/",
+    "https://www.playtika.com/",
+    "https://unity.com/",
+    "https://www.wix.com/",
+    "https://ridewithvia.com/"
+]
 const COMPANY_ARR = [
     {
         name: "Mobileye",
         city: "Jerusalem",
         image: `<img src=${IMG_ARR[0]}>`,
-        link: "https://www.mobileye.com/"
+        link: `${LINK_ARR[0]}`
     },
     {
         name: "Nvidia",
         city: "Santa-Clara",
         image: `<img src=${IMG_ARR[1]}>`,
-        link: "https://www.nvidia.com/en-us/"
+        link: `${LINK_ARR[1]}`
     },
     {
         name: "Fiverr",
         city: "Tel-Aviv",
         image: `<img src=${IMG_ARR[2]}>`,
-        link: "https://www.fiverr.com/"
+        link: `${LINK_ARR[2]}`
     },
     {
         name: "Israel Aerospace Industries",
         city: "Lod",
         image: `<img src=${IMG_ARR[3]}>`,
-        link: "https://www.iai.co.il/"
+        link: `${LINK_ARR[3]}`
     },
     {
         name: "Intel",
         city: "Santa-Clara",
         image: `<img src=${IMG_ARR[4]}>`,
-        link: "https://www.intel.com/"
+        link: `${LINK_ARR[4]}`
     },
     {
         name: "PayPal",
         city: "San Jose",
         image: `<img src=${IMG_ARR[5]}>`,
-        link: "https://www.paypal.com/"
+        link: `${LINK_ARR[5]}`
     },
     {
         name: "Playtika",
         city: "Herzliya",
         image: `<img src=${IMG_ARR[6]}>`,
-        link: "https://www.playtika.com/"
+        link: `${LINK_ARR[6]}`
     },
     {
         name: "Unity",
         city: "San Francisco",
         image: `<img src=${IMG_ARR[7]}>`,
-        link: "https://unity.com/"
+        link: `${LINK_ARR[7]}`
     },
     {
         name: "Wix",
         city: "Tel-Aviv",
         image: `<img src=${IMG_ARR[8]}>`,
-        link: "https://www.wix.com/"
+        link: `${LINK_ARR[8]}`
     },
     {
         name: "Via",
         city: "New York",
         image: `<img src=${IMG_ARR[9]}>`,
-        link: "https://ridewithvia.com/"
+        link: `${LINK_ARR[9]}`
     }
 ];
 
