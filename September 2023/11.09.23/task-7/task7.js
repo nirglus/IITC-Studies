@@ -85,7 +85,7 @@ COMPANY_ARR.forEach((element, index) => {
     companies.innerHTML += `<div id="card${index}" class="card"></div>`
     element["id"] = index;
     for(const key in element){
-        if(key != "id" || key != "link"){
+        if(key != "id" && key != "link"){
             document.getElementById(`card${index}`).innerHTML += `<span>${element[key]}<span>`;
         }
     }
