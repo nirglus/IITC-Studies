@@ -33,61 +33,81 @@ const COMPANY_ARR = [
     {
         name: "Mobileye",
         city: "Jerusalem",
-        image: `<img src=${IMG_ARR[0]}>`,
+        image: `<a href="${LINK_ARR[0]}">
+        <img src=${IMG_ARR[0]}>
+        </a>`,
         link: `${LINK_ARR[0]}`
     },
     {
         name: "Nvidia",
         city: "Santa-Clara",
-        image: `<img src=${IMG_ARR[1]}>`,
+        image: `<a href="${LINK_ARR[1]}">
+        <img src=${IMG_ARR[1]}>
+        </a>`,
         link: `${LINK_ARR[1]}`
     },
     {
         name: "Fiverr",
         city: "Tel-Aviv",
-        image: `<img src=${IMG_ARR[2]}>`,
+        image: `<a href="${LINK_ARR[2]}">
+        <img src=${IMG_ARR[2]}>
+        </a>`,
         link: `${LINK_ARR[2]}`
     },
     {
         name: "Israel Aerospace Industries",
         city: "Lod",
-        image: `<img src=${IMG_ARR[3]}>`,
+        image: `<a href="${LINK_ARR[3]}">
+        <img src=${IMG_ARR[3]}>
+        </a>`,
         link: `${LINK_ARR[3]}`
     },
     {
         name: "Intel",
         city: "Santa-Clara",
-        image: `<img src=${IMG_ARR[4]}>`,
+        image: `<a href="${LINK_ARR[4]}">
+        <img src=${IMG_ARR[4]}>
+        </a>`,
         link: `${LINK_ARR[4]}`
     },
     {
         name: "PayPal",
         city: "San Jose",
-        image: `<img src=${IMG_ARR[5]}>`,
+        image: `<a href="${LINK_ARR[5]}">
+        <img src=${IMG_ARR[5]}>
+        </a>`,
         link: `${LINK_ARR[5]}`
     },
     {
         name: "Playtika",
         city: "Herzliya",
-        image: `<img src=${IMG_ARR[6]}>`,
+        image: `<a href="${LINK_ARR[6]}">
+        <img src=${IMG_ARR[6]}>
+        </a>`,
         link: `${LINK_ARR[6]}`
     },
     {
         name: "Unity",
         city: "San Francisco",
-        image: `<img src=${IMG_ARR[7]}>`,
+        image: `<a href="${LINK_ARR[7]}">
+        <img src=${IMG_ARR[7]}>
+        </a>`,
         link: `${LINK_ARR[7]}`
     },
     {
         name: "Wix",
         city: "Tel-Aviv",
-        image: `<img src=${IMG_ARR[8]}>`,
+        image: `<a href="${LINK_ARR[8]}">
+        <img src=${IMG_ARR[8]}>
+        </a>`,
         link: `${LINK_ARR[8]}`
     },
     {
         name: "Via",
         city: "New York",
-        image: `<img src=${IMG_ARR[9]}>`,
+        image: `<a href="${LINK_ARR[9]}">
+        <img src=${IMG_ARR[9]}>
+        </a>`,
         link: `${LINK_ARR[9]}`
     }
 ];
