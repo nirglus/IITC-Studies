@@ -21,59 +21,71 @@ const COMPANY_ARR = [
     {
         name: "Mobileye",
         city: "Jerusalem",
-        image: `<img src=${IMG_ARR[0]}>`
+        image: `<img src=${IMG_ARR[0]}>`,
+        link: "https://www.mobileye.com/"
     },
     {
         name: "Nvidia",
         city: "Santa-Clara",
-        image: `<img src=${IMG_ARR[1]}>`
+        image: `<img src=${IMG_ARR[1]}>`,
+        link: "https://www.nvidia.com/en-us/"
     },
     {
         name: "Fiverr",
         city: "Tel-Aviv",
-        image: `<img src=${IMG_ARR[2]}>`
+        image: `<img src=${IMG_ARR[2]}>`,
+        link: "https://www.fiverr.com/"
     },
     {
         name: "Israel Aerospace Industries",
         city: "Lod",
-        image: `<img src=${IMG_ARR[3]}>`
+        image: `<img src=${IMG_ARR[3]}>`,
+        link: "https://www.iai.co.il/"
     },
     {
         name: "Intel",
         city: "Santa-Clara",
-        image: `<img src=${IMG_ARR[4]}>`
+        image: `<img src=${IMG_ARR[4]}>`,
+        link: "https://www.intel.com/"
     },
     {
         name: "PayPal",
         city: "San Jose",
-        image: `<img src=${IMG_ARR[5]}>`
+        image: `<img src=${IMG_ARR[5]}>`,
+        link: "https://www.paypal.com/"
     },
     {
         name: "Playtika",
         city: "Herzliya",
-        image: `<img src=${IMG_ARR[6]}>`
+        image: `<img src=${IMG_ARR[6]}>`,
+        link: "https://www.playtika.com/"
     },
     {
         name: "Unity",
         city: "San Francisco",
-        image: `<img src=${IMG_ARR[7]}>`
+        image: `<img src=${IMG_ARR[7]}>`,
+        link: "https://unity.com/"
     },
     {
         name: "Wix",
         city: "Tel-Aviv",
-        image: `<img src=${IMG_ARR[8]}>`
+        image: `<img src=${IMG_ARR[8]}>`,
+        link: "https://www.wix.com/"
     },
     {
         name: "Via",
         city: "New York",
-        image: `<img src=${IMG_ARR[9]}>`
+        image: `<img src=${IMG_ARR[9]}>`,
+        link: "https://ridewithvia.com/"
     }
-]
+];
+
 document.body.innerHTML += `<div id="companies"></div>`;
 COMPANY_ARR.forEach((element, index) => {
     companies.innerHTML += `<div id="card${index}" class="card"></div>`
+    element["id"] = index;
     for(const key in element){
-        if(element.hasOwnProperty(key)){
+        if(key != "id" || key != "link"){
             document.getElementById(`card${index}`).innerHTML += `<span>${element[key]}<span>`;
         }
     }
