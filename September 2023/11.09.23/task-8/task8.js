@@ -53,3 +53,8 @@ let fourKeyObj = {
 for(const key in fourKeyObj){
     console.log(`Key: ${key}, Value = ${fourKeyObj[key]}`);
 }
+
+//Task 8.4
+for(const key in fourKeyObj){
+    console.log(`Value: ${fourKeyObj[key]}`);
+}
