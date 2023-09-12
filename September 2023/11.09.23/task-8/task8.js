@@ -24,3 +24,6 @@ function checkIfOver18(NAME_ARR){
     })
 }
 checkIfOver18(NAME_ARR);
+
+const TAG_ARR = ["h1", "p", "span", "h4", "div"];
+TAG_ARR.forEach((element) => document.body.innerHTML += `<${element} class="sameClass">some text</${element}>`);
