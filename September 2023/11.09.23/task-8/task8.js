@@ -42,3 +42,14 @@ colorBtn.addEventListener("click", () => {
 changeHello.addEventListener("click", () => {
     TXT_ARR.forEach((element) => element.innerHTML = "Hello");
 })
+
+//Task 8.3
+let fourKeyObj = {
+    key1: "First key value",
+    key2: "Second key value",
+    key3: "Third key value",
+    key4: "Fourth key value"
+}
+for(const key in fourKeyObj){
+    console.log(`Key: ${key}, Value = ${fourKeyObj[key]}`);
+}
