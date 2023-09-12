@@ -1,6 +1,6 @@
-const COMPANY_ARR = ["Mobileye", "Nvidia", "Fiverr", "Israel Aerospace Industries",
+const COMPANY_NAME_ARR = ["Mobileye", "Nvidia", "Fiverr", "Israel Aerospace Industries",
 "Intel", "PayPal", "Playtika", "Unity" ,"Wix", "Via"];
-COMPANY_ARR.forEach((element) => document.body.innerHTML += `<p>${element}</p>`);
+COMPANY_NAME_ARR.forEach((element) => document.body.innerHTML += `<p>${element}</p>`);
 
 const IMG_ARR = ["https://pic1.calcalist.co.il/picserver3/crop_images/2022/04/12/Bycg3azEq/Bycg3azEq_1_0_3000_1688_0_x-large.jpg",
 "https://venturebeat.com/wp-content/uploads/2023/07/NVIDIA.jpg?fit=750%2C422&strip=all",
@@ -16,3 +16,5 @@ const IMG_ARR = ["https://pic1.calcalist.co.il/picserver3/crop_images/2022/04/12
 "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/homepage/geforce-ada-40-series-nv-sfg-295x166@2x.jpg"];
 document.body.innerHTML += `<div id="imgs"></div>`;
 IMG_ARR.forEach((element) => imgs.innerHTML += `<img src="${element}">`);
+
+
