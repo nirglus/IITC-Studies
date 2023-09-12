@@ -15,4 +15,4 @@ const IMG_ARR = ["https://pic1.calcalist.co.il/picserver3/crop_images/2022/04/12
 "https://assets-global.website-files.com/609196881a69bf7486cbfd01/60f8563681cadbdc1e0a9fd0_hero-v-opt-poster-00001.jpg",
 "https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/ada/homepage/geforce-ada-40-series-nv-sfg-295x166@2x.jpg"];
 document.body.innerHTML += `<div id="imgs"></div>`;
-
+IMG_ARR.forEach((element) => imgs.innerHTML += `<img src="${element}">`);
