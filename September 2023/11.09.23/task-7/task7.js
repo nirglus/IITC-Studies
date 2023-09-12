@@ -17,4 +17,65 @@ const IMG_ARR = ["https://pic1.calcalist.co.il/picserver3/crop_images/2022/04/12
 document.body.innerHTML += `<div id="imgs"></div>`;
 IMG_ARR.forEach((element) => imgs.innerHTML += `<img src="${element}">`);
 
+const COMPANY_ARR = [
+    {
+        name: "Mobileye",
+        city: "Jerusalem",
+        image: `<img src=${IMG_ARR[0]}>`
+    },
+    {
+        name: "Nvidia",
+        city: "Santa-Clara",
+        image: `<img src=${IMG_ARR[1]}>`
+    },
+    {
+        name: "Fiverr",
+        city: "Tel-Aviv",
+        image: `<img src=${IMG_ARR[2]}>`
+    },
+    {
+        name: "Israel Aerospace Industries",
+        city: "Lod",
+        image: `<img src=${IMG_ARR[3]}>`
+    },
+    {
+        name: "Intel",
+        city: "Santa-Clara",
+        image: `<img src=${IMG_ARR[4]}>`
+    },
+    {
+        name: "PayPal",
+        city: "San Jose",
+        image: `<img src=${IMG_ARR[5]}>`
+    },
+    {
+        name: "Playtika",
+        city: "Herzliya",
+        image: `<img src=${IMG_ARR[6]}>`
+    },
+    {
+        name: "Unity",
+        city: "San Francisco",
+        image: `<img src=${IMG_ARR[7]}>`
+    },
+    {
+        name: "Wix",
+        city: "Tel-Aviv",
+        image: `<img src=${IMG_ARR[8]}>`
+    },
+    {
+        name: "Via",
+        city: "New York",
+        image: `<img src=${IMG_ARR[9]}>`
+    }
+]
+document.body.innerHTML += `<div id="companies"></div>`;
+COMPANY_ARR.forEach((element, index) => {
+    companies.innerHTML += `<div id="card${index}" class="card"></div>`
+    for(const key in element){
+        if(element.hasOwnProperty(key)){
+            document.getElementById(`card${index}`).innerHTML += `<span>${element[key]}<span>`;
+        }
+    }
+});
 
