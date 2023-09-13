@@ -13,8 +13,8 @@ const AGE_ARR = [10 , 27 , 35, 8, 5, 45, 69, 9, 2, 90];
 // })
 
 // //Task 3
-// const LAST_NAME_ARR = ["Gluskin", "Bengaev", "Fittousi", "AlAluf", "Hazan"];
-// const UPPERCASE_LNAME_ARR = [];
+const LAST_NAME_ARR = ["Gluskin", "Bengaev", "Fittousi", "AlAluf", "Hazan"];
+const UPPERCASE_LNAME_ARR = [];
 // LAST_NAME_ARR.forEach((element) =>{
 //     UPPERCASE_LNAME_ARR.push(element.toUpperCase());
 // })
@@ -31,3 +31,9 @@ for(const age of AGE_ARR){
         console.log(age);
     }
 }
+
+//Task 6
+for(const lName of LAST_NAME_ARR){
+    UPPERCASE_LNAME_ARR.push(lName.toUpperCase());
+}
+console.log(UPPERCASE_LNAME_ARR);
