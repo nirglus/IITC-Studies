@@ -13,7 +13,6 @@
 //             return;        
 //         default:
 //             console.log("There isn't a proper message");
-//             return;
 //     }
 // }
 // checkInput(userNum);
@@ -32,8 +31,7 @@ function checkName(){
             document.body.innerHTML = `${userName.toLowerCase()}`;   
             return;
         default: 
-        document.body.innerHTML = "There isn't a proper name";
-           return;
+            document.body.innerHTML = "There isn't a proper name";
     }
 }
 checkName();
