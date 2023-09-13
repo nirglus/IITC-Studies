@@ -88,3 +88,31 @@ for(const dogElem of DOG_ARR){
         `<h3>${dogElemKey}:<small>${dogElem[dogElemKey]}</small></h3>`
     }
 }
+
+//Task 10
+const STUDENTS_ARR = [
+    {
+        fullName: "John Johnson",
+        birthDate: "1998-02-04",
+        email: "johny@gmail.com",
+        passedTest: false
+    },
+    {
+        fullName: "Jeremy Clarkson",
+        birthDate: "1999-03-06",
+        email: "jermes@gmail.com",
+        passedTest: true
+    },
+    {
+        fullName: "Moshe Moshaev",
+        birthDate: "1998-11-22",
+        email: "moshka@gmail.com",
+        passedTest: false
+    },
+    {
+        fullName: "Sunny Manson",
+        birthDate: "1997-07-09",
+        email: "sunson@gmail.com",
+        passedTest: true
+    }
+]

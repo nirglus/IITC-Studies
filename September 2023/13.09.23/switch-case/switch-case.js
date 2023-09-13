@@ -35,3 +35,25 @@ function checkName(){
     }
 }
 checkName();
+
+//Task 3
+function calculate(){
+    let num1 = +prompt("Enter first number");
+    let num2 = +prompt("Enter second number");
+    let param = prompt("Enter a paramater (+ - * /)");
+    switch (param) {
+        case "+":
+            console.log(num1 + num2);
+            return;
+        case "-":
+            console.log(num2 - num1);
+            return;
+        case "/":
+            console.log(num2 / num1);
+            return;
+        case "*":
+            console.log(num1 * num2);
+            return;    
+        default:
+    }
+}
