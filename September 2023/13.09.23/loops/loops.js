@@ -38,18 +38,53 @@
 // }
 // console.log(UPPERCASE_LNAME_ARR);
 
-//Task 8
-const HOUSE_OBJ = {
-    street: "Hertzel",
-    city: "Lod",
-    country: "Israel",
-    rooms: "4",
-    isResidents: true 
+// //Task 8
+// const HOUSE_OBJ = {
+//     street: "Hertzel",
+//     city: "Lod",
+//     country: "Israel",
+//     rooms: "4",
+//     isResidents: true 
+// }
+// console.log(HOUSE_OBJ);
+// for(const houseKey in HOUSE_OBJ){
+//     console.log(houseKey);
+// }
+// for(const houseValue in HOUSE_OBJ){
+//     document.body.innerHTML += `<p>${HOUSE_OBJ[houseValue]}</p>`;
+// }
+
+//Task 9
+const DOG_ARR = [
+    {
+        name: "Archi",
+        age: 2,
+        breed: "Mixed"
+    },
+    {
+        name: "Rexsov",
+        age: 5,
+        breed: "Pitbul"
+    },
+    {
+        name: "Milka",
+        age: 1,
+        breed: "Husky"
+    }
+]
+for(const dogElem of DOG_ARR){
+    console.log(dogElem);
 }
-console.log(HOUSE_OBJ);
-for(const houseKey in HOUSE_OBJ){
-    console.log(houseKey);
+for(const dogElem of DOG_ARR){
+    if(DOG_ARR.indexOf(dogElem) == 1){
+        console.log(dogElem);
+    }
 }
-for(const houseValue in HOUSE_OBJ){
-    document.body.innerHTML += `<p>${HOUSE_OBJ[houseValue]}</p>`;
+document.body.innerHTML += `<div id="main_div"></div>`;
+for(const dogElem of DOG_ARR){
+    main_div.innerHTML += `<div id="dog_obj${DOG_ARR.indexOf(dogElem)}"></div>`
+    for(const dogElemKey in dogElem){
+        document.getElementById(`dog_obj${DOG_ARR.indexOf(dogElem)}`).innerHTML +=
+        `<h3>${dogElemKey}:<small>${dogElem[dogElemKey]}</small></h3>`
+    }
 }
