@@ -54,40 +54,40 @@
 //     document.body.innerHTML += `<p>${HOUSE_OBJ[houseValue]}</p>`;
 // }
 
-//Task 9
-const DOG_ARR = [
-    {
-        name: "Archi",
-        age: 2,
-        breed: "Mixed"
-    },
-    {
-        name: "Rexsov",
-        age: 5,
-        breed: "Pitbul"
-    },
-    {
-        name: "Milka",
-        age: 1,
-        breed: "Husky"
-    }
-]
-for(const dogElem of DOG_ARR){
-    console.log(dogElem);
-}
-for(const dogElem of DOG_ARR){
-    if(DOG_ARR.indexOf(dogElem) == 1){
-        console.log(dogElem);
-    }
-}
-document.body.innerHTML += `<div id="main_div"></div>`;
-for(const dogElem of DOG_ARR){
-    main_div.innerHTML += `<div id="dog_obj${DOG_ARR.indexOf(dogElem)}"></div>`
-    for(const dogElemKey in dogElem){
-        document.getElementById(`dog_obj${DOG_ARR.indexOf(dogElem)}`).innerHTML +=
-        `<h3>${dogElemKey}:<small>${dogElem[dogElemKey]}</small></h3>`
-    }
-}
+// //Task 9
+// const DOG_ARR = [
+//     {
+//         name: "Archi",
+//         age: 2,
+//         breed: "Mixed"
+//     },
+//     {
+//         name: "Rexsov",
+//         age: 5,
+//         breed: "Pitbul"
+//     },
+//     {
+//         name: "Milka",
+//         age: 1,
+//         breed: "Husky"
+//     }
+// ]
+// for(const dogElem of DOG_ARR){
+//     console.log(dogElem);
+// }
+// for(const dogElem of DOG_ARR){
+//     if(DOG_ARR.indexOf(dogElem) == 1){
+//         console.log(dogElem);
+//     }
+// }
+// document.body.innerHTML += `<div id="main_div"></div>`;
+// for(const dogElem of DOG_ARR){
+//     main_div.innerHTML += `<div id="dog_obj${DOG_ARR.indexOf(dogElem)}"></div>`
+//     for(const dogElemKey in dogElem){
+//         document.getElementById(`dog_obj${DOG_ARR.indexOf(dogElem)}`).innerHTML +=
+//         `<h3>${dogElemKey}:<small>${dogElem[dogElemKey]}</small></h3>`
+//     }
+// }
 
 //Task 10
 const STUDENTS_ARR = [
@@ -115,4 +115,27 @@ const STUDENTS_ARR = [
         email: "sunson@gmail.com",
         passedTest: true
     }
-]
+];
+function logAllObj(){
+    for(const studentObj of STUDENTS_ARR){
+        console.log(studentObj);
+    }
+}
+function logThirdObj(){
+    for(const studentObj of STUDENTS_ARR){
+        if(STUDENTS_ARR.indexOf(studentObj) == 2){
+            console.log(studentObj);
+        }
+    }
+}
+function printEachObj(){
+    document.body.innerHTML += `<div id="main_div"></div>`;
+    for(const studentObj of STUDENTS_ARR){
+        main_div.innerHTML += `<div id="student_${STUDENTS_ARR.indexOf(studentObj)}"></div>`;
+        for(const studentKey in studentObj){
+            document.getElementById(`student_${STUDENTS_ARR.indexOf(studentObj)}`).innerHTML +=
+            `<h3>${studentKey} : ${studentObj[studentKey]}</h3>`;
+        }
+    }
+}
+printEachObj();
