@@ -89,53 +89,106 @@
 //     }
 // }
 
-//Task 10
-const STUDENTS_ARR = [
-    {
-        fullName: "John Johnson",
-        birthDate: "1998-02-04",
-        email: "johny@gmail.com",
-        passedTest: false
-    },
-    {
-        fullName: "Jeremy Clarkson",
-        birthDate: "1999-03-06",
-        email: "jermes@gmail.com",
-        passedTest: true
-    },
-    {
-        fullName: "Moshe Moshaev",
-        birthDate: "1998-11-22",
-        email: "moshka@gmail.com",
-        passedTest: false
-    },
-    {
-        fullName: "Sunny Manson",
-        birthDate: "1997-07-09",
-        email: "sunson@gmail.com",
-        passedTest: true
-    }
-];
-function logAllObj(){
-    for(const studentObj of STUDENTS_ARR){
-        console.log(studentObj);
-    }
-}
-function logThirdObj(){
-    for(const studentObj of STUDENTS_ARR){
-        if(STUDENTS_ARR.indexOf(studentObj) == 2){
-            console.log(studentObj);
+// //Task 10
+// const STUDENTS_ARR = [
+//     {
+//         fullName: "John Johnson",
+//         birthDate: "1998-02-04",
+//         email: "johny@gmail.com",
+//         passedTest: false
+//     },
+//     {
+//         fullName: "Jeremy Clarkson",
+//         birthDate: "1999-03-06",
+//         email: "jermes@gmail.com",
+//         passedTest: true
+//     },
+//     {
+//         fullName: "Moshe Moshaev",
+//         birthDate: "1998-11-22",
+//         email: "moshka@gmail.com",
+//         passedTest: false
+//     },
+//     {
+//         fullName: "Sunny Manson",
+//         birthDate: "1997-07-09",
+//         email: "sunson@gmail.com",
+//         passedTest: true
+//     }
+// ];
+// function logAllObj(){
+//     for(const studentObj of STUDENTS_ARR){
+//         console.log(studentObj);
+//     }
+// }
+// function logThirdObj(){
+//     for(const studentObj of STUDENTS_ARR){
+//         if(STUDENTS_ARR.indexOf(studentObj) == 2){
+//             console.log(studentObj);
+//         }
+//     }
+// }
+// function printEachObj(){
+//     document.body.innerHTML += `<div id="main_div"></div>`;
+//     for(const studentObj of STUDENTS_ARR){
+//         main_div.innerHTML += `<div id="student_${STUDENTS_ARR.indexOf(studentObj)}"></div>`;
+//         for(const studentKey in studentObj){
+//             document.getElementById(`student_${STUDENTS_ARR.indexOf(studentObj)}`).innerHTML +=
+//             `<h3>${studentKey} : ${studentObj[studentKey]}</h3>`;
+//         }
+//     }
+// }
+// printEachObj();
+
+//Task 11
+
+function createOffice(){
+    const OFFICE_ARR = [];
+    let counter = 0;
+    document.body.innerHTML += `
+    <form id="officeForm">
+    <input type="text" id="division" placeholder="Division:">
+    <input type="number" id="employeesNum" placeholder="Employees:">
+    <input type="text" id="managerName" placeholder="Manager name:">
+    <button id="submitBtn">Submit</button>
+    </form>`;
+    submitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if(counter < 3){
+            const OFFICE_OBJ = {
+                officeDivision: `${division.value}`,
+                employees: `${employeesNum.value}`,
+                manager: `${managerName.value}`
+            }
+            OFFICE_ARR.push(OFFICE_OBJ);
+            counter++;
+            console.log(OFFICE_ARR);
+            division.value = "";
+            employeesNum.value = "";
+            managerName.value = "";
+        }if(counter == 3){
+            submitBtn.disabled = true;
+            printOfficeObj(OFFICE_ARR);
         }
-    }
+    });
+
 }
-function printEachObj(){
+function printOfficeObj(OFFICE_ARR){
     document.body.innerHTML += `<div id="main_div"></div>`;
-    for(const studentObj of STUDENTS_ARR){
-        main_div.innerHTML += `<div id="student_${STUDENTS_ARR.indexOf(studentObj)}"></div>`;
-        for(const studentKey in studentObj){
-            document.getElementById(`student_${STUDENTS_ARR.indexOf(studentObj)}`).innerHTML +=
-            `<h3>${studentKey} : ${studentObj[studentKey]}</h3>`;
+    for(const officeObj of OFFICE_ARR){
+        const div = document.createElement('div')
+        div.setAttribute("id",`office_${OFFICE_ARR.indexOf(officeObj)}`);
+        main_div.appendChild(div); 
+
+        for(const officeKey in officeObj){
+            document.getElementById(`office_${OFFICE_ARR.indexOf(officeObj)}`).innerHTML +=
+            `<h3>${officeKey} : ${officeObj[officeKey]}</h3>`;
         }
+        console.log(document.getElementById("main_div"));
     }
-}
-printEachObj();
+ }
+ createOffice();
+
+
+
+
