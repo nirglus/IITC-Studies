@@ -58,13 +58,48 @@
 //     }
 // }
 
-//Task 4
-function printText(){
-    let userTxt = prompt("Enter a text");
+// //Task 4
+// function printText(){
+//     let userTxt = prompt("Enter a text");
+//     let userColor = prompt("Enter color");
+//     let userFontSize = +prompt("Enter font size");
+//     document.body.innerHTML += `<p id="printedTxt">${userTxt}</p>`;
+//     printedTxt.style.color = `${userColor}`;
+//     printedTxt.style.fontSize = `${userFontSize}px`;
+// }
+// printText();
+
+//Task 5
+function printCircle(){
     let userColor = prompt("Enter color");
-    let userFontSize = +prompt("Enter font size");
-    document.body.innerHTML += `<p id="printedTxt">${userTxt}</p>`;
-    printedTxt.style.color = `${userColor}`;
-    printedTxt.style.fontSize = `${userFontSize}px`;
+    let userPos = prompt("Enter a position (left / right / up / bottom/ center)");
+    document.body.innerHTML += `<div id="circle" style="border-radius: 50%; background-color:red; width: 300px; height: 300px; position: absolute;"></div>`;
+    switch (userPos) {
+        case "top":
+            circle.style.left = "calc(50% - 150px)";        
+            circle.style.backgroundColor = `${userColor}`; 
+            return;
+        case "bottom":
+            circle.style.left = "calc(50% - 150px)";
+            circle.style.top = "calc(98% - 300px)";
+            circle.style.backgroundColor = `${userColor}`; 
+            return;
+        case "left":
+            circle.style.top = "calc(50% - 150px)";
+            circle.style.backgroundColor = `${userColor}`;
+            return;
+        case "right":
+            circle.style.left = "calc(100% - 300px)";
+            circle.style.top = "calc(50% - 150px)";
+            circle.style.backgroundColor = `${userColor}`;
+            return;
+        case "center":
+            circle.style.left = "calc(50% - 150px)";
+            circle.style.top = "calc(50% - 150px)";
+            circle.style.backgroundColor = `${userColor}`;
+        default:
+            break;
+    }
 }
-printText();
+printCircle();
+
