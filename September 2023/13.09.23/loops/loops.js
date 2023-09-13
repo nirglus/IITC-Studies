@@ -142,53 +142,75 @@
 
 //Task 11
 
-function createOffice(){
-    const OFFICE_ARR = [];
-    let counter = 0;
-    document.body.innerHTML += `
-    <form id="officeForm">
-    <input type="text" id="division" placeholder="Division:">
-    <input type="number" id="employeesNum" placeholder="Employees:">
-    <input type="text" id="managerName" placeholder="Manager name:">
+// function createOffice(){
+//     const OFFICE_ARR = [];
+//     let counter = 0;
+//     document.body.innerHTML += `
+//     <form id="officeForm">
+//     <input type="text" id="division" placeholder="Division:">
+//     <input type="number" id="employeesNum" placeholder="Employees:">
+//     <input type="text" id="managerName" placeholder="Manager name:">
+//     <button id="submitBtn">Submit</button>
+//     </form>`;
+//     submitBtn.addEventListener("click", (e) => {
+//         e.preventDefault();
+//         if(counter < 3){
+//             const OFFICE_OBJ = {
+//                 officeDivision: `${division.value}`,
+//                 employees: `${employeesNum.value}`,
+//                 manager: `${managerName.value}`
+//             }
+//             OFFICE_ARR.push(OFFICE_OBJ);
+//             counter++;
+//             console.log(OFFICE_ARR);
+//             division.value = "";
+//             employeesNum.value = "";
+//             managerName.value = "";
+//         }if(counter == 3){
+//             submitBtn.disabled = true;
+//             printOfficeObj(OFFICE_ARR);
+//         }
+//     });
+
+// }
+// function printOfficeObj(OFFICE_ARR){
+//     document.body.innerHTML += `<div id="main_div"></div>`;
+//     for(const officeObj of OFFICE_ARR){
+//         const div = document.createElement('div')
+//         div.setAttribute("id",`office_${OFFICE_ARR.indexOf(officeObj)}`);
+//         main_div.appendChild(div); 
+
+//         for(const officeKey in officeObj){
+//             document.getElementById(`office_${OFFICE_ARR.indexOf(officeObj)}`).innerHTML +=
+//             `<h3>${officeKey} : ${officeObj[officeKey]}</h3>`;
+//         }
+//         console.log(document.getElementById("main_div"));
+//     }
+//  }
+//  createOffice();
+
+//Task 12
+document.body.innerHTML += `<button id="firstBtn">Click me</button>
+<div id="myForm"></div>`;
+firstBtn.addEventListener("click", () => {
+    myForm.innerHTML += `
+    <form id="routeForm">
+    <input type="text" id="depart" placeholder="Departure:">
+    <input type="text" id="dest" placeholder="Destination:">
+    <input type="number" id="time" placeholder="Route time:">
     <button id="submitBtn">Submit</button>
     </form>`;
     submitBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        if(counter < 3){
-            const OFFICE_OBJ = {
-                officeDivision: `${division.value}`,
-                employees: `${employeesNum.value}`,
-                manager: `${managerName.value}`
+        const ROUTE_OBJ = {
+            departure: `${depart.value}`, 
+            destination: `${dest.value}`,
+            time: `${time.value}`
             }
-            OFFICE_ARR.push(OFFICE_OBJ);
-            counter++;
-            console.log(OFFICE_ARR);
-            division.value = "";
-            employeesNum.value = "";
-            managerName.value = "";
-        }if(counter == 3){
-            submitBtn.disabled = true;
-            printOfficeObj(OFFICE_ARR);
-        }
+            document.body.innerHTML += `<div id="objDiv"></div>`;
+            for(routeKey in ROUTE_OBJ){
+                objDiv.innerHTML += `<h3>${routeKey} : ${ROUTE_OBJ[routeKey]}</h3>`;
+            }
     });
-
-}
-function printOfficeObj(OFFICE_ARR){
-    document.body.innerHTML += `<div id="main_div"></div>`;
-    for(const officeObj of OFFICE_ARR){
-        const div = document.createElement('div')
-        div.setAttribute("id",`office_${OFFICE_ARR.indexOf(officeObj)}`);
-        main_div.appendChild(div); 
-
-        for(const officeKey in officeObj){
-            document.getElementById(`office_${OFFICE_ARR.indexOf(officeObj)}`).innerHTML +=
-            `<h3>${officeKey} : ${officeObj[officeKey]}</h3>`;
-        }
-        console.log(document.getElementById("main_div"));
-    }
- }
- createOffice();
-
-
-
+});
 
