@@ -51,5 +51,5 @@ for(const houseKey in HOUSE_OBJ){
     console.log(houseKey);
 }
 for(const houseValue in HOUSE_OBJ){
-    console.log(HOUSE_OBJ[houseValue]);
+    document.body.innerHTML += `<p>${HOUSE_OBJ[houseValue]}</p>`;
 }
