@@ -264,3 +264,32 @@ for(const cityObj of CITIES_ARR){
     }
 }
 
+document.body.innerHTML += `<button id="openForm">Click me</button>
+<div id="form_div"></div>`;
+openForm.addEventListener("click", () => {
+    form_div.innerHTML += `<form id="newObjectForm">
+    <input type="text" id="cityNameInp" placeholder="City name:">
+    <input type="number" id="residInp" placeholder="Residents:">
+    <input type="text" id="emblemInp" placeholder="City emblem URL:">
+    <label for="quarntInp">Is on quarantine?</label>
+    <input type="radio" id="quarntInp">
+    <button id="submitBtn">Create new city</button>
+    </form>
+    `;
+     submitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if(quarntInp.checked){
+            quarntInp.value = true;
+        }else{
+            quarntInp.value = false;
+        }
+        const NEW_CITY = {
+            name: `${cityNameInp.value}`,
+            residents: `${residInp.value}`,
+            emblem: `<img width="100px" src="${emblemInp.value}">`,
+            quarantine: `${quarntInp.value}`
+        }
+        CITIES_ARR.push(NEW_CITY);
+        console.log(CITIES_ARR);
+     })
+})
