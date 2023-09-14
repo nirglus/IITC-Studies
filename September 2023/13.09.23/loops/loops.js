@@ -214,82 +214,136 @@
 //     });
 // });
 
-//Task 13
-const CITIES_ARR = [
+// //Task 13
+// const CITIES_ARR = [
+//     {
+//         name: "Lod",
+//         residents: 81660,
+//         emblem: `<img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Coat_of_arms_of_Lod.svg/1200px-Coat_of_arms_of_Lod.svg.png">`,
+//         quarantine: false
+//     },
+//     {
+//         name: "Ramla",
+//         residents: 77798,
+//         emblem: `<img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Coat_of_Arms_of_Ramla.svg/1200px-Coat_of_Arms_of_Ramla.svg.png">`,
+//         quarantine: false
+//     },
+//     {
+//         name: "Holon",
+//         residents: 197464,
+//         emblem: `<img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Coat_of_arms_of_Holon.svg/800px-Coat_of_arms_of_Holon.svg.png">`,
+//         quarantine: true
+//     },
+//     {
+//         name:"Bat-Yam",
+//         residents: 129012,
+//         emblem: `<img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Coat_of_arms_of_Bat-Yam.svg/1200px-Coat_of_arms_of_Bat-Yam.svg.png">`,
+//         quarantine: true
+//     },
+//     {
+//         name:"Netanya",
+//         residents: 203390,
+//         emblem: `<img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/NetanyaCoa.svg/1200px-NetanyaCoa.svg.png">`,
+//         quarantine: false
+//     }
+// ];
+// for(const obj of CITIES_ARR){
+//     console.log(obj);
+// }
+// for(const obj of CITIES_ARR){
+//     if(CITIES_ARR.lastIndexOf(obj) == CITIES_ARR.length - 1){
+//         console.log(obj);
+//     }
+// }
+// document.body.innerHTML += `<div id="cities"></div>`;
+// for(const cityObj of CITIES_ARR){
+//     const cityDiv = document.createElement("div");
+//     cityDiv.setAttribute("id", `city_${CITIES_ARR.indexOf(cityObj)}`);
+//     for(const cityKey in cityObj){
+//         cities.appendChild(cityDiv).innerHTML += `<p>${cityKey} : ${cityObj[cityKey]}<p>`
+//     }
+// }
+
+// document.body.innerHTML += `<button id="openForm">Click me</button>
+// <div id="form_div"></div>`;
+// openForm.addEventListener("click", () => {
+//     form_div.innerHTML += `<form id="newObjectForm">
+//     <input type="text" id="cityNameInp" placeholder="City name:">
+//     <input type="number" id="residInp" placeholder="Residents:">
+//     <input type="text" id="emblemInp" placeholder="City emblem URL:">
+//     <label for="quarntInp">Is on quarantine?</label>
+//     <input type="radio" id="quarntInp">
+//     <button id="submitBtn">Create new city</button>
+//     </form>
+//     `;
+//      submitBtn.addEventListener("click", (e) => {
+//         e.preventDefault();
+//         if(quarntInp.checked){
+//             quarntInp.value = true;
+//         }else{
+//             quarntInp.value = false;
+//         }
+//         const NEW_CITY = {
+//             name: `${cityNameInp.value}`,
+//             residents: `${residInp.value}`,
+//             emblem: `<img width="100px" src="${emblemInp.value}">`,
+//             quarantine: `${quarntInp.value}`
+//         }
+//         CITIES_ARR.push(NEW_CITY);
+//         console.log(CITIES_ARR);
+//      })
+// })
+
+//Task 14 
+const OBJECTSS_ARR = [
     {
-        name: "Lod",
-        residents: 81660,
-        emblem: `<img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Coat_of_arms_of_Lod.svg/1200px-Coat_of_arms_of_Lod.svg.png">`,
-        quarantine: false
+        fName: "John",
+        lName: "Johnson",
+        birthDate: "1998-02-04",
+        email: "johny@gmail.com"
     },
     {
-        name: "Ramla",
-        residents: 77798,
-        emblem: `<img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Coat_of_Arms_of_Ramla.svg/1200px-Coat_of_Arms_of_Ramla.svg.png">`,
-        quarantine: false
+        fName: "Jeremy",
+        lName: "Clarkson",
+        birthDate: "1999-03-06",
+        email: "jermes@gmail.com"
     },
     {
-        name: "Holon",
-        residents: 197464,
-        emblem: `<img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Coat_of_arms_of_Holon.svg/800px-Coat_of_arms_of_Holon.svg.png">`,
-        quarantine: true
+        fName: "Moshe",
+        lName: "Moshaev",
+        birthDate: "1998-11-22",
+        email: "moshka@gmail.com"
     },
     {
-        name:"Bat-Yam",
-        residents: 129012,
-        emblem: `<img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Coat_of_arms_of_Bat-Yam.svg/1200px-Coat_of_arms_of_Bat-Yam.svg.png">`,
-        quarantine: true
-    },
-    {
-        name:"Netanya",
-        residents: 203390,
-        emblem: `<img width="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/NetanyaCoa.svg/1200px-NetanyaCoa.svg.png">`,
-        quarantine: false
+        fullName: "Sunny",
+        lName: "Manson",
+        birthDate: "1997-07-09",
+        email: "sunson@gmail.com"
     }
 ];
-for(const obj of CITIES_ARR){
-    console.log(obj);
-}
-for(const obj of CITIES_ARR){
-    if(CITIES_ARR.lastIndexOf(obj) == CITIES_ARR.length - 1){
-        console.log(obj);
-    }
-}
-document.body.innerHTML += `<div id="cities"></div>`;
-for(const cityObj of CITIES_ARR){
-    const cityDiv = document.createElement("div");
-    cityDiv.setAttribute("id", `city_${CITIES_ARR.indexOf(cityObj)}`);
-    for(const cityKey in cityObj){
-        cities.appendChild(cityDiv).innerHTML += `<p>${cityKey} : ${cityObj[cityKey]}<p>`
-    }
-}
 
-document.body.innerHTML += `<button id="openForm">Click me</button>
-<div id="form_div"></div>`;
-openForm.addEventListener("click", () => {
-    form_div.innerHTML += `<form id="newObjectForm">
-    <input type="text" id="cityNameInp" placeholder="City name:">
-    <input type="number" id="residInp" placeholder="Residents:">
-    <input type="text" id="emblemInp" placeholder="City emblem URL:">
-    <label for="quarntInp">Is on quarantine?</label>
-    <input type="radio" id="quarntInp">
-    <button id="submitBtn">Create new city</button>
-    </form>
-    `;
-     submitBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        if(quarntInp.checked){
-            quarntInp.value = true;
-        }else{
-            quarntInp.value = false;
+document.body.innerHTML += `<div id="tableDiv"></div>`;
+tableDiv.innerHTML = `    
+<table id="myTable">
+<thead><tr id="tableTHead"></tr></thead>
+<tbody id="t_Body"></tbody>
+</table>`
+
+function addKeysToThead(obj){
+    for(const key in obj){
+        const tHead = document.getElementById("tableTHead");
+        tHead.innerHTML += `<th>${key}</th>`
+    }
+}
+function addDataToTable(objectArr){
+    const tBody = document.getElementById("t_Body")
+    for(const obj of objectArr){
+        tBody.innerHTML += `<tr id="object_${objectArr.indexOf(obj)}"</tr>`
+        for(const key in obj){
+            document.getElementById(`object_${objectArr.indexOf(obj)}`).innerHTML +=
+            `<td>${obj[key]}</td>`
         }
-        const NEW_CITY = {
-            name: `${cityNameInp.value}`,
-            residents: `${residInp.value}`,
-            emblem: `<img width="100px" src="${emblemInp.value}">`,
-            quarantine: `${quarntInp.value}`
-        }
-        CITIES_ARR.push(NEW_CITY);
-        console.log(CITIES_ARR);
-     })
-})
+    }
+}
+addKeysToThead(OBJECTSS_ARR[0]);
+addDataToTable(OBJECTSS_ARR);
