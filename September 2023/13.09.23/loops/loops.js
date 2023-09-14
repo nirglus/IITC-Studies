@@ -140,7 +140,7 @@
 // }
 // printEachObj();
 
-//Task 11
+// //Task 11
 
 // function createOffice(){
 //     const OFFICE_ARR = [];
@@ -189,28 +189,65 @@
 //  }
 //  createOffice();
 
-//Task 12
-document.body.innerHTML += `<button id="firstBtn">Click me</button>
-<div id="myForm"></div>`;
-firstBtn.addEventListener("click", () => {
-    myForm.innerHTML += `
-    <form id="routeForm">
-    <input type="text" id="depart" placeholder="Departure:">
-    <input type="text" id="dest" placeholder="Destination:">
-    <input type="number" id="time" placeholder="Route time:">
-    <button id="submitBtn">Submit</button>
-    </form>`;
-    submitBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        const ROUTE_OBJ = {
-            departure: `${depart.value}`, 
-            destination: `${dest.value}`,
-            time: `${time.value}`
-            }
-            document.body.innerHTML += `<div id="objDiv"></div>`;
-            for(routeKey in ROUTE_OBJ){
-                objDiv.innerHTML += `<h3>${routeKey} : ${ROUTE_OBJ[routeKey]}</h3>`;
-            }
-    });
-});
+// //Task 12
+// document.body.innerHTML += `<button id="firstBtn">Click me</button>
+// <div id="myForm"></div>`;
+// firstBtn.addEventListener("click", () => {
+//     myForm.innerHTML += `
+//     <form id="routeForm">
+//     <input type="text" id="depart" placeholder="Departure:">
+//     <input type="text" id="dest" placeholder="Destination:">
+//     <input type="number" id="time" placeholder="Route time:">
+//     <button id="submitBtn">Submit</button>
+//     </form>`;
+//     submitBtn.addEventListener("click", (e) => {
+//         e.preventDefault();
+//         const ROUTE_OBJ = {
+//             departure: `${depart.value}`, 
+//             destination: `${dest.value}`,
+//             time: `${time.value}`
+//             }
+//             document.body.innerHTML += `<div id="objDiv"></div>`;
+//             for(routeKey in ROUTE_OBJ){
+//                 objDiv.innerHTML += `<h3>${routeKey} : ${ROUTE_OBJ[routeKey]}</h3>`;
+//             }
+//     });
+// });
+
+//Task 13
+const CITIES_ARR = [
+    {
+        name: "Lod",
+        residents: 81660,
+        emblem: `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Coat_of_arms_of_Lod.svg/1200px-Coat_of_arms_of_Lod.svg.png">`,
+        quarantine: false
+    },
+    {
+        name: "Ramla",
+        residents: 77798,
+        emblem: `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Coat_of_Arms_of_Ramla.svg/1200px-Coat_of_Arms_of_Ramla.svg.png">`,
+        quarantine: false
+    },
+    {
+        name: "Holon",
+        residents: 197464,
+        emblem: `<img src="src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Coat_of_arms_of_Holon.svg/800px-Coat_of_arms_of_Holon.svg.png">`,
+        quarantine: true
+    },
+    {
+        name:"Bat-Yam",
+        residents: 129012,
+        emblem: `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Coat_of_arms_of_Bat-Yam.svg/1200px-Coat_of_arms_of_Bat-Yam.svg.png">`,
+        quarantine: true
+    },
+    {
+        name:"Netanya",
+        residents: 203390,
+        emblem: `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/NetanyaCoa.svg/1200px-NetanyaCoa.svg.png">`,
+        quarantine: false
+    }
+];
+for(const obj of CITIES_ARR){
+    console.log(obj);
+}
 
