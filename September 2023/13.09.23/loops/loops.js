@@ -250,4 +250,9 @@ const CITIES_ARR = [
 for(const obj of CITIES_ARR){
     console.log(obj);
 }
+for(const obj of CITIES_ARR){
+    if(CITIES_ARR.lastIndexOf(obj) == CITIES_ARR.length - 1){
+        console.log(obj);
+    }
+}
 
