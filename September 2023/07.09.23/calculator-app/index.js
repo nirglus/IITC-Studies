@@ -34,7 +34,7 @@ function buttonListeners(){
     }
 }
 function resetBtn(){
-    reset.addEventListener("click", function(){
+    reset.addEventListener("click", () => {
         screenInput.value = "";
     })
 }
@@ -104,7 +104,7 @@ function calculate(){
             break;
     }
 }
-del.addEventListener("click", function(){
+del.addEventListener("click", () => {
     screenInput.value = screenInput.value.substring(0,screenInput.value.length - 1);
 })
 buttonListeners();
