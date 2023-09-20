@@ -49,13 +49,16 @@ function Book(title, category, author, pages, image){
     }
 }
 
-const book1 = new Book("The Godfather", "Crime", "Mario Puzo", 433, "https://m.media-amazon.com/images/I/81IHPwG1tbL._SY522_.jpg");
-const book2 = new Book("Harry Potter", "Fantasy", "J.K Rolling", 766, "https://m.media-amazon.com/images/I/71-++hbbERL._AC_SY300_SX300_.jpg");
-const book3 = new Book("The Godfather Returns", "Crime", "Mark Winegardner", 448, "https://m.media-amazon.com/images/I/51UYngmZ-2L._SY445_SX342_.jpg")
+const BOOKS_ARR = [new Book("The Godfather", "Crime", "Mario Puzo", 433, "https://m.media-amazon.com/images/I/81IHPwG1tbL._SY522_.jpg")
+,new Book("Harry Potter", "Fantasy", "J.K Rowling", 766, "https://m.media-amazon.com/images/I/71-++hbbERL._AC_SY300_SX300_.jpg")
+,new Book("The Godfather Returns", "Crime", "Mark Winegardner", 448, "https://m.media-amazon.com/images/I/51UYngmZ-2L._SY445_SX342_.jpg")
+];
 
-const BOOKS_ARR = [book1, book2, book3];
 console.log(BOOKS_ARR[0].render());
 
 BOOKS_ARR.forEach((book) => {
     document.getElementById("book").innerHTML += book.render();
 })
+
+//Another solution
+// document.getElementById("book").innerHTML += BOOKS_ARR.map(book => book.render()).join("");
