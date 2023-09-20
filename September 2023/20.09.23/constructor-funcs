@@ -1,0 +1,29 @@
+const CAR1 = {
+    brand: "BMW",
+    model: "M3",
+    year: 2022,
+    currentSpeed: 0,
+    drive: () => {
+        return this.currentSpeed += 20;
+    }
+}
+
+//Instead of builiding each object, we can use constractor functions as following.
+
+
+function Car(brand, model, year){
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+    this.currentSpeed = 0;
+
+    this.drive = () => {
+        return this.currentSpeed += 20;
+    }
+}
+
+const car1 = new Car("BMW", "M3", 2022);
+const car2 = new Car("Mazda", "MX-5", 2020);
+
+console.log(car1);
+console.log(car1.drive());
