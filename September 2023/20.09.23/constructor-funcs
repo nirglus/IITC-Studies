@@ -22,6 +22,9 @@ function Car(brand, model, year){
     }
 }
 
+//It's a good practice to NOT use arrow funcs with objects.
+//While using this with arrow funcs, it takses a global this that is out of the current scope.
+
 const car1 = new Car("BMW", "M3", 2022);
 const car2 = new Car("Mazda", "MX-5", 2020);
 
