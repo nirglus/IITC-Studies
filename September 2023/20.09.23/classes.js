@@ -129,7 +129,7 @@ class Product {
         return this.priceAfterSale * this.quantity;
     }
     priceAfterSale(){
-        if(this.onSale == true){
+        if(this.onSale){
             return this.price - (this.price * (this.salePrecentage / 100));
         }
         return this.price;
