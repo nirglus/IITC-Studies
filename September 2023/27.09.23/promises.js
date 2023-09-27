@@ -84,6 +84,7 @@ function fetchJoke(){
        })
        .catch(err => {
         console.log(err);
+        console.error(err); // Bolds the error with red color
        })
 }
 refresh.addEventListener("click", fetchJoke);
