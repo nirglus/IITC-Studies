@@ -16,5 +16,11 @@ document.getElementById('add').addEventListener("click", () =>{
     }
     BOOK_ARR.push(NEW_BOOK);
     console.log(BOOK_ARR);
+    //! local storage
+    // setItem, getItem
+
+    //JSON 
+    //stringify, parse
+    localStorage.setItem("books", JSON.stringify(BOOK_ARR));
 })
 
