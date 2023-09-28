@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .card input[type="text"],
+        .card input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .card button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
+    <div class="card">
+        <input type="text" id="title" placeholder="Title:">
+        <input type="text" id="author" placeholder="Author:">
+        <input type="number" id="pages" placeholder="Pages:">
+        <button id="add">Add Book</button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
