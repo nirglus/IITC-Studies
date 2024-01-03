@@ -1,6 +1,6 @@
 document.body.innerHTML = `
 <div id="calculator">
-<div id="screen"><input type="text" id="screenInput"></div>
+<div id="screen"><input type="text" id="screenInput" disabled></div>
 <div id="numberBtns">
     <button class="btn" id="num1">1</button>
     <button class="btn" id="num2">2</button>
@@ -23,9 +23,9 @@ document.body.innerHTML = `
     <button class="btn delRes" id="reset">RES</button>
 </div>
 </div>`
-var selectedOperator = "";
-var num1 = 0;
-var resultsArr = [];
+let selectedOperator = "";
+let num1 = 0;
+const resultsArr = [];
 function buttonListeners(){
     for(let i = 0; i < 11; i++){
         document.getElementById(`num${i}`).addEventListener("click", function(){
@@ -34,7 +34,7 @@ function buttonListeners(){
     }
 }
 function resetBtn(){
-    reset.addEventListener("click", function(){
+    reset.addEventListener("click", () => {
         screenInput.value = "";
     })
 }
@@ -72,30 +72,31 @@ function getNum1(){
     return num1;
 }
 function calculate(){
-    var num2 = +screenInput.value;
+    let num2 = +screenInput.value;
+    let result;
     switch(selectedOperator){
         case "+":
-            var result = add(num1, num2);
+            result = add(num1, num2);
             screenInput.value = result;
             resultsArr.push(result);
             break;
         case "-":
-            var result = subtract(num1, num2);
+            result = subtract(num1, num2);
             screenInput.value = result;
             resultsArr.push(result);
             break;
         case "*":
-            var result = multiply(num1, num2);
+            result = multiply(num1, num2);
             screenInput.value = result;
             resultsArr.push(result);
             break;
         case "/":
-            var result = divide(num1, num2);
+            result = divide(num1, num2);
             screenInput.value = result;
             resultsArr.push(result);
             break;
         case "%":
-            var result = modulos(num1, num2);
+            result = modulos(num1, num2);
             screenInput.value = result;
             resultsArr.push(result);
            break;
@@ -103,7 +104,7 @@ function calculate(){
             break;
     }
 }
-del.addEventListener("click", function(){
+del.addEventListener("click", () => {
     screenInput.value = screenInput.value.substring(0,screenInput.value.length - 1);
 })
 buttonListeners();

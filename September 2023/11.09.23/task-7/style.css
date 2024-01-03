@@ -1,0 +1,17 @@
+#imgs, #companies{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2vw;
+    margin: 5vh 0;
+}
+#imgs img, #companies .card, .card img{
+    width: 100%;
+} 
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vh;
+    border: solid 2px ;
+}

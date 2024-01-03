@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            border: 2px solid #008080;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            margin: 0 auto;
+            box-shadow: 2px 2px 5px #888;
+            font-family: Arial, sans-serif;
+        }
+
+        .card input[type="text"],
+        .card input[type="number"] {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .card button {
+            background-color: #008080;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background-color: #006666;
+        }
+     </style>
+</head>
+<body>
+    <div class="card">
+        <input type="text" id="title" placeholder="Title:">
+        <input type="text" id="author" placeholder="Author:">
+        <input type="number" id="pages" placeholder="Pages:">
+        <button id="add">Add Book</button>
+    </div>
+    <script src="local-storage.js"></script>
+</body>
+</html>
