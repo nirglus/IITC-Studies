@@ -1,7 +1,9 @@
 import Employee from './components/Employee'
 import Gallery from './components/Gallery'
+import Grocery from './pages/Grocery'
+import Products from './pages/Products'
 // import Counter from './components/Counter'
-import './App.css'
+// import './App.css'
 const person1 = {
   image: "https://storage.googleapis.com/pai-images/263842313e3e452a8cbe848059216547.jpeg",
   fullName: "Jason Vite",
@@ -49,9 +51,11 @@ function App() {
         <Employee person={person2} />
         <Employee person={person3} />
       </div> */}
-      <Gallery />
+      {/* <Gallery /> */}
+      {/* <Grocery /> */}
+      <Products />
     </div>
   )
 }
 
-export default App
+export default App;
