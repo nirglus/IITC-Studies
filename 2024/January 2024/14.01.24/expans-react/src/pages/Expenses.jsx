@@ -39,7 +39,7 @@ function Expenses(props){
     }, []);
 
     return (
-        <>{props.user == null ? (
+        <>{!props.user ? (
           <h1>User is not connected</h1>
         ) : ( 
         <div>
