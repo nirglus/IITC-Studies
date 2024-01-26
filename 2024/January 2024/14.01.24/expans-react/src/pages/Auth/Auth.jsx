@@ -10,7 +10,7 @@ function Auth(props){
     let toggleTxt = setIsLoginMode ? "Register" : "Log In";
 
     const handleToggle = () =>{
-        setIsLoginMode(!setIsLoginMode);
+        setIsLoginMode(!isLoginMode);
     }
     const changeHandler = (e) => {
         console.log(e.target.name, e.target.value);
