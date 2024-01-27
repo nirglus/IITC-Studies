@@ -27,6 +27,7 @@
 .expenses table{
     background-color: var(--lightYellow);
     padding: 10px;
+    margin-bottom: 30px;
     border-radius: 10px;
     width: 620px;
 }
