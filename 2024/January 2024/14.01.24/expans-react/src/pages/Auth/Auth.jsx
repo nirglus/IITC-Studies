@@ -2,7 +2,7 @@ import { useState} from "react";
 import { auth } from "../../config/firebaseConfig";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import Login from "../../components/Login";
-import SignUp from "../../components/Signup";
+import SignUp from "../../components/SignUp";
 
 function Auth(props){
     const [isLoginMode, setIsLoginMode] = useState(true);
