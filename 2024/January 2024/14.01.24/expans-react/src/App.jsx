@@ -41,7 +41,7 @@ function App() {
       <Routes>
         <Route path="/budget" element={<Expenses user={user}/>}/>
         <Route path="/login" element={<Auth setUser={setUser} />}/>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home user={user}/>} />
       </Routes>
     </BrowserRouter>
     </>

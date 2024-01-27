@@ -9,11 +9,14 @@ function Navbar({user, userSignOut}){
             <h1>BudgetBuddy</h1>
         </div>
         <div className="navItems">
-            <Link to="/" style={{padding: "5px"}}>Home</Link>
-            <Link to="/about" style={{padding: "5px"}}>About</Link>
-            <Link to="/budget" style={{padding: "5px"}}>Budget</Link>
-            <Link to ="/login" style={{padding: "5px"}}>Login</Link>
-            {user ? <button onClick={userSignOut}>Sign out</button> : null}
+            <Link to="/" style={{padding: "8px"}}>Home</Link>
+            <Link to="/about" style={{padding: "8px"}}>About</Link>
+            <Link to="/budget" style={{padding: "8px"}}>Budget</Link>
+            
+            {user ? 
+            (<button onClick={userSignOut}>Sign out</button>)
+             : (<Link to ="/login" style={{padding: "8px"}}>Login</Link>)
+             }
         </div>
     </nav>
     )
