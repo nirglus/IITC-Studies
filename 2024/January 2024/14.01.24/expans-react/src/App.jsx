@@ -7,6 +7,7 @@ import About from './pages/About';
 import Auth from './pages/Auth/Auth';
 import Expenses from './pages/Expenses'
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <Route path="/" element={<Home user={user}/>} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
     </>
   )
