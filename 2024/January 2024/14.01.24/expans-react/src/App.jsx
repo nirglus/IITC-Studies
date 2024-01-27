@@ -5,6 +5,7 @@ import Auth from './pages/Auth/Auth';
 import { auth } from './config/firebaseConfig';
 import Expenses from './pages/Expenses'
 import Navbar from './components/Navbar';
+import Home from './pages/Home/Home';
 
 
 function App() {
@@ -39,7 +40,8 @@ function App() {
       <Navbar user={user} userSignOut={userSignOut}/>
       <Routes>
         <Route path="/budget" element={<Expenses user={user}/>}/>
-        <Route path="/login" element={<Auth setUser={setUser} />} />
+        <Route path="/login" element={<Auth setUser={setUser} />}/>
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
     </>
