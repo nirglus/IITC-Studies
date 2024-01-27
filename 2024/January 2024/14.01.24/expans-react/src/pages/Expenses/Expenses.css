@@ -19,3 +19,20 @@
     border: 0;
     background-color: var(--lightYellow);
 }
+.budgetDisplay{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.expenses table{
+    background-color: var(--lightYellow);
+    padding: 10px;
+    border-radius: 10px;
+    width: 620px;
+}
+.expenses th{
+    text-align: left;
+}
+.deleteRow{
+    width: 90px;
+}

@@ -44,7 +44,7 @@ function Expenses(props){
           <h1>User is not connected</h1>
         ) : ( 
         <div className="expenses">
-        <h1>Budget Tracker</h1>
+        <h1>Add an expense</h1>
         <form className="expenseForm" onSubmit={submitHandler}>
             <input onChange={changeHandler} type="text" name="title" placeholder="Enter a title:"/>
             <select onChange={changeHandler} name="category">
@@ -62,21 +62,24 @@ function Expenses(props){
             </select>
             <button type="submit">Add +</button>
         </form>
-        <table>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Category</th>
-              <th>Amount</th>
-              <th>Type</th>
-            </tr>
-          </thead>
-          <tbody>
-            {expenses.map((item, index) =>{
-                return <ExpenseItem item={item} key={index} onDelete={() => handleDelete(item.id)}/>
-            })}
-          </tbody>
-          </table>
+        <div className="budgetDisplay">
+          <h1>My expenses</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              {expenses.map((item, index) =>{
+                  return <ExpenseItem item={item} key={index} onDelete={() => handleDelete(item.id)}/>
+              })}
+            </tbody>
+            </table>
+        </div>
 
         </div>
 

@@ -8,7 +8,7 @@ function ExpenseItem(props){
             <td>{props.item.category}</td>
             <td>${props.item.amount}</td>
             <td>{props.item.type}</td>
-            <td><button onClick={handleDelete}>Delete</button></td>
+            <td className="deleteRow"><button onClick={handleDelete}>Delete</button></td>
         </tr>
     )
 }
