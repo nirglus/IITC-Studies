@@ -2,7 +2,7 @@
   --whiteGreen: #F7F4E3;
   --lightGreen: #D2E1C8;
   --yellow: #FEE4A6;
-  --pink: #F9C4AA;
+  --pink: rgb(249, 196, 170);
   --lightYellow: #FDF0D1;
   --lightPink: #AC7D88;
   --mediumPink: #85586F;
@@ -52,6 +52,7 @@ button {
 }
 button:hover {
   background-color: var(--btnHover);
+  color: var(--pink);
 }
 
 

@@ -40,6 +40,7 @@ function Auth(props){
           console.log("Signed up succesfully");
           props.setUser(userCard.user);
         }
+        window.location.href = "/budget";
       };
 
     return (

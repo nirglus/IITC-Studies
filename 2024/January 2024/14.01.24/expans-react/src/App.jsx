@@ -36,8 +36,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
-      <Navbar/>
-      {user ? <button onClick={userSignOut}>Sign out</button> : null}
+      <Navbar user={user} userSignOut={userSignOut}/>
       <Routes>
         <Route path="/budget" element={<Expenses user={user}/>}/>
         <Route path="/login" element={<Auth setUser={setUser} />} />

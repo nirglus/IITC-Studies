@@ -4,7 +4,7 @@ function SignUp(props){
         <div className="loginCont">
             <h2>Budget Tracker</h2>
             <p>Register</p>
-            <form onSubmit={props.submitHandler}>
+            <form className="authForm" onSubmit={props.submitHandler}>
                 <input
                     onChange={props.changeHandler}
                     type="email"
