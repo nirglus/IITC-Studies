@@ -7,6 +7,13 @@ function SignUp(props){
             <form className="authForm" onSubmit={props.submitHandler}>
                 <input
                     onChange={props.changeHandler}
+                    type="text"
+                    name="nickname"
+                    placeholder="Enter a username"
+                    required
+                />
+                <input
+                    onChange={props.changeHandler}
                     type="email"
                     name="email"
                     placeholder="example123@email.com"
