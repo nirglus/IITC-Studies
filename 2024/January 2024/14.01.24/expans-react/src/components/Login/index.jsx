@@ -2,9 +2,10 @@
 function Login(props){
 
     return (
-        <div>
+        <div className="loginCont">
+            <h2>Budget Tracker</h2>
+            <p>Login</p>
             <form onSubmit={props.submitHandler}>
-                <label htmlFor="email">Email</label>
                 <input
                     onChange={props.changeHandler}
                     type="email"
@@ -12,7 +13,6 @@ function Login(props){
                     placeholder="example123@email.com"
                     required
                 />
-                <label htmlFor="password">Password</label>
                 <input
                     onChange={props.changeHandler}
                     type="password"

@@ -3,11 +3,11 @@ import { auth } from "../../config/firebaseConfig";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import Login from "../../components/Login";
 import SignUp from "../../components/SignUp";
+import "./Auth.css";
 
 function Auth(props){
     const [isLoginMode, setIsLoginMode] = useState(true);
     const [formData, setFormData] = useState({});
-    let toggleTxt = setIsLoginMode ? "Register" : "Log In";
 
     const handleToggle = () =>{
         setIsLoginMode(!isLoginMode);
@@ -43,8 +43,7 @@ function Auth(props){
       };
 
     return (
-        <div className="loginCont">
-            <button onClick={handleToggle}>{toggleTxt}</button>
+        <div className="authCont">
             {
                 isLoginMode ?
                     <Login submitHandler={submitHandler} changeHandler={changeHandler} />
@@ -52,8 +51,8 @@ function Auth(props){
                     <SignUp submitHandler={submitHandler} changeHandler={changeHandler} />
             }
 
-            <p onClick={handleToggle} >
-                {isLoginMode ? "Go to create account" : "already have account"}
+            <p className="toggleLog" onClick={handleToggle} >
+                {isLoginMode ? "Don't have an account? Register" : "Have an account? Login"}
             </p>
         </div>
     )

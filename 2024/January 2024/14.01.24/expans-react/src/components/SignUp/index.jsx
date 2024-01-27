@@ -1,9 +1,10 @@
 
 function SignUp(props){
     return (
-        <div>
+        <div className="loginCont">
+            <h2>Budget Tracker</h2>
+            <p>Register</p>
             <form onSubmit={props.submitHandler}>
-            <label htmlFor="email">Email</label>
                 <input
                     onChange={props.changeHandler}
                     type="email"
@@ -11,7 +12,6 @@ function SignUp(props){
                     placeholder="example123@email.com"
                     required
                 />
-                <label htmlFor="password">Password</label>
                 <input
                     onChange={props.changeHandler}
                     type="password"

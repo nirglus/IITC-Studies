@@ -3,11 +3,21 @@
   --lightGreen: #D2E1C8;
   --yellow: #FEE4A6;
   --pink: #F9C4AA;
-
+  --lightYellow: #FDF0D1;
+  --lightPink: #AC7D88;
+  --mediumPink: #85586F;
+  --brownPink: #643843;
+  --btnHover: #7a565f;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: var(--whiteGreen);
+  background-color: var(--mediumPink);
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -35,12 +45,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--pink);
+  color: #fff;
+  background-color: var(--brownPink);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: 0.3s;
 }
 button:hover {
-  background-color: var(--lightGreen);
+  background-color: var(--btnHover);
 }
 
 
