@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 import { onAuthStateChanged ,signOut, getAuth } from 'firebase/auth';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Auth from './pages/Auth/Auth';
 import { auth } from './config/firebaseConfig';
+import Home from './pages/Home/Home';
+import About from './pages/About';
+import Auth from './pages/Auth/Auth';
 import Expenses from './pages/Expenses'
 import Navbar from './components/Navbar';
-import Home from './pages/Home/Home';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route path="/budget" element={<Expenses user={user}/>}/>
         <Route path="/login" element={<Auth setUser={setUser} />}/>
         <Route path="/" element={<Home user={user}/>} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
     </>

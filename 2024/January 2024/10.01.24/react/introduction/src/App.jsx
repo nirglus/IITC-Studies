@@ -44,16 +44,16 @@ function App() {
       {/* <Employee person={person1} />
       <Employee person={person2} /> */}
       {/* <Counter /> */}
-      {/* <h1 className='team'>Our Team</h1>
+      <h1 className='team'>Our Team</h1>
       <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
       <div className="cards">
         <Employee person={person1} />
         <Employee person={person2} />
         <Employee person={person3} />
-      </div> */}
+      </div>
       {/* <Gallery /> */}
       {/* <Grocery /> */}
-      <Products />
+      {/* <Products /> */}
     </div>
   )
 }

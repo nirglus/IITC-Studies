@@ -1,0 +1,21 @@
+.employee{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--lightYellow);
+    padding: 20px;
+    border-radius: 15px;
+}
+.memberImage{
+    width: 300px;
+    border-radius: 50%;
+}
+.memberName{
+    text-transform: uppercase;
+    color: var(--brownPink);
+}
+.position{
+    color: rgb(19, 21, 153);
+    text-transform: uppercase;
+}
