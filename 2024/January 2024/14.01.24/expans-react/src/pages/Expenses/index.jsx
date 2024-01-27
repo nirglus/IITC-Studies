@@ -1,7 +1,8 @@
-import ExpenseItem from "../components/ExpenseItem";
+import ExpenseItem from "../../components/ExpenseItem";
 import { useState, useEffect } from "react";
-import { db } from "../config/firebaseConfig";
+import { db } from "../../config/firebaseConfig";
 import { addDoc, collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
+import "./Expenses.css";
 
 function Expenses(props){
 
@@ -42,10 +43,10 @@ function Expenses(props){
         <>{!props.user ? (
           <h1>User is not connected</h1>
         ) : ( 
-        <div>
+        <div className="expenses">
         <h1>Budget Tracker</h1>
-        <form onSubmit={submitHandler}>
-            <input onChange={changeHandler} type="text" name="title"/>
+        <form className="expenseForm" onSubmit={submitHandler}>
+            <input onChange={changeHandler} type="text" name="title" placeholder="Enter a title:"/>
             <select onChange={changeHandler} name="category">
                 <option value="" selected disabled>Category</option>
                 <option value="House">House</option>
@@ -53,7 +54,7 @@ function Expenses(props){
                 <option value="Food">Food</option>
                 <option value="Clothes">Clothes</option>
             </select>
-            <input onChange={changeHandler} type="number" name="amount"/>
+            <input onChange={changeHandler} type="number" name="amount" placeholder="How much?"/>
             <select onChange={changeHandler} name="type">
                 <option value="" selected disabled>Type</option>
                 <option value="Income">Income</option>

@@ -26,7 +26,7 @@
     gap: 20px;
     width: 250px;
 }
-.authForm input{
+form input{
     height: 40px;
     border: 0;
     outline: none;
@@ -35,11 +35,11 @@
     margin-top: 0;
     transition: 0.3s;
 }
-.authForm input:focus{
+form input:focus{
     box-shadow: 0 16px 11px -16px rgba(172,125,136,0.83);
 }
-.authForm input:-webkit-autofill,
-.authForm input:-webkit-autofill:focus {
+form input:-webkit-autofill,
+form input:-webkit-autofill:focus {
     transition: background-color 600000s 0s, color 600000s 0s;
 }
 .authForm input[data-autocompleted] {

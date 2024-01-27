@@ -1,0 +1,21 @@
+.expenses{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.expenseForm{
+    display: flex;
+    gap: 10px;
+    background-color: var(--lightYellow);
+    padding: 10px;
+    border-radius: 10px;
+}
+.expenseForm input{
+    height: unset;
+}
+.expenseForm select{
+    outline: none;
+    border: 0;
+    background-color: var(--lightYellow);
+}
