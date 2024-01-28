@@ -1,7 +1,10 @@
 import Employee from './components/Employee'
 import Gallery from './components/Gallery'
+import Test from './components/Test'
+import ProductCard from './components/ProductCard'
 import Grocery from './pages/Grocery'
 import Products from './pages/Products'
+import ThemeProvider from './context/Theme'
 // import Counter from './components/Counter'
 // import './App.css'
 const person1 = {
@@ -30,31 +33,11 @@ function App() {
   //   author: "J.K Rowling"
   // }
   return (
-    <div className='employees'>
-      {/* <h1>Hello, {name}!</h1>
-      <h2>How it feels to be {age} years old?</h2>
-      <button>Hello</button>
-      <select>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
-      <img src="https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267_1280.jpg" alt="owl" width={400} height={300} />
-      <p>{todo.title}, <small>{todo.author}</small></p> */}
-      {/* <Employee person={person1} />
-      <Employee person={person2} /> */}
-      {/* <Counter /> */}
-      <h1 className='team'>Our Team</h1>
-      <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
-      <div className="cards">
-        <Employee person={person1} />
-        <Employee person={person2} />
-        <Employee person={person3} />
-      </div>
-      {/* <Gallery /> */}
-      {/* <Grocery /> */}
-      {/* <Products /> */}
+    <ThemeProvider>
+      <div className='employees'>
+      <Test />
     </div>
+    </ThemeProvider>
   )
 }
 
