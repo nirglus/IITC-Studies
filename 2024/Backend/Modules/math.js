@@ -14,4 +14,12 @@ const calcDivide = (num1, num2) =>{
     return num1 / num2;
 }
 
-module.exports = {calcSum, calcSubstract, calcMultiply, calcDivide};
+const sumOfArray = (arr) =>{
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++){
+        sum = sum + arr[i];
+    }
+    return sum;
+}
+
+module.exports = {calcSum, calcSubstract, calcMultiply, calcDivide, sumOfArray};
