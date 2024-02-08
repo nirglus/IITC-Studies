@@ -68,6 +68,21 @@ app.patch("/api/v1/tasks/:id", (req, res) =>{
     }
 });
 
+//PUT Method
+app.patch("/api/v1/tasks/:id", (req, res) =>{
+    const taskID = parseInt(req.params.id);
+    const updatedTaskData = req.body;
+
+    const taskIndex = tasks.findIndex(task => task.id === taskID);
+
+    if(taskIndex !== -1){
+        tasks[taskIndex] = { id: taskID, ...updatedTaskData };
+        res.send(`Task with ID ${taskID} has been updated.`);
+    } else{
+        res.status(404).send(`Task with ID ${taskID} not found.`);
+    }
+})
+
 app.listen(PORT, () =>{
     console.log(`Server is running on port ${PORT}`);
 })
