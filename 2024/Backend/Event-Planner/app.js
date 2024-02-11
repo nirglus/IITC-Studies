@@ -1,5 +1,5 @@
 const express = require("express");
-const PORT = process.env.PORT || 3000;
+
 
 
 const app = express();
@@ -43,7 +43,4 @@ app.delete("/event-planner/events/:id", (req, res)=>{
 
 })
 
-
-app.listen(PORT, () =>{
-    console.log(`Server is running on port ${PORT}`);
-})
+module.exports = { app }
