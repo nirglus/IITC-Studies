@@ -23,22 +23,21 @@ router.post("/", async (req, res) =>{
     }
 })
 
-router.patch("/:id", (req, res)=>{
+router.patch("/:id", async (req, res)=>{
     const id = req.params.id;
     const body = req.body;
-    const event = events.findIndex(event => event.id == id);
-    console.log(event);
-    if(event != -1){
-        events[event] = {...events[id], ...body}
-        return res.send(`Event ${id} has been updated`);
+    try {
+        const updatedEvent = await Event.findByIdAndUpdate(id, body, { new: true});
+        res.send({message: "Event updated succesfully", data: updatedEvent});
+    } catch (error) {
+        res.status(400).send("Error updating event");
     }
-    res.send("Not found");
-})
+});
 
 router.delete("/:id", async(req, res)=>{
     const id = req.params.id;
     try {
-        await Event.findByIdAndDelete(id)
+        await Event.findByIdAndDelete(id);
     } catch (error) {
         res.status(400).send("Error");
     }
