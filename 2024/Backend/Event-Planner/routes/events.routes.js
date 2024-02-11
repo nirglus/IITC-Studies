@@ -35,11 +35,13 @@ router.patch("/:id", (req, res)=>{
     res.send("Not found");
 })
 
-router.delete("/:id", (req, res)=>{
+router.delete("/:id", async(req, res)=>{
     const id = req.params.id;
-    events = events.filter(event => id != event.id);
-    res.send(`Event with ID ${id} has been deleted.`);
-
+    try {
+        await Event.findByIdAndDelete(id)
+    } catch (error) {
+        res.status(400).send("Error");
+    }
 })
 
 module.exports = router;
