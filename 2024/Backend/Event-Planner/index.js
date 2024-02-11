@@ -1,7 +1,7 @@
 const { app } = require("./app");
 const mongoose = require("mongoose");
 
-const mongoUrl = 'mongodb://localhost:27017';
+const mongoUrl = 'mongodb://localhost:27017/event-planner';
 
 mongoose.connect(mongoUrl)
     .then(() => {

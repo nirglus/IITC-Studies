@@ -1,23 +1,26 @@
 const { Router } = require("express");
+const { Event } = require("../models/event.model")
 const router = Router();
 
-let events = [
-    {
-        id: 1,
-        title: "party",
-        description: "go to party",
-        date: "30-05-2024"
-    }
-]
 
-router.get("/", (req, res) =>{
-    res.send(events);
+router.get("/", async (req, res) =>{
+    try {
+        const events = await Event.find({});
+        res.send(events);
+    } catch (error) {
+        res.status(400).send("Error");
+    }
 });
 
-router.post("/", (req, res) =>{
+router.post("/", async (req, res) =>{
     const body = req.body;
-    events.push(body);
-    console.log({message: "Event added succesfully", data: body});
+    try {
+        const newEvent = new Event(body);
+        await newEvent.save();
+        res.send({message: "Event added succesfully", data: body});
+    } catch (error) {
+        res.status(400).send("Error");
+    }
 })
 
 router.patch("/:id", (req, res)=>{
