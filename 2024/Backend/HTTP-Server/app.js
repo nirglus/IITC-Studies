@@ -68,6 +68,21 @@ app.patch("/api/v1/tasks/:id", (req, res) =>{
     }
 });
 
+app.patch("/api/v1/tasks/:id", (req , res) =>{
+    const id = req.params.id;
+    const body = req.body;
+    const task = tasks.find(task => task.id === id);
+    if(task){
+        tasks.map(task => {
+            if(task.id === id){
+                return body;
+            }
+            return task;
+        });
+    }
+    res.send(body);
+})
+
 //PUT Method
 app.patch("/api/v1/tasks/:id", (req, res) =>{
     const taskID = parseInt(req.params.id);
