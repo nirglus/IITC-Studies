@@ -4,12 +4,24 @@ const router = Router();
 
 router.get("/", async (req ,res) =>{
     try {
-        const links = await Link.find({});
+        const query = req.query;
+        const links = await Link.find({ ...query });
         res.send(links);
     } catch (error) {
         res.status(400).send("Error");
     }
 });
+
+router.get("/:id", async (req, res) =>{
+    const { id } = req.params;
+    try {
+        const link = await Link.findById(id);
+        if(link) return res.send(link);
+        res.send("Couldn't find link");
+    } catch (error) {
+        res.status(400).send(Error);
+    }
+})
 
 router.post("/", async (req ,res) =>{
     const body = req.body;
