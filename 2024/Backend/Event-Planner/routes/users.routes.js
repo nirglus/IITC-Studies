@@ -37,6 +37,17 @@ router.patch("/:id", async (req, res)=>{
     } catch (error) {
         res.status(400).send("Error");
     }
+});
+
+router.delete("/:id", async (req, res)=>{
+    const { id } = req.params;
+    try {
+        await User.findByIdAndDelete(id);
+        return res.send("Succesfully deleted user");
+    } catch (error) {
+        console.log(error);
+        res.status(400).send("Error");
+    }
 })
 
 module.exports = router;
