@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
+import Links from '../../components/Links/Links';
 
 function Home() {
-    const [links, setLinks] = useState([]);
+
     const [newLink, setNewLink] = useState({});
     const linksURL = "http://localhost:2000/my-links/links";
 
@@ -36,28 +37,10 @@ function Home() {
         console.log(newLink);
     }
 
-    const getLinks = () =>{
-        fetch(linksURL)
-          .then(response => response.json())
-          .then(result => {
-              console.log(result);
-              setLinks(result);
-          })
-          .catch(error => console.log('error', error));
-    }
 
-    useEffect(()=>{
-      getLinks();
-    }, []);
   return (
     <>
-    {links.map((link, index) => (
-      <div key={index}>
-        <p>{link.title}</p>
-        <p>{link.description}</p>
-        <p>{link.link}</p>
-      </div>
-    ))}
+    <Links linksURL={linksURL} />
     <form onSubmit={submitHandler}>
         <input type="text" name="title" placeholder='Enter a title:' onChange={changeHandler} />
         <input type="text" name="link"  placeholder='Enter a link:' onChange={changeHandler} />
