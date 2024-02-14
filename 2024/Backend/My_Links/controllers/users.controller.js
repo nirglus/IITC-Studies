@@ -1,9 +1,11 @@
 const { User } = require("../models/user.model");
+const bcrypt = require("bcryptjs");
 
 const register = async (req ,res) =>{
-    const body = req.body;
     try {
-        const newUser = new User(body);
+        const {email, password, fullName} = req.body;
+        const hash = await bcrypt.hash(password, 10);
+        const newUser = new User({email, password: hash, fullName});
         newUser.id = newUser._id;
         await newUser.save();
         res.send({message: "User saved successfully!", data: newUser});
@@ -25,14 +27,14 @@ const updateUser = async(req, res) => {
 };
 
 const login = async (req, res) =>{
-    const body = req.body;
+    const {email, password} = req.body;
     try {
-        const checkUser = await User.findOne({email: body.email, password: body.password})
+        const checkUser = await User.findOne({email});
         if(checkUser){
-            res.send({message: "Logged in succesfully", data: checkUser.fullName});
-        } else{
-            res.send({message: "Wrong email or password", data: null});
-        }
+             const isMatch = await bcrypt.compare(password, checkUser.password);
+             if(isMatch) return res.send(checkUser);
+                    }
+        res.status(401).send("Email or password are incorrect");
     } catch (error) {
         res.status(400).send("Error");
     }
