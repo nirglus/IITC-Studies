@@ -10,10 +10,10 @@ const getAllLinks = async (req ,res) =>{
     }
 };
 
-const getOneLink =async (req, res) =>{
+const getOneLink = async (req, res) =>{
     const { id } = req.params;
     try {
-        const link = await Link.findById(id);
+        const link = await Link.findById(id).populate("userID");
         if(link) return res.send(link);
         res.send("Couldn't find link");
     } catch (error) {

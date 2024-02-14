@@ -4,7 +4,7 @@ const linkSchema = new mongoose.Schema({
     title:{type: String, required: true},
     link:{type: String, required: true},
     description:{type: String, required: true},
-    userID: {type: String, required: false},
+    userID: {type: mongoose.Types.ObjectId, ref: "User"},
     id: {type: String, required: false}
 });
 
