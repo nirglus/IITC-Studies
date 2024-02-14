@@ -1,6 +1,8 @@
 import { useState } from "react"
+import { APIBaseURL } from "../../../config/apiUrl";
 
-function AddLink({linksURL}) {
+
+function AddLink() {
     const [newLink, setNewLink] = useState({});
     const submitHandler = (e) =>{
         e.preventDefault();
@@ -12,13 +14,8 @@ function AddLink({linksURL}) {
             body: JSON.stringify(newLink),
         };
         
-        fetch(linksURL, options)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
+        fetch(`${APIBaseURL}/links`, options)
+            .then(response => response.json())
             .then(data => {
                 console.log('Post request successful:', data);
             })
@@ -32,6 +29,7 @@ function AddLink({linksURL}) {
         setNewLink({...newLink});
         console.log(newLink);
     }
+
 
   return (
     <div>
