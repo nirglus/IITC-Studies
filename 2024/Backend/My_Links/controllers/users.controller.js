@@ -1,5 +1,6 @@
 const { User } = require("../models/user.model");
 const bcrypt = require("bcryptjs");
+const {generateToken} = require("../utils/jwt");
 
 const register = async (req ,res) =>{
     try {
@@ -32,8 +33,11 @@ const login = async (req, res) =>{
         const checkUser = await User.findOne({email});
         if(checkUser){
              const isMatch = await bcrypt.compare(password, checkUser.password);
-             if(isMatch) return res.send(checkUser);
-                    }
+             if(isMatch){
+                const token = generateToken({id: checkUser._id, email: checkUser.email, role:"admin"})
+                return res.send({checkUser, token});
+            } 
+        };
         res.status(401).send("Email or password are incorrect");
     } catch (error) {
         res.status(400).send("Error");
