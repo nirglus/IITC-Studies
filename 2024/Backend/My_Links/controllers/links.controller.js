@@ -24,6 +24,8 @@ const getOneLink = async (req, res) =>{
 const postLink = async (req ,res) =>{
     const body = req.body;
     try {
+        console.log(req.user);
+        body.userID = req.user.id; // change the author key 
         const newLink = new Link(body);
         newLink.id = newLink._id;
         await newLink.save();
