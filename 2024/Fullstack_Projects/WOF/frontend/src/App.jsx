@@ -4,6 +4,8 @@ import Auth from './pages/Auth/Auth';
 import UserAcc from "./pages/UserAcc/UserAcc";
 import Products from "./pages/Products/Products";
 import Navbar from "./components/Navbar/Navbar"
+import Cart from "./pages/Cart/Cart";
+import SingleItem from "./components/SingleItem/SingleItem";
 import './App.css'
 
 function App() {
@@ -15,8 +17,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/account/:id" element={<UserAcc />} />
+        <Route path="/cart/:id" element={<Cart />} />
         <Route path="/login" element={<Auth />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<SingleItem />} />
       </Routes>
     </BrowserRouter>
     </>

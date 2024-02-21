@@ -17,6 +17,7 @@ function Navbar() {
         <div className="navItems">
             <Link to="/">Home</Link>
             <Link to="/products">Products</Link>
+            <Link to="/cart">Cart</Link>
             {user ? <Link to={`/account/${user.id}`}>My Account</Link> : null}     
             {user ? 
             (<button onClick={signOut}>Sign out,<span> <b>{user?.fullName}</b></span></button>)
