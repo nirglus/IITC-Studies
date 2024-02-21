@@ -1,6 +1,6 @@
 import { useState, useEffect, createContext} from "react";
 import axios from "axios";
-import { baseURL } from "../config/serverUrl";
+import { baseURL } from "../config/serverConfig";
 
 export const UserContext = createContext({});
 export default function UserProvider({children}){
@@ -9,15 +9,15 @@ export default function UserProvider({children}){
 
     const register = async(user) =>{
         try {
-            const res = await axios.post(`${baseURL}/users/register`,
-            {
-              fullName: user.fullName,
-              email: user.email,
-              password: user.password
-            })
+            const res = await axios.post(`${baseURL}/users/register`, {
+                fullName: user.fullName,
+                email: user.email,
+                password: user.password
+            });
             setUser(res.data.user);
             setToken(res.data.token);
             console.log('Register successful:', user);
+            window.location.href = '/';
         } catch (error) {
             console.error("Failed to register:", error);
         }
@@ -25,29 +25,51 @@ export default function UserProvider({children}){
 
     const login = async(user) =>{
         try {
-            const response = await axios.post(`${baseURL}/users/users/login`, {
+            const response = await axios.post(`${baseURL}/users/login`, {
                 email: user.email,
                 password: user.password
             });
-            console.log(response);
             setUser(response.data.user);
             setToken(response.data.token);
             console.log('Login successful:', user);
+            window.location.href = '/';
         } catch (error) {
             console.error("Failed to login:", error);
         }
     }
+
+    const getUser = async(token) =>{
+        try {
+            const res = await axios.get(`${baseURL}/users`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+            console.log(user);
+            setUser(res.data.user);
+        } catch (error) {
+            console.error("Failed to get user:", error);
+        }
+    }
     
+    const signOut = () =>{
+        setUser();
+        setToken('');
+        localStorage.setItem('token', '');
+    }
+
     useEffect(() =>{
         if(token == ''){
             setToken(localStorage.getItem('token') ?? '');
         } else{
             localStorage.setItem('token', token);
         }
+        getUser(token);
     },[token]);
 
+
     return (
-        <UserContext.Provider value={{ user, setUser, token, setToken, register, login}}>
+        <UserContext.Provider value={{ user, setUser, getUser, token, setToken, register, login, signOut}}>
             {children}
         </UserContext.Provider>
     );
