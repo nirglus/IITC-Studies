@@ -1,11 +1,13 @@
-import { useState, useEffect, createContext} from "react";
+import { useState, useEffect, createContext, useContext} from "react";
 import axios from "axios";
 import { baseURL } from "../config/serverConfig";
+import { CartContext } from "./Cart";
 
 export const UserContext = createContext({});
 export default function UserProvider({children}){
     const [user, setUser] = useState();
     const [token, setToken] = useState('');
+    const {findCartByUserID, userCartID} = useContext(CartContext)
 
     const register = async(user) =>{
         try {
@@ -47,6 +49,7 @@ export default function UserProvider({children}){
             });
             console.log(user);
             setUser(res.data.user);
+            findCartByUserID(res.data.user.id);
         } catch (error) {
             console.error("Failed to get user:", error);
         }

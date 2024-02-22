@@ -25,10 +25,10 @@ function Auth() {
     }
   }
 
-  useEffect(() =>{
-    console.log(user);
-    console.log(token);
-  },[user,token])
+  // useEffect(() =>{
+  //   console.log(user);
+  //   console.log(token);
+  // },[user,token])
 
   return (
     <div>

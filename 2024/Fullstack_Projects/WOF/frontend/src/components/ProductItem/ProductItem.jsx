@@ -1,8 +1,10 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState ,useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/Cart';
 
 function ProductItem({product}) {
   const [quantity, setQuantity] = useState(1); 
+  const {addItemToCart, userCart} = useContext(CartContext)
 
   const handleIncrement = () => {
     setQuantity(prevQuantity => prevQuantity + 1);
@@ -15,7 +17,14 @@ function ProductItem({product}) {
   };
 
   const handleAddToCart = () => {
-    console.log(`Added ${quantity} ${product.title} to the cart`);
+    const productID = product.id;
+    console.log({userCart});
+    const cartID = userCart.id;
+    const price = product.price;
+    console.log({productID, cartID, price, quantity});
+    addItemToCart({productID, cartID, price, quantity});
+
+    // console.log(`Added ${quantity} ${product.title} to the cart`);
   };
 
   return (
@@ -31,7 +40,7 @@ function ProductItem({product}) {
         <span>{quantity}</span>
         <button onClick={handleIncrement}>+</button>
       </div>
-      <button>Add to cart</button>
+      <button onClick={handleAddToCart}>Add to cart</button>
    </div>
   )
 }
