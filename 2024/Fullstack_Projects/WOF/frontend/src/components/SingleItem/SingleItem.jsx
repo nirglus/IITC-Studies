@@ -1,13 +1,15 @@
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { baseURL } from "../../config/serverConfig";
+import { CartContext } from '../../context/Cart';
 
 function SingleItem() {
   let {id: itemID} = useParams();
   const [item, setItem] = useState({});
   const [quantity, setQuantity] = useState(1); 
+  const {addItemToCart, userCart} = useContext(CartContext);
 
   const getItem = async(itemID) =>{
       try {
@@ -30,7 +32,12 @@ function SingleItem() {
     };
   
     const handleAddToCart = () => {
-      console.log(`Added ${quantity} ${product.title} to the cart`);
+      const productID = item.id;
+      console.log({userCart});
+      const cartID = userCart.id;
+      const price = item.price;
+      console.log({productID, cartID, price, quantity});
+      addItemToCart({productID, cartID, price, quantity});
     };
     
     useEffect(() =>{
@@ -51,7 +58,7 @@ function SingleItem() {
             <span>{quantity}</span>
             <button onClick={handleIncrement}>+</button>
         </div>
-        <button>Add to cart</button>
+        <button onClick={handleAddToCart}>Add to cart</button>
         </div>
         <Link to={"/products"}>Back to products</Link>
     </>

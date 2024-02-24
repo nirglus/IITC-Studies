@@ -1,15 +1,16 @@
 import CartItem from "../MiniComponents/CartItem.jsx/CartItem";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import {CartContext} from "../../context/Cart";
 import { useParams } from "react-router-dom";
 
 function CartItems() {
   const {userCart, findCartByUserID, setUserCart, removeItemFromCart} = useContext(CartContext);
+  const [cartTotalPrice, setCartTotalPrice] = useState(userCart.totalPrice);
   let {id: cartID} = useParams();
   
   useEffect(() => {
     findCartByUserID(cartID);
-  }, [cartID]);
+  }, [cartID, userCart.totalPrice]);
 
   if (!userCart || !userCart.items) {
     return <div>Loading...</div>;
