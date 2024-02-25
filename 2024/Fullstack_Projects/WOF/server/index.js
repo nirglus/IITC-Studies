@@ -1,9 +1,9 @@
 const { app } = require("./app");
 const mongoose = require("mongoose");
+const { config } = require("./config")
 
-const mongoUrl = 'mongodb://localhost:27017/wof';
 
-mongoose.connect(mongoUrl)
+mongoose.connect(config.MONGO_URL)
    .then(() =>{
     console.log("Connected to db");
    }).catch(error =>{
