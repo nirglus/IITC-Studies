@@ -2,7 +2,7 @@ import React from 'react'
 import { UserContext } from '../../context/User'
 import { useContext ,useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import { isAdmin } from '../../config/roles';
+import { isModerator } from '../../config/roles';
 
 function Navbar() {
   const {user, signOut, token} = useContext(UserContext);
@@ -20,7 +20,7 @@ function Navbar() {
             <Link to="/products">Products</Link>
             {user ? <Link to={`/cart/${user.id}`}>Cart</Link> : null}
             {user ? <Link to={`/account/${user.id}`}>My Account</Link> : null}  
-            {isAdmin(user) ? (
+            {isModerator(user) ? (
                 <Link to="/dashboard">Dashboard</Link>
             ) : null}   
             {user ? 
