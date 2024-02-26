@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 config
 Dashboard
+DashboardSidebar
 User
 Admin
 Moderator

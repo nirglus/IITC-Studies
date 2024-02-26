@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Auth from './pages/Auth/Auth';
 import UserAcc from "./pages/UserAcc/UserAcc";
@@ -7,10 +7,13 @@ import Navbar from "./components/Navbar/Navbar"
 import Cart from "./pages/Cart/Cart";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import SingleItem from "./components/SingleItem/SingleItem";
+import { UserContext } from "./context/User";
+import { useContext } from "react";
 import './App.css'
+import { isModerator } from "./config/roles";
 
 function App() {
-
+const {user} = useContext(UserContext);
   return (
     <>
     <BrowserRouter>
@@ -22,7 +25,7 @@ function App() {
         <Route path="/login" element={<Auth />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:id" element={<SingleItem />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={isModerator(user) ? <Dashboard /> : <Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
     </>
