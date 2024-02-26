@@ -36,13 +36,13 @@ function Products() {
   }, [products.length])
   return (
     <>
-          {products.map((product, index) =>
-               product.active ? (
-                  <div key={index} className="productItem">
-                      <ProductItem product={product} isAdmin={isAdmin(user)} onDelete={handleDelete} setProducts={setProducts} products={products} />
-                    </div>
-              ) : null
-          )}
+      {products.map((product, index) =>
+         product.active ? (
+          <div key={index} className="productItem">
+            <ProductItem product={product} isAdmin={isAdmin(user)} onDelete={handleDelete} setProducts={setProducts} />
+          </div>
+          ) : null
+      )}
     </>
   );
 }

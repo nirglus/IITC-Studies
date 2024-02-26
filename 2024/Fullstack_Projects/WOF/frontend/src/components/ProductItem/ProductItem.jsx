@@ -6,7 +6,7 @@ import axios from 'axios';
 import { baseURL } from '../../config/serverConfig';
 
 
-function ProductItem({ product, isAdmin, onDelete, setProducts, products }) {
+function ProductItem({ product, isAdmin, onDelete, setProducts}) {
   const [quantity, setQuantity] = useState(1);
   const { addItemToCart, userCart } = useContext(CartContext);
   const {headers} = useContext(UserContext);
@@ -83,24 +83,24 @@ function ProductItem({ product, isAdmin, onDelete, setProducts, products }) {
     ) : (
         <>
         <img src={product.image} alt={product.title} width={300}/>
-      <h2><Link to={`/products/${product.id}`}>{product.title}</Link></h2>
-      <p>{product.description}</p>
-      <p>{product.scale}</p>
-      <p>In stock: {product.totalQuantity}</p>
-      <p>${product.price}</p>
-      <div>
-        <p>Quantity:</p>
-        <button onClick={handleDecrement}>-</button>
-        <span>{quantity}</span>
-        <button onClick={handleIncrement}>+</button>
-      </div>
-      <button onClick={handleAddToCart}>Add to cart</button>
-            {isAdmin && (
-                <>
-                    <button onClick={handleEdit}>Edit</button>
-                    <button onClick={handleDelete}>Delete</button>
-                </>
-            )}
+        <h2><Link to={`/products/${product.id}`}>{product.title}</Link></h2>
+        <p>{product.description}</p>
+        <p>{product.scale}</p>
+        <p>In stock: {product.totalQuantity}</p>
+        <p>${product.price}</p>
+        <div>
+            <p>Quantity:</p>
+            <button onClick={handleDecrement}>-</button>
+            <span>{quantity}</span>
+            <button onClick={handleIncrement}>+</button>
+        </div>
+        <button onClick={handleAddToCart}>Add to cart</button>
+                {isAdmin && (
+                    <>
+                        <button onClick={handleEdit}>Edit</button>
+                        <button onClick={handleDelete}>Delete</button>
+                    </>
+                )}
       </>
     )}
 </div>
