@@ -3,7 +3,7 @@ function OrderItem({order}) {
   return (
     <div className="orderItem">
     <h3>Order ID: {order._id}</h3>
-    <p>Date: {formatDate(order.createdAt)}</p>
+    <p>Purchased at: {formatDate(order.createdAt)}</p>
     <p>Status: {order.status}</p>
     <p>Total Price: ${order.totalPrice}</p>
     <div>
