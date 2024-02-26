@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
 :root{
     font-family: "Roboto", sans-serif;
+    --veryLightBiege: #FDF7E4;
+    --lightBiege: #FAEED1;
+    --lightGray: #DED0B6;
+    --brownGray: #BBAB8C;
+    --darkBrownGray:rgb(118, 85, 20);
+    --btnHover: rgb(83, 60, 16);
+    --navShadow: 0px 6px 9px -7px rgba(83, 60, 16, 0.77);
 }

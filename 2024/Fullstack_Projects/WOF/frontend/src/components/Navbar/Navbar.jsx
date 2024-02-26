@@ -1,33 +1,41 @@
 import React from 'react'
 import { UserContext } from '../../context/User'
-import { useContext ,useEffect} from 'react'
+import { useContext ,useState} from 'react'
 import { Link } from 'react-router-dom';
 import { isModerator } from '../../config/roles';
+import "./Navbar.scss"
 
 function Navbar() {
   const {user, signOut, token} = useContext(UserContext);
-  useEffect(() =>{
-    console.log("Nav",user);
-    console.log("Nav",token);
-  },[user,token])
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = ()=>{
+    setIsOpen(!isOpen);
+  }
   return (
     <nav>
-        <div className="logo">
-            <h1>World of Formula</h1>
+      <div className="logo">
+        <h1>World of Formula</h1>
+      </div>
+      <div className={`navItems ${isOpen ? 'active' : ''}`}>
+        <div className="hamburger" onClick={toggleMenu}>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
         </div>
-        <div className="navItems">
-            <Link to="/">Home</Link>
-            <Link to="/products">Products</Link>
-            {user ? <Link to={`/cart/${user.id}`}>Cart</Link> : null}
-            {user ? <Link to={`/account/${user.id}`}>My Account</Link> : null}  
-            {isModerator(user) ? (
-                <Link to="/dashboard">Dashboard</Link>
-            ) : null}   
-            {user ? 
-            (<button onClick={signOut}>Sign out,<span> <b>{user?.fullName}</b></span></button>)
-             : (<Link to ="/login">Login</Link>)
-             }
-        </div>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/products">Products</Link></li>
+          {user && <li><Link to={`/cart/${user.id}`}>Cart</Link></li>}
+          {user && <li><Link to={`/account/${user.id}`}>My Account</Link></li>}
+          {isModerator(user) && <li><Link to="/dashboard">Dashboard</Link></li>}
+          {user ? (
+            <li><button onClick={signOut}>Sign out, <b>{user.fullName}</b></button></li>
+          ) : (
+            <li><Link to="/login">Login</Link></li>
+          )}
+        </ul>
+      </div>
     </nav>
   )
 }
