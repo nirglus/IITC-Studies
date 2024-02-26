@@ -7,7 +7,11 @@ export const UserContext = createContext({});
 export default function UserProvider({children}){
     const [user, setUser] = useState();
     const [token, setToken] = useState('');
-    const {findCartByUserID, userCartID} = useContext(CartContext)
+    const {findCartByUserID, userCartID} = useContext(CartContext);
+    const headers = {
+        'Authorization': `Bearer ${token}`
+    };
+
 
     const register = async(user) =>{
         try {
@@ -42,11 +46,7 @@ export default function UserProvider({children}){
 
     const getUser = async(token) =>{
         try {
-            const res = await axios.get(`${baseURL}/users`, {
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            });
+            const res = await axios.get(`${baseURL}/users`, {headers});
             console.log(user);
             setUser(res.data.user);
             findCartByUserID(res.data.user.id);
@@ -72,7 +72,7 @@ export default function UserProvider({children}){
 
 
     return (
-        <UserContext.Provider value={{ user, setUser, getUser, token, setToken, register, login, signOut}}>
+        <UserContext.Provider value={{ user, setUser, getUser, token, setToken, register, login, signOut, headers}}>
             {children}
         </UserContext.Provider>
     );

@@ -7,7 +7,7 @@ import ProductItem from '../../components/ProductItem/ProductItem';
 
 function Products() {
   const [products, setProducts] = useState([]);
-  const {user} = useContext(UserContext);
+  const {user, headers} = useContext(UserContext);
   const getProducts = async () =>{
     try {
       const response = await axios.get(`${baseURL}/products`);
@@ -24,7 +24,7 @@ function Products() {
         await axios.patch(`${baseURL}/products`, {
           id: productId,
           active: false
-        });
+        }, {headers});
         setProducts(products.filter(product => product._id !== productId));
       } catch (error) {
         console.error("Failed to disable product", error);

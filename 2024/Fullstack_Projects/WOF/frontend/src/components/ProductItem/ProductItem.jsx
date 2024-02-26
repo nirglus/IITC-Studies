@@ -1,6 +1,7 @@
 import { useState ,useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/Cart';
+import { UserContext } from '../../context/User';
 import axios from 'axios';
 import { baseURL } from '../../config/serverConfig';
 
@@ -8,6 +9,7 @@ import { baseURL } from '../../config/serverConfig';
 function ProductItem({ product, isAdmin, onDelete }) {
   const [quantity, setQuantity] = useState(1);
   const { addItemToCart, userCart } = useContext(CartContext);
+  const {headers} = useContext(UserContext);
   const [isEditMode, setIsEditMode] = useState(false);
   const [editedProduct, setEditedProduct] = useState({ ...product });
 
@@ -17,7 +19,7 @@ function ProductItem({ product, isAdmin, onDelete }) {
 
   const handleSave = async () => {
     try {
-        const res = await axios.patch(`${baseURL}/products/${product._id}`, editedProduct);
+        const res = await axios.patch(`${baseURL}/products/${product._id}`,editedProduct , {headers} );
         console.log(`Item updated!`, res.data);
         setIsEditMode(false);
     } catch (error) {
