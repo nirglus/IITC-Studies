@@ -1,4 +1,4 @@
-import CartItem from "../MiniComponents/CartItem.jsx/CartItem";
+import CartItem from "../MiniComponents/CartItem/CartItem";
 import { useContext, useEffect, useState } from "react";
 import {CartContext} from "../../context/Cart";
 import { useParams } from "react-router-dom";

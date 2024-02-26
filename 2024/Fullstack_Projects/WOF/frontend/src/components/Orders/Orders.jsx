@@ -1,7 +1,8 @@
 import axios from "axios"
 import { UserContext } from "../../context/User"
-import { useContext, useState} from "react"
+import { useContext, useState, useEffect} from "react"
 import { baseURL } from "../../config/serverConfig";
+import OrderItem from "../MiniComponents/OrderItem/OrderItem";
 
 function Orders() {
   const {user, headers} = useContext(UserContext);
@@ -9,19 +10,23 @@ function Orders() {
 
   const getOrders = async(userID)  =>{
     try {
-      const res = await axios.get(`${baseURL}/users`, {id: userID}, {headers});
-      setOrders(res);
+      const res = await axios.get(`${baseURL}/orders`, {id: userID}, {headers});
+      setOrders(res.data);
+      console.log("Orders:" ,res.data);
     } catch (error) {
       console.log("Failed to get orders");
+      console.log(error);
     }
   }
-  getOrders(user.id);
+  useEffect(() =>{
+    getOrders(user.id);
+  }, [])
 
   return (
     <div>
       <h1>My Orders</h1>
       {orders.map((order, index)=>(
-        <h1>{order.id}</h1>
+        <OrderItem order={order} key={index}/>
       ))}
     </div>
   )
