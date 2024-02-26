@@ -39,7 +39,7 @@ function Products() {
           {products.map((product, index) =>
                product.active ? (
                   <div key={index} className="productItem">
-                      <ProductItem product={product} isAdmin={isAdmin(user)} onDelete={handleDelete} />
+                      <ProductItem product={product} isAdmin={isAdmin(user)} onDelete={handleDelete} setProducts={setProducts} products={products} />
                     </div>
               ) : null
           )}

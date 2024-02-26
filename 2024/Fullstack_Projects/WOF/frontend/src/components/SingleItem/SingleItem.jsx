@@ -47,6 +47,7 @@ function SingleItem() {
   return (
       <>
         <div>
+        <img src={item.image} alt={item.title} width={600}/>
         <h2>{item.title}</h2>
         <p>{item.description}</p>
         <p>{item.scale}</p>

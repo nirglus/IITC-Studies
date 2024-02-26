@@ -6,7 +6,7 @@ import axios from 'axios';
 import { baseURL } from '../../config/serverConfig';
 
 
-function ProductItem({ product, isAdmin, onDelete }) {
+function ProductItem({ product, isAdmin, onDelete, setProducts, products }) {
   const [quantity, setQuantity] = useState(1);
   const { addItemToCart, userCart } = useContext(CartContext);
   const {headers} = useContext(UserContext);
@@ -22,6 +22,14 @@ function ProductItem({ product, isAdmin, onDelete }) {
         const res = await axios.patch(`${baseURL}/products/${product._id}`,editedProduct , {headers} );
         console.log(`Item updated!`, res.data);
         setIsEditMode(false);
+        setProducts(prevProducts => {
+            const existingProductIndex = prevProducts.findIndex(product => product.id === res.data.id);
+            if (existingProductIndex !== -1) {
+                const updatedProducts = [...prevProducts];
+                updatedProducts[existingProductIndex] = res.data;
+                return updatedProducts;
+            }
+        });
     } catch (error) {
         console.error('Failed to save product changes', error);
     }
@@ -74,6 +82,7 @@ function ProductItem({ product, isAdmin, onDelete }) {
         </div>
     ) : (
         <>
+        <img src={product.image} alt={product.title} width={300}/>
       <h2><Link to={`/products/${product.id}`}>{product.title}</Link></h2>
       <p>{product.description}</p>
       <p>{product.scale}</p>
