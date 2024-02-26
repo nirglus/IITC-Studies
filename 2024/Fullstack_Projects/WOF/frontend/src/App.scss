@@ -1,0 +1,29 @@
+$veryLightBiege: #FDF7E4;
+$lightBiege: #FAEED1;
+$lightGray: #DED0B6;
+$brownGray: #BBAB8C;
+$darkBrownGray:rgb(118, 85, 20);
+$btnHover: rgb(83, 60, 16);
+
+button{
+    font-family: "Roboto", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: $darkBrownGray;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    &:hover{
+        background-color: $btnHover;
+        cursor: pointer;
+    }
+    &:active{
+        transform: translateY(2px);
+    }
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}

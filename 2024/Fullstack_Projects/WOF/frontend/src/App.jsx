@@ -9,8 +9,8 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import SingleItem from "./components/SingleItem/SingleItem";
 import { UserContext } from "./context/User";
 import { useContext } from "react";
-import './App.css'
 import { isModerator } from "./config/roles";
+import "./App.scss";
 
 function App() {
 const {user} = useContext(UserContext);
