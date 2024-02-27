@@ -4,6 +4,7 @@ import { CartContext } from '../../context/Cart';
 import { UserContext } from '../../context/User';
 import axios from 'axios';
 import { baseURL } from '../../config/serverConfig';
+import "./ProductItem.scss";
 
 
 function ProductItem({ product, isAdmin, onDelete, setProducts}) {
@@ -67,7 +68,7 @@ function ProductItem({ product, isAdmin, onDelete, setProducts}) {
   return (
     <div className="product">
     {isEditMode ? (
-        <div>
+        <div className='editPreview'>
             <input type="text" name="title" value={editedProduct.title} onChange={handleChange} />
             <input type="text" name="description" value={editedProduct.description} onChange={handleChange} />
             <input type="text" name="scale" value={editedProduct.scale} onChange={handleChange} />
@@ -81,14 +82,14 @@ function ProductItem({ product, isAdmin, onDelete, setProducts}) {
             <button onClick={handleSave}>Save</button>
         </div>
     ) : (
-        <>
+        <div className='productPreview'>
         <img src={product.image} alt={product.title} width={300}/>
         <h2><Link to={`/products/${product.id}`}>{product.title}</Link></h2>
-        <p>{product.description}</p>
-        <p>{product.scale}</p>
-        <p>In stock: {product.totalQuantity}</p>
-        <p>${product.price}</p>
-        <div>
+        <p><span>Description: </span>{product.description}</p>
+        <p><span>Scale: </span>{product.scale}</p>
+        <p><span>In stock:</span> {product.totalQuantity}</p>
+        <p className='price'>${product.price}</p>
+        <div className='quantity'>
             <p>Quantity:</p>
             <button onClick={handleDecrement}>-</button>
             <span>{quantity}</span>
@@ -101,7 +102,7 @@ function ProductItem({ product, isAdmin, onDelete, setProducts}) {
                         <button onClick={handleDelete}>Delete</button>
                     </>
                 )}
-      </>
+      </div>
     )}
 </div>
   )
