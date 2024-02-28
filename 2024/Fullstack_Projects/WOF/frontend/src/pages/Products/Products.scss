@@ -18,3 +18,19 @@
     }
 }
 
+@media (max-width: 768px){
+    .products{
+        .productsDisp{
+            grid-template-columns: 1fr;
+            width: unset;
+        }
+    }
+}
+@media (min-width: 768px) and (max-width:1000px){
+    .products{
+        .productsDisp{
+            grid-template-columns: 1fr 1fr;
+            width: unset;
+        }
+    }
+}
