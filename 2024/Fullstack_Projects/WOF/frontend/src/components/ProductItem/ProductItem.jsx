@@ -69,7 +69,7 @@ function ProductItem({ product, isAdmin, onDelete, setProducts}) {
     <>
     {isEditMode ? (
         <div className='productPreview editPreview'>
-            <img src={product.image} alt={product.title} width={300}/>
+            <img src={product.image} alt={product.title} width={250}/>
             <input type="text" name="title" value={editedProduct.title} onChange={handleChange} />
             <input type="text" name="description" value={editedProduct.description} onChange={handleChange} />
             <input type="text" name="scale" value={editedProduct.scale} onChange={handleChange} />
@@ -80,16 +80,17 @@ function ProductItem({ product, isAdmin, onDelete, setProducts}) {
                 onChange={handleChange}
             />
             <input type="number" name="price" value={editedProduct.price} onChange={handleChange} />
-            <button onClick={handleSave}>Save</button>
-            <button onClick={handleEdit}>Cancel</button>
+            <div className="editBtns">
+                <button className='saveBtn' onClick={handleSave}><i class="bi bi-check-lg"></i></button>
+                <button className='deleteBtn' onClick={handleEdit}><i class="bi bi-x-lg"></i></button>
+            </div>
         </div>
     ) : (
         <div className='productPreview'>
-        <img src={product.image} alt={product.title} width={300}/>
+        <img src={product.image} alt={product.title} width={250}/>
         <h2><Link to={`/products/${product.id}`}>{product.title}</Link></h2>
-        <p><span>Description: </span>{product.description}</p>
-        <p><span>Scale: </span>{product.scale}</p>
-        <p><span>In stock:</span> {product.totalQuantity}</p>
+        <p className="productDescription">{product.description}</p>
+        <p className="productQuantity">In stock: {product.totalQuantity}</p>
         <p className='price'>${product.price}</p>
         <div className='quantity'>
             <p>Quantity:</p>

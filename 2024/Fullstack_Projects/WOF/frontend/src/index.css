@@ -11,4 +11,8 @@
     --btnRedHover: rgb(93, 22, 1);
     --btnHover: rgb(83, 60, 16);
     --navShadow: 0px 6px 9px -7px rgba(83, 60, 16, 0.77);
+    --cartBtnColor: #004225;
+    --cartBtnHover: #1d7a51;
+    --deleteBtn: #b30000;
+    --deleteHover: #9d0505;
 }
