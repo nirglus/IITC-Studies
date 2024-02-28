@@ -43,10 +43,11 @@
 
     .addToCartBtn{
         width: 200px;
-        background-color: #4CAF50;
+        background-color: #004225;
         &:hover{
-            background-color: #357137;
+            background-color: #1d7a51;
         }
+
     }
 
     .adminBtns{
@@ -69,4 +70,8 @@
         }
     }
     
+}
+.editPreview{
+    height: 85vh;
+    justify-content: flex-start;
 }
