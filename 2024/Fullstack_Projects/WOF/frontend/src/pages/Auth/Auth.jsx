@@ -2,6 +2,7 @@ import { useState, useContext, useEffect } from "react";
 import { UserContext } from "../../context/User";
 import Login from "../../components/Auth/Login/Login";
 import Register from "../../components/Auth/Register/Register";
+import "./Auth.scss";
 
 function Auth() {
   const [isLoginMode, setIsLoginMode] = useState(true);
@@ -31,7 +32,7 @@ function Auth() {
   // },[user,token])
 
   return (
-    <div>
+    <div className="authContainer">
        {isLoginMode ?
           <Login submitHandler={submitHandler} changeHandler={changeHandler} />
         :

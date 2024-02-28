@@ -4,6 +4,8 @@ import { UserContext } from '../../context/User'
 import { baseURL } from '../../config/serverConfig';
 import { useState, useEffect, useContext } from 'react'
 import ProductItem from '../../components/ProductItem/ProductItem';
+import "./Products.scss";
+import "../../assets/hr.scss";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -35,15 +37,17 @@ function Products() {
     getProducts();
   }, [products.length])
   return (
-    <>
-      {products.map((product, index) =>
-         product.active ? (
-          <div key={index} className="productItem">
-            <ProductItem product={product} isAdmin={isAdmin(user)} onDelete={handleDelete} setProducts={setProducts} />
-          </div>
-          ) : null
-      )}
-    </>
+    <div className='products'>
+      <h1>Our Products</h1>
+      <hr/>
+      <div className="productsDisp">
+        {products.map((product, index) =>
+          product.active ? (
+              <ProductItem key={index} product={product} isAdmin={isAdmin(user)} onDelete={handleDelete} setProducts={setProducts} />
+            ) : null
+        )}
+      </div>
+    </div>
   );
 }
 

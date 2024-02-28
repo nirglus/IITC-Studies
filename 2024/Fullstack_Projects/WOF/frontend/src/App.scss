@@ -7,13 +7,13 @@ button{
     border: 0;
     border-radius: 5px;
     padding: 10px;
-    background-color: var(--darkBrownGray);
+    background-color: var(--btnRed);
     color: #fff;
     text-decoration: none;
     transition: background-color 0.3s;
     box-shadow: var(--navShadow);
     &:hover{
-        background-color: var(--btnHover);
+        background-color: var(--btnRedHover);
         cursor: pointer;
     }
     &:active{

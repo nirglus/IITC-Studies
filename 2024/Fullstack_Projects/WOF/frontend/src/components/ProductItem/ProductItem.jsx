@@ -66,9 +66,9 @@ function ProductItem({ product, isAdmin, onDelete, setProducts}) {
   };
 
   return (
-    <div className="product">
+    <>
     {isEditMode ? (
-        <div className='editPreview'>
+        <div className='productPreview editPreview'>
             <input type="text" name="title" value={editedProduct.title} onChange={handleChange} />
             <input type="text" name="description" value={editedProduct.description} onChange={handleChange} />
             <input type="text" name="scale" value={editedProduct.scale} onChange={handleChange} />
@@ -91,20 +91,20 @@ function ProductItem({ product, isAdmin, onDelete, setProducts}) {
         <p className='price'>${product.price}</p>
         <div className='quantity'>
             <p>Quantity:</p>
-            <button onClick={handleDecrement}>-</button>
+            <button className='quantityBtn' onClick={handleDecrement}>-</button>
             <span>{quantity}</span>
-            <button onClick={handleIncrement}>+</button>
+            <button className='quantityBtn' onClick={handleIncrement}>+</button>
         </div>
-        <button onClick={handleAddToCart}>Add to cart</button>
+        <button className='addToCartBtn'onClick={handleAddToCart}>Add to cart</button>
                 {isAdmin && (
-                    <>
-                        <button onClick={handleEdit}>Edit</button>
-                        <button onClick={handleDelete}>Delete</button>
-                    </>
+                    <div className='adminBtns'>
+                        <button className='editBtn' onClick={handleEdit}>Edit</button>
+                        <button className='deleteBtn' onClick={handleDelete}>Delete</button>
+                    </div>
                 )}
       </div>
     )}
-</div>
+</>
   )
 }
 

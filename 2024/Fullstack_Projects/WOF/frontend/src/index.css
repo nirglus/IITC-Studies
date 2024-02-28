@@ -6,6 +6,8 @@
     --lightGray: #DED0B6;
     --brownGray: #BBAB8C;
     --darkBrownGray:rgb(118, 85, 20);
+    --btnRed : rgb(126 30 0);
+    --btnRedHover: rgb(93, 22, 1);
     --btnHover: rgb(83, 60, 16);
     --navShadow: 0px 6px 9px -7px rgba(83, 60, 16, 0.77);
 }
