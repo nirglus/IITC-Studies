@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { baseURL } from "../../config/serverConfig";
 import { CartContext } from '../../context/Cart';
+import "./SingleItem.scss";
 
 function SingleItem() {
   let {id: itemID} = useParams();
@@ -46,22 +47,35 @@ function SingleItem() {
 
   return (
       <>
-        <div>
-        <img src={item.image} alt={item.title} width={600}/>
-        <h2>{item.title}</h2>
-        <p>{item.description}</p>
-        <p>{item.scale}</p>
-        <p>In stock: {item.totalQuantity}</p>
-        <p>${item.price}</p>
-        <div>
-            <p>Quantity:</p>
-            <button onClick={handleDecrement}>-</button>
-            <span>{quantity}</span>
-            <button onClick={handleIncrement}>+</button>
+        <div className="singleProduct">
+          <div className="productImages">
+            <img className='mainImg' src={item.image} alt={item.title} width={600}/>
+            <div className="imagesStack">
+              <img src={item.image} alt={item.title} width={200}/>
+              <img src={item.image} alt={item.title} width={200}/>
+              <img src={item.image} alt={item.title} width={200}/>
+            </div>
+
+          </div>
+          <div className="productDescription">
+            <h2>{item.title}</h2>
+            <hr />
+              <p className="itemDesc">Feel the thrill of the Formula One championship with this detailed diecast model car, a precise replica of George Russell’s 2023 winning ride. Invite the exhilarating world of racing into your life today!</p>
+            <div className="productStats">
+              <p><span>Scale: </span>{item.scale}</p>
+              <p><span>In stock:</span> {item.totalQuantity}</p>
+            </div>
+            <p className="price">${item.price}</p>
+            <div className="quantity">
+                <p>Quantity:</p>
+                <button className='quantityBtn' onClick={handleDecrement}>-</button>
+                <span>{quantity}</span>
+                <button className='quantityBtn' onClick={handleIncrement}>+</button>
+            </div>
+            <button className="addToCartBtn" onClick={handleAddToCart}><i class="bi bi-cart-plus"></i> Add to cart</button>
+            <Link to={"/products"}><i class="bi bi-sign-turn-left-fill"></i> Back to products</Link>
+          </div>
         </div>
-        <button onClick={handleAddToCart}>Add to cart</button>
-        </div>
-        <Link to={"/products"}>Back to products</Link>
     </>
   )
 }

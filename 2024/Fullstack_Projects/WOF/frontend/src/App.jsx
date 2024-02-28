@@ -11,6 +11,7 @@ import { UserContext } from "./context/User";
 import { useContext } from "react";
 import { isModerator } from "./config/roles";
 import "./App.scss";
+import "./assets/hr.scss";
 
 function App() {
 const {user} = useContext(UserContext);

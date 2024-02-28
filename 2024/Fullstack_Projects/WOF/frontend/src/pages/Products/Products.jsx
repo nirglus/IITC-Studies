@@ -5,7 +5,7 @@ import { baseURL } from '../../config/serverConfig';
 import { useState, useEffect, useContext } from 'react'
 import ProductItem from '../../components/ProductItem/ProductItem';
 import "./Products.scss";
-import "../../assets/hr.scss";
+
 
 function Products() {
   const [products, setProducts] = useState([]);

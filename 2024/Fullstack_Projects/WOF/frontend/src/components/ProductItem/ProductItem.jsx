@@ -89,7 +89,7 @@ function ProductItem({ product, isAdmin, onDelete, setProducts}) {
         <div className='productPreview'>
         <img src={product.image} alt={product.title} width={250}/>
         <h2><Link to={`/products/${product.id}`}>{product.title}</Link></h2>
-        <p className="productDescription">{product.description}</p>
+        {/* <p className="productDescription">{product.description}</p> */}
         <p className="productQuantity">In stock: {product.totalQuantity}</p>
         <p className='price'>${product.price}</p>
         <div className='quantity'>
