@@ -13,7 +13,10 @@ function Cart() {
   return (
     <div className="cartPage">
       <CartItems/>
-      <button onClick={toggleCheckout}>Buy now</button>
+      {!isCheckout ? 
+      <button onClick={toggleCheckout} className="addToCartBtn"><i class="bi bi-bag"></i> Buy now</button> :
+      <button onClick={toggleCheckout} className="cancelBtn"><i class="bi bi-x-lg"></i> Cancel</button>}
+      
       {isCheckout ? <Checkout/> : null}
       
 

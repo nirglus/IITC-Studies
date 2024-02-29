@@ -3,6 +3,7 @@ function CheckoutForm({handleChange, handleSubmit}) {
     return (
         <>
         <h1>Address for shipment</h1>
+        <hr />
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="street">Street:</label>

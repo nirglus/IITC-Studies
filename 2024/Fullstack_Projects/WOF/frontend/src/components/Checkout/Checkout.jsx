@@ -5,6 +5,7 @@ import axios from 'axios';
 import { baseURL } from '../../config/serverConfig';
 
 function Checkout() {
+    const [isCancel, setIsCancel] = useState(false);
     const [address, setAddress] = useState({
         street: '',
         city: '',
@@ -35,10 +36,14 @@ function Checkout() {
             console.log(`Could'nt create order`, error);
         }
     };
+
   return (
-    <div>
-      <CheckoutForm handleChange={handleChange} handleSubmit={handleSubmit} />
-    </div>
+    <>
+    <CheckoutForm handleChange={handleChange} handleSubmit={handleSubmit}/>
+    </>
+
+      
+
   )
 }
 
