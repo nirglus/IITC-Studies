@@ -1,12 +1,11 @@
 nav{
     top: 0;
     padding: 0 20px;
-    margin-top: 10px;
     position: sticky;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--lightBiege);
+    background-image: linear-gradient( 109.6deg,  rgba(113,14,51,0.83) 15.2%, rgba(217,43,23,0.95) 96.8% );
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px ;
     box-shadow: var(--navShadow);
