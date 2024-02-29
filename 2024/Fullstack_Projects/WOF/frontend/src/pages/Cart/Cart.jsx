@@ -2,6 +2,7 @@ import Checkout from "../../components/Checkout/Checkout";
 import CartItems from "../../components/CartItems/CartItems";
 import { useState,useContext } from "react";
 import {CartContext} from "../../context/Cart";
+import { Link } from "react-router-dom";
 import "./Cart.scss";
 
 function Cart() {
@@ -16,11 +17,21 @@ function Cart() {
   return (
     <div className="cartPage">
       <CartItems/>
-      {!isCheckout ? 
-      <button onClick={userCart.items.length > 0 ? toggleCheckout: null} className="addToCartBtn"><i class="bi bi-bag"></i> Buy now</button> :
-      <button onClick={toggleCheckout} className="cancelBtn"><i class="bi bi-x-lg"></i> Cancel</button>}
-      
-      {isCheckout ? <Checkout/> : null}
+      {userCart.items.length < 1 ? (
+       <div className="noItems">
+         <h2>Seems like your cart is empty!</h2>
+         <button><Link to="/products">Go to products</Link></button>
+       </div>) : (
+        <>
+        {!isCheckout ? 
+        <button onClick={toggleCheckout} className="addToCartBtn"><i class="bi bi-bag"></i> Buy now</button> :
+        <button onClick={toggleCheckout} className="cancelBtn"><i class="bi bi-x-lg"></i> Cancel</button>}
+        
+        {isCheckout ? <Checkout/> : null}
+        </>
+       )}
+        
+
       
 
     </div>

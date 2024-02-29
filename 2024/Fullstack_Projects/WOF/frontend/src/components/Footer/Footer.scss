@@ -9,10 +9,12 @@ footer{
     gap: 40px;
     margin-bottom: 0;
 }
-.company h2{
+.company {
+    h2{
     display: flex;
     align-items: center;
     gap: 5px;
+    }
 }
 .topFooter{
     display: flex;
@@ -22,16 +24,13 @@ footer{
     }
 }
 
-.products{
+.projects{
     display: flex;
     flex-direction: column;
     a{
         text-decoration: none;
         color: #fff;
         transition: 0.3s;
-    }
-    h2{
-        text-align: center;
     }
 }
 
@@ -61,5 +60,10 @@ footer{
     footer{
         padding: 14px;
         font-size: x-small;
+        .company{
+            p{
+                width: 143px;
+            }
+        }
     }
 }

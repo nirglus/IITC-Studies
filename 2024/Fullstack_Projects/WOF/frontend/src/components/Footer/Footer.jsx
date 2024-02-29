@@ -9,7 +9,7 @@ function Footer() {
           <h2>World of Formula</h2>
           <p>From track to shelf, Capturing racing spirit</p>
         </div>
-        <div className="products">
+        <div className="projects">
           <h2>Other Products</h2>
           <a href="https://nirglus.github.io/Movies-Project/html/index.html">MovieNatic</a>
           <a href="https://resumematrix-50ace.web.app/">ResumeMatrix</a>
