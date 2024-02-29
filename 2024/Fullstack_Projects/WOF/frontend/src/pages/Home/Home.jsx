@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./Home.scss";
 import { homeImages } from "../../helpers/images";
+import HomeBrands from "../../components/MiniComponents/HomeBrands/HomeBrands";
 
 function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,6 +33,7 @@ function Home() {
           <button><Link to="/products">View Products</Link></button>
         </div>
       </div>
+      <HomeBrands />
     </div>
     );
   }
