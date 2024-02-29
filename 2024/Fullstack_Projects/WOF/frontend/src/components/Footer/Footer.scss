@@ -1,5 +1,6 @@
 footer{
-    background-image: linear-gradient(to bottom, #363636, #363636, #373737, #373737, #383737, #373636, #373536, #363435, #333233, #313031, #2e2e2e, #2c2c2c);    padding: 50px;
+    background-image: var(--footerGrad);
+    padding: 50px;
     display: grid;
     place-content: center;
     color: #fff;
@@ -58,7 +59,7 @@ footer{
 }
 @media (max-width: 768px){
     footer{
-        gap: 40px;
+        padding: 14px;
         font-size: x-small;
     }
 }
