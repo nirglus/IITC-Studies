@@ -1,0 +1,64 @@
+footer{
+    background-image: linear-gradient(to bottom, #363636, #363636, #373737, #373737, #383737, #373636, #373536, #363435, #333233, #313031, #2e2e2e, #2c2c2c);    padding: 50px;
+    display: grid;
+    place-content: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 0;
+}
+.company h2{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.topFooter{
+    display: flex;
+    justify-content: space-between;
+    *{
+        flex-grow: 1;
+    }
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    a{
+        text-decoration: none;
+        color: #fff;
+        transition: 0.3s;
+    }
+    h2{
+        text-align: center;
+    }
+}
+
+.bottomFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #b0b0b0;
+    border-top: #b0b0b0 2px solid;
+}
+.icons{
+    i{
+        margin: 0 3px;
+        transition: 0.3s;
+    }
+    a{
+        text-decoration: none;
+        color: #b0b0b0;
+    }
+} 
+    
+.icons i:hover, .products a:hover{
+    color: var(--brownGray);
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    footer{
+        gap: 40px;
+        font-size: x-small;
+    }
+}

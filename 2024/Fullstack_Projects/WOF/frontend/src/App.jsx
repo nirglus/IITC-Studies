@@ -3,7 +3,8 @@ import Home from "./pages/Home/Home";
 import Auth from './pages/Auth/Auth';
 import UserAcc from "./pages/UserAcc/UserAcc";
 import Products from "./pages/Products/Products";
-import Navbar from "./components/Navbar/Navbar"
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import Cart from "./pages/Cart/Cart";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import SingleItem from "./components/SingleItem/SingleItem";
@@ -28,6 +29,7 @@ const {user} = useContext(UserContext);
         <Route path="/products/:id" element={<SingleItem />} />
         <Route path="/dashboard" element={isModerator(user) ? <Dashboard /> : <Navigate to="/" />} />
       </Routes>
+    <Footer/>
     </BrowserRouter>
     </>
   )

@@ -1,3 +1,5 @@
+export const currentYear = new Date().getFullYear();
+
 const formatDate = (dateString) => {
     const date = new Date(dateString);
     const day = date.getDate();
