@@ -19,7 +19,7 @@ function Cart() {
 
   return (
     <div className="cartPage">
-      <div className="myCartTitle">
+      <div className="titles">
         <h1><i class="bi bi-cart"></i> My Cart</h1>
         <hr />
       </div>
