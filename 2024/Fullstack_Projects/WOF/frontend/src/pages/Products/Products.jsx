@@ -38,8 +38,10 @@ function Products() {
   }, [products.length])
   return (
     <div className='products'>
-      <h1>Our Products</h1>
-      <hr/>
+      <div className="titles">
+        <h1>Our Products</h1>
+        <hr/>
+      </div>
       <div className="productsDisp">
         {products.map((product, index) =>
           product.active ? (

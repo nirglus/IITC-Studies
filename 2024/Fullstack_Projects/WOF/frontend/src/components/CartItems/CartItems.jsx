@@ -19,8 +19,6 @@ function CartItems() {
 
   return (
     <div className="cartItems">
-      <h1><i class="bi bi-cart"></i> My Cart</h1>
-      <hr />
       {userCart.items.map((item,index)=>(
         <div className='cartItem' key={index}>
         <CartItem item={item} />

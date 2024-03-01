@@ -3,6 +3,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    min-height: 100vh;
 
     .imagesStack{
         display: flex;
@@ -19,7 +20,12 @@
     .itemDesc{
         max-width: 30vw;
     }
-    a{
+    .quantityBtn{
+        &:hover{
+            background-color: #fff;
+        }
+    }
+    .backToProducts{
         margin-top: 70px;
         color: rgb(151, 151, 151);
         transition: 0.2s;

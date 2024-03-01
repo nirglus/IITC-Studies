@@ -1,6 +1,6 @@
 import Checkout from "../../components/Checkout/Checkout";
 import CartItems from "../../components/CartItems/CartItems";
-import { useState,useContext } from "react";
+import { useState,useContext, useEffect } from "react";
 import {CartContext} from "../../context/Cart";
 import { Link } from "react-router-dom";
 import "./Cart.scss";
@@ -12,10 +12,17 @@ function Cart() {
     setIsCheckout(!isCheckout);
     console.log({userCart});
   }
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
 
 
   return (
     <div className="cartPage">
+      <div className="myCartTitle">
+        <h1><i class="bi bi-cart"></i> My Cart</h1>
+        <hr />
+      </div>
       <CartItems/>
       {userCart.items.length < 1 ? (
        <div className="noItems">

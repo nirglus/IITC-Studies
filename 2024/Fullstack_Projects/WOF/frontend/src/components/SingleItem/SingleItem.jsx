@@ -73,7 +73,7 @@ function SingleItem() {
                 <button className='quantityBtn' onClick={handleIncrement}>+</button>
             </div>
             <button className="addToCartBtn" onClick={handleAddToCart}><i class="bi bi-cart-plus"></i> Add to cart</button>
-            <Link to={"/products"}><i class="bi bi-sign-turn-left-fill"></i> Back to products</Link>
+            <Link to={"/products"} className="backToProducts"><i class="bi bi-sign-turn-left-fill"></i> Back to products</Link>
           </div>
         </div>
     </>
