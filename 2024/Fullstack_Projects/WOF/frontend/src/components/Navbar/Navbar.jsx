@@ -30,7 +30,7 @@ function Navbar() {
           {user && <li><Link to={`/account/${user.id}`}>My Account</Link></li>}
           {isModerator(user) && <li><Link to="/dashboard">Dashboard</Link></li>}
           {user ? (
-            <li><button onClick={signOut}>Sign out, <b>{user.fullName}</b></button></li>
+            <li><button onClick={signOut}><i className="bi bi-box-arrow-left"></i> Sign out, <b>{user.fullName}</b></button></li>
           ) : (
             <li><Link to="/login">Login</Link></li>
           )}

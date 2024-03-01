@@ -22,7 +22,7 @@ function CartItems() {
       {userCart.items.map((item,index)=>(
         <div className='cartItem' key={index}>
         <CartItem item={item} />
-        <button onClick={() => removeItemFromCart(userCart.id, item._id)}><i class="bi bi-trash3"></i> <span className="removeFromCart">Remove from Cart</span></button>
+        <button onClick={() => removeItemFromCart(userCart.id, item._id)}><i className="bi bi-trash3"></i> <span className="removeFromCart">Remove from Cart</span></button>
         </div>
       ))}
       <p><b>Total price: </b>${userCart.totalPrice}</p>

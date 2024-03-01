@@ -20,7 +20,7 @@ function Cart() {
   return (
     <div className="cartPage">
       <div className="titles">
-        <h1><i class="bi bi-cart"></i> My Cart</h1>
+        <h1><i className="bi bi-cart"></i> My Cart</h1>
         <hr />
       </div>
       <CartItems/>
@@ -31,8 +31,8 @@ function Cart() {
        </div>) : (
         <>
         {!isCheckout ? 
-        <button onClick={toggleCheckout} className="addToCartBtn"><i class="bi bi-bag"></i> Buy now</button> :
-        <button onClick={toggleCheckout} className="cancelBtn"><i class="bi bi-x-lg"></i> Cancel</button>}
+        <button onClick={toggleCheckout} className="addToCartBtn"><i className="bi bi-bag"></i> Buy now</button> :
+        <button onClick={toggleCheckout} className="cancelBtn"><i className="bi bi-x-lg"></i> Cancel</button>}
         
         {isCheckout ? <Checkout/> : null}
         </>
