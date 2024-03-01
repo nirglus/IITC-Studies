@@ -27,7 +27,7 @@
     margin: 0 0 100px 50px;
 
     .welcomeHeading{
-      font-family: "Madimi One", sans-serif;
+      font-family: var(--headingFont);
       text-transform: uppercase;
       font-size: 3em;
       margin-bottom: 0;

@@ -3,25 +3,21 @@ import { useState, useEffect } from "react";
 import "./Home.scss";
 import { homeImages } from "../../helpers/images";
 import HomeBrands from "../../components/MiniComponents/HomeBrands/HomeBrands";
+import BenefitsSection from "../../components/MiniComponents/BenefitsSection/BenefitsSection";
 
 function Home() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % homeImages.length);
-    }, 3000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % homeImages.length);
+  //   }, 3000);
   
-    return () => clearInterval(interval);
-  }, [homeImages.length, currentIndex]);
+  //   return () => clearInterval(interval);
+  // }, [homeImages.length, currentIndex]);
   
 
   return (
-    // <div>
-    //       <h1>Welcome to World of Formula!</h1>
-    //       <p>Checkout our formula 1 diecast</p>
-    //       <button><Link to="/products">Show me the products</Link></button>
-    // </div>
     <div className="home">
       {/* <div className="home-container">
       <div className="image-slider">
@@ -48,6 +44,7 @@ function Home() {
         </div>
       </div>
       <HomeBrands />
+      <BenefitsSection />
     </div>
     );
   }
