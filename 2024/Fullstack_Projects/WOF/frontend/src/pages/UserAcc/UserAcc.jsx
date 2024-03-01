@@ -3,6 +3,7 @@ import { UserContext } from '../../context/User';
 import { useContext, useState } from 'react';
 import AccountSidebar from '../../components/MiniComponents/AccountSidebar/AccountSidebar';
 import Orders from '../../components/Orders/Orders';
+import "./UserAcc.scss";
 
 function UserAcc() {
   const [selectedComponent, setSelectedComponent] = useState(null);
@@ -17,10 +18,10 @@ function UserAcc() {
     }
   };
   return (
-    <div>
-      <h1>Hello, {user?.fullName}!</h1>
-      <div className="accountDashboard">
-        <AccountSidebar setSelectedComponent={setSelectedComponent} />
+    <div className='accountDashboard'>
+
+      <div className="dashboardDisplay">
+        <AccountSidebar setSelectedComponent={setSelectedComponent} user={user} />
         {renderComponent()}
       </div>
     </div>

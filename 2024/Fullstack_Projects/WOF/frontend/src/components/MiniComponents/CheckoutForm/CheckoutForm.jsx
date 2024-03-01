@@ -3,7 +3,7 @@ function CheckoutForm({handleChange, handleSubmit}) {
 
     return (
         <>
-        <div className="headings">
+        <div className="titles">
             <h1><i class="bi bi-truck"></i> Address for shipment</h1>
             <hr />
         </div>
