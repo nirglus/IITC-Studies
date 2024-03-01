@@ -23,7 +23,7 @@ function Home() {
     //       <button><Link to="/products">Show me the products</Link></button>
     // </div>
     <div className="home">
-      <div className="home-container">
+      {/* <div className="home-container">
       <div className="image-slider">
         <img src={homeImages[currentIndex]} alt={`Image ${currentIndex}`} className="current" />
       </div>
@@ -33,6 +33,16 @@ function Home() {
             <p>Explore and collect your favorite Formula 1 cars and teams to adorn your collection!</p>
             <p>Immerse yourself in the world of Formula 1, where passion meets craftsmanship, and relive the excitement of iconic races.</p>
 
+          </div>
+          <button><Link to="/products">View Products</Link></button>
+        </div>
+      </div> */}
+      <div className="homeContainer">
+        <div className="contentOverlay">
+          <h1 className="welcomeHeading">Start your engines</h1>
+          <div className="welcomeDescription">
+            <p>Explore and collect your favorite Formula 1 cars and teams to adorn your collection!</p>
+            {/* <p>Immerse yourself in the world of Formula 1, where passion meets craftsmanship, and relive the excitement of iconic races.</p> */}
           </div>
           <button><Link to="/products">View Products</Link></button>
         </div>

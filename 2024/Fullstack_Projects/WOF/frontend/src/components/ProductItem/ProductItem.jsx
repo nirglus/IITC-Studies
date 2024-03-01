@@ -98,11 +98,11 @@ function ProductItem({ product, isAdmin, onDelete, setProducts}) {
             <span>{quantity}</span>
             <button className='quantityBtn' onClick={handleIncrement}>+</button>
         </div>
-        <button className='addToCartBtn'onClick={handleAddToCart}><i class="bi bi-cart-plus"></i> Add to cart</button>
+        <button className='addToCartBtn'onClick={handleAddToCart}><i className="bi bi-cart-plus"></i> Add to cart</button>
                 {isAdmin && (
                     <div className='adminBtns'>
-                        <button className='editBtn' onClick={handleEdit}><i class="bi bi-pencil-square"></i></button>
-                        <button className='deleteBtn' onClick={handleDelete}><i class="bi bi-x-lg"></i></button>
+                        <button className='editBtn' onClick={handleEdit}><i className="bi bi-pencil-square"></i></button>
+                        <button className='deleteBtn' onClick={handleDelete}><i className="bi bi-x-lg"></i></button>
                     </div>
                 )}
       </div>
