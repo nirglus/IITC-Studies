@@ -15,6 +15,7 @@
     --deleteBtn: #b30000;
     --deleteHover: #9d0505;
     --mainBg: #fff4ec;
+    --brandsBg: #dcdcdc;
     --navShadow: 0px 6px 9px -7px rgba(83, 60, 16, 0.77);
     --navGrad: linear-gradient( 109.6deg,  rgba(113,14,51,0.83) 15.2%, rgba(217,43,23,0.95) 96.8% );
     --footerGrad: linear-gradient(to bottom, #363636, #363636, #373737, #373737, #383737, #373636, #373536, #363435, #333233, #313031, #2e2e2e, #2c2c2c);    

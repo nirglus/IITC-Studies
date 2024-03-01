@@ -1,12 +1,12 @@
-import { brandImages } from "../../../helpers/images"
+import { brandImages } from "../../../helpers/images";
+import "./HomeBrands.scss";
 
 function HomeBrands() {
   return (
     <div className="brands">
-    <h1></h1>
-    <div className="brandsImg">
+    <div className="brandsImgs">
       {brandImages.map((image, index) => (
-        <img src={image} alt="brand" key={index} width={200}/>
+        <img src={image} alt="brand" key={index} width={180}/>
       ))}
     </div>
 </div>
