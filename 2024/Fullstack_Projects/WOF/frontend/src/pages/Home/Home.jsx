@@ -29,7 +29,11 @@ function Home() {
       </div>
         <div className="content-overlay">
           <h1 className="welcome-heading">Welcome to World of Formula!</h1>
-          <p className="thrills-description">Explore the Thrills of Formula 1 Diecast Collectibles</p>
+          <div className="welcome-description">
+            <p>Explore and collect your favorite Formula 1 cars and teams to adorn your collection!</p>
+            <p>Immerse yourself in the world of Formula 1, where passion meets craftsmanship, and relive the excitement of iconic races.</p>
+
+          </div>
           <button><Link to="/products">View Products</Link></button>
         </div>
       </div>
