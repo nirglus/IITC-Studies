@@ -9,7 +9,8 @@ function AccountSidebar({setSelectedComponent, selectedComponent, user}) {
     <div className="sidebar">
       <div className="titles">
           <h3>Hello, {user?.fullName}!</h3>
-          <hr />
+          <div className="avatar"></div>
+
       </div>
       <div className="spans">
         <span className={`dashLink ${selectedComponent === 'orders' ? 'active' : ''}`} onClick={() => handleClick('orders')}>
