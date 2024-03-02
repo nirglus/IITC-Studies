@@ -26,7 +26,7 @@ function UserAcc() {
     <div className='accountDashboard'>
 
       <div className="dashboardDisplay">
-        <AccountSidebar setSelectedComponent={setSelectedComponent} user={user} />
+        <AccountSidebar setSelectedComponent={setSelectedComponent} selectedComponent={selectedComponent} user={user} />
         <div className="compDisplay">
         {renderComponent()}
         </div>

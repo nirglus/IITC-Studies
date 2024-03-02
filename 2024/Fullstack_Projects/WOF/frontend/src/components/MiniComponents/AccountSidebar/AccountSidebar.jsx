@@ -1,5 +1,10 @@
 import "./AccountSidebar.scss";
-function AccountSidebar({setSelectedComponent, user}) {
+function AccountSidebar({setSelectedComponent, selectedComponent, user}) {
+  
+  const handleClick = (component) => {
+    setSelectedComponent(component);
+  };
+
   return (
     <div className="sidebar">
       <div className="titles">
@@ -7,9 +12,12 @@ function AccountSidebar({setSelectedComponent, user}) {
           <hr />
       </div>
       <div className="spans">
-        <span className="dashLink" onClick={() => setSelectedComponent('orders')}><i className="bi bi-receipt-cutoff"></i> My Orders</span>
-        <span className="dashLink" onClick={() => setSelectedComponent('orders')}><i className="bi bi-receipt-cutoff"></i> My Orders</span>
-        <span className="dashLink" onClick={() => setSelectedComponent('orders')}><i className="bi bi-gear-fill"></i> Settings</span>
+        <span className={`dashLink ${selectedComponent === 'orders' ? 'active' : ''}`} onClick={() => handleClick('orders')}>
+        <i className="bi bi-receipt-cutoff"></i> My Orders
+        </span>
+        <span className={`dashLink ${selectedComponent === 'settings' ? 'active' : ''}`} onClick={() => handleClick('settings')}>
+         <i className="bi bi-gear-fill"></i> Settings
+        </span>
       </div>
 
   </div>
