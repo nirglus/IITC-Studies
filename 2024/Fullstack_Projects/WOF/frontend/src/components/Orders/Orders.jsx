@@ -23,7 +23,7 @@ function Orders() {
   }, [])
 
   return (
-    <div>
+    <div className="orders">
       <h1>My Orders</h1>
       {orders.map((order, index)=>(
         <OrderItem order={order} key={index}/>
