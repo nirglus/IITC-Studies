@@ -5,7 +5,8 @@
     margin-bottom: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    max-width: 500px;
+    min-width: 495px;
+    flex: none;
   
     &:hover {
       background-color: var(--brownGray);
@@ -43,5 +44,11 @@
           margin-bottom: 5px;
         }
       }
+    }
+  }
+
+  @media (max-width: 555px){
+    .orderItem{
+        min-width: 300px;
     }
   }

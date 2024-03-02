@@ -3,6 +3,7 @@ import { UserContext } from "../../context/User"
 import { useContext, useState, useEffect} from "react"
 import { baseURL } from "../../config/serverConfig";
 import OrderItem from "../MiniComponents/OrderItem/OrderItem";
+import "./Orders.scss";
 
 function Orders() {
   const {user, headers} = useContext(UserContext);
@@ -24,10 +25,15 @@ function Orders() {
 
   return (
     <div className="orders">
-      <h1>My Orders</h1>
-      {orders.map((order, index)=>(
-        <OrderItem order={order} key={index}/>
-      ))}
+      <div className="titles">
+        <h1>My Orders</h1>
+        <hr />
+      </div>
+      <div className="ordersDisp">
+        {orders.map((order, index)=>(
+          <OrderItem order={order} key={index}/>
+        ))}
+      </div>
     </div>
   )
 }
