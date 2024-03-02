@@ -22,7 +22,9 @@ function UserAcc() {
 
       <div className="dashboardDisplay">
         <AccountSidebar setSelectedComponent={setSelectedComponent} user={user} />
+        <div className="compDisplay">
         {renderComponent()}
+        </div>
       </div>
     </div>
   )

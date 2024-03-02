@@ -4,11 +4,12 @@
     flex-direction: column;
     min-height: 100vh;
     background-color: var(--brandsBg);
+    flex: 1;
     .titles{
         padding: 0 20px;
         margin-bottom: 20px;
     }
-    span{
+    .dashLink{
         padding: 20px;
         i{
             margin-right: 5px;
@@ -17,6 +18,21 @@
             background: var(--navGrad);
             color: #fff;
             cursor: pointer;
+        }
+    }
+    .spans{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 650px){
+    .sidebar{
+        min-height: fit-content;
+        .spans{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            font-size: 0.7em;
         }
     }
 }

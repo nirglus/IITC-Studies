@@ -12,3 +12,15 @@
         justify-content: space-between;
     }
 }
+.compDisplay{
+    flex: 8;
+}
+
+@media (max-width: 650px){
+    .accountDashboard{
+        .dashboardDisplay{
+            flex-direction: column;
+        }
+
+    }
+}
