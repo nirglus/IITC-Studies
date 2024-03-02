@@ -15,6 +15,10 @@ function Home() {
   
   //   return () => clearInterval(interval);
   // }, [homeImages.length, currentIndex]);
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+
   
 
   return (
@@ -38,7 +42,6 @@ function Home() {
           <h1 className="welcomeHeading">Start your engines</h1>
           <div className="welcomeDescription">
             <p>Explore and collect your favorite Formula 1 cars and teams to adorn your collection!</p>
-            {/* <p>Immerse yourself in the world of Formula 1, where passion meets craftsmanship, and relive the excitement of iconic races.</p> */}
           </div>
           <button><Link to="/products">View Products</Link></button>
         </div>

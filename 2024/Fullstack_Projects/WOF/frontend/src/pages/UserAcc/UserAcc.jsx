@@ -1,6 +1,6 @@
 import React from 'react'
 import { UserContext } from '../../context/User';
-import { useContext, useState } from 'react';
+import { useContext, useState ,useEffect} from 'react';
 import AccountSidebar from '../../components/MiniComponents/AccountSidebar/AccountSidebar';
 import Orders from '../../components/Orders/Orders';
 import "./UserAcc.scss";
@@ -17,6 +17,11 @@ function UserAcc() {
         return null;
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+
   return (
     <div className='accountDashboard'>
 

@@ -35,7 +35,12 @@ function Products() {
   };
   useEffect(()=>{
     getProducts();
-  }, [products.length])
+  }, [products.length]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+
   return (
     <div className='products'>
       <div className="titles">
