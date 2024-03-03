@@ -61,7 +61,7 @@ function Products() {
 
       ) : (
         <div className="loading">
-          <img src={loading} alt="loading" />
+          <img src={loading} alt="loading"/>
         </div>
       )}
 
