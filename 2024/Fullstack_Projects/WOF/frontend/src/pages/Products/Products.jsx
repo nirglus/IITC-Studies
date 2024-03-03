@@ -5,6 +5,7 @@ import { baseURL } from '../../config/serverConfig';
 import { useState, useEffect, useContext } from 'react'
 import ProductItem from '../../components/ProductItem/ProductItem';
 import "./Products.scss";
+import loading from "../../assets/loading.gif";
 
 
 function Products() {
@@ -47,13 +48,23 @@ function Products() {
         <h1>Our Products</h1>
         <hr/>
       </div>
-      <div className="productsDisp">
+      {products.length > 0 ? (
+        <>
+        <div className="productsDisp">
         {products.map((product, index) =>
           product.active ? (
               <ProductItem key={index} product={product} isAdmin={isAdmin(user)} onDelete={handleDelete} setProducts={setProducts} />
             ) : null
         )}
       </div>
+      </>
+
+      ) : (
+        <div className="loading">
+          <img src={loading} alt="loading" />
+        </div>
+      )}
+
     </div>
   );
 }
