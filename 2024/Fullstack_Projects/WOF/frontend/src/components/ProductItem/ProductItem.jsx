@@ -91,7 +91,7 @@ function ProductItem({ product, isAdmin, onDelete, setProducts}) {
         <h2><Link to={`/products/${product.id}`}>{product.title}</Link></h2>
         {/* <p className="productDescription">{product.description}</p> */}
         <p className="productQuantity">In stock: {product.totalQuantity}</p>
-        <p className='price'>${product.price}</p>
+        <p className='price'>${product.price.toFixed(2)}</p>
         <div className='quantity'>
             <p>Quantity:</p>
             <button className='quantityBtn' onClick={handleDecrement}>-</button>
