@@ -6,7 +6,9 @@ function Footer() {
     <footer>
       <div className="topFooter">
         <div className="company">
-          <h2>World of Formula</h2>
+            <div className="logo">
+              <h2>World of Formula</h2>
+            </div>
           <p>From track to shelf, Capturing racing spirit</p>
         </div>
         <div className="projects">

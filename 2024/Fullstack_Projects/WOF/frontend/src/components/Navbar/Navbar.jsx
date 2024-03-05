@@ -15,6 +15,7 @@ function Navbar() {
   return (
     <nav>
       <div className="logo">
+        <img src="https://i.pinimg.com/originals/ae/d6/b5/aed6b55143050c6762ed415f1cde83c5.png" alt="wof-logo" width={50} />
         <h1>World of Formula</h1>
       </div>
       <div className={`navItems ${isOpen ? 'active' : ''}`}>
