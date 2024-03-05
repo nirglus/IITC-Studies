@@ -3,9 +3,11 @@ import { CartContext } from '../../context/Cart';
 import CheckoutForm from '../MiniComponents/CheckoutForm/CheckoutForm';
 import axios from 'axios';
 import { baseURL } from '../../config/serverConfig';
+import PaymentForm from '../MiniComponents/PaymentForm/PaymentForm';
 
 function Checkout() {
     const [isCancel, setIsCancel] = useState(false);
+    const [isPayment, setIsPayment] = useState(false);
     const [address, setAddress] = useState({
         street: '',
         city: '',
@@ -14,13 +16,20 @@ function Checkout() {
     });
     const {userCart} = useContext(CartContext);
 
-    const handleChange = (e) => {
+    const handleAddressChange = (e) => {
         setAddress({
             ...address,
             [e.target.name]: e.target.value
         });
     };
+    const handleAddressSubmit = (e) =>{
+        e.preventDefault();
+    }
 
+    const moveToPayment = () =>{
+        setIsPayment(!isPayment);
+        console.log({address});
+    }
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -39,7 +48,9 @@ function Checkout() {
 
   return (
     <>
-    <CheckoutForm handleChange={handleChange} handleSubmit={handleSubmit}/>
+    <CheckoutForm handleChange={handleAddressChange} handleSubmit={handleAddressSubmit} moveToPayment={moveToPayment}/>
+    {isPayment && <PaymentForm /> }
+    
     </>
 
       

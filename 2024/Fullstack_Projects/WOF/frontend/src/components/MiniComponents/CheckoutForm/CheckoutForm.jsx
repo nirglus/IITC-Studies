@@ -1,10 +1,10 @@
 import "./CheckoutForm.scss";
-function CheckoutForm({handleChange, handleSubmit}) {
+function CheckoutForm({handleChange, handleSubmit, moveToPayment}) {
 
     return (
         <>
         <div className="titles">
-            <h1><i class="bi bi-truck"></i> Address for shipment</h1>
+            <h1><i className="bi bi-truck"></i> Address for shipment</h1>
             <hr />
         </div>
         <form className="checkOutForm" onSubmit={handleSubmit}>
@@ -48,7 +48,7 @@ function CheckoutForm({handleChange, handleSubmit}) {
                     required
                 />
             </div>
-            <button type="submit">Proceed to Checkout</button>
+            <button type="button" onClick={moveToPayment}>Proceed to Payment</button>
         </form>
         
         </>
