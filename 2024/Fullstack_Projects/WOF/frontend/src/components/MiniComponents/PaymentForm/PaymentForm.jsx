@@ -65,7 +65,7 @@ function PaymentForm({ handleSubmit }) {
                 {paymentMethod === "card" && (
                     <div className="card-details">
                         <div className="checkoutInput">
-                            <label htmlFor="cardNumber">Card Number:</label>
+                            <label htmlFor="cardNumber" className="cardLabel">Card Number:</label>
                             <input
                                 type="text"
                                 id="cardNumber"
@@ -76,7 +76,7 @@ function PaymentForm({ handleSubmit }) {
                         </div>
                         <div className="cardDates">
                             <div className="checkoutInput">
-                                <label htmlFor="expiryDate">Expiry:</label>
+                                <label htmlFor="expiryDate" className="cardLabel">Expiry:</label>
                                 <input
                                 type="text"
                                 id="expiryDate"

@@ -5,7 +5,11 @@
 }
 .cardDates{
     display: flex;
+    gap: 5px;
     #expiryDate, #cvv{
-        width: 70px;
+        width: 85px;
     }
+}
+.cardLabel{
+    width: 80px;
 }
