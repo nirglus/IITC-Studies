@@ -99,6 +99,28 @@ function PaymentForm({ handleSubmit }) {
                         </div>
                     </div>
                 )}
+                {paymentMethod === "paypal" && (
+                    <>
+                    <div className="checkoutInput">
+                        <label htmlFor="email">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                        />
+                    </div>
+                    <div className="checkoutInput">
+                        <label htmlFor="password">Password:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                        />
+                    </div>
+                    </>
+                )}
 
                 <button type="submit">Order</button>
             </form>
