@@ -7,7 +7,7 @@ import UserSettings from '../../components/UserSettings/UserSettings';
 import "./UserAcc.scss";
 
 function UserAcc() {
-  const [selectedComponent, setSelectedComponent] = useState(null);
+  const [selectedComponent, setSelectedComponent] = useState('settings');
   const {user} = useContext(UserContext);
 
   const renderComponent = () => {
