@@ -55,7 +55,7 @@ function Checkout() {
     {!isOrderFinished ? (
         <>
         <CheckoutForm handleChange={handleAddressChange} handleSubmit={handleAddressSubmit} moveToPayment={moveToPayment}/>
-        {isPayment && <PaymentForm /> }
+        {isPayment && <PaymentForm handleSubmit={handleSubmit}/> }
         </>
     ) : (
         <div className="thankYou">

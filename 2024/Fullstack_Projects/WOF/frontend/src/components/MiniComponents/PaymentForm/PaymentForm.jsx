@@ -32,7 +32,7 @@ function PaymentForm({ handleSubmit }) {
             // Handle card payment
         }
 
-        handleSubmit(paymentMethod);
+        handleSubmit(e, paymentMethod);
     };
 
     return (
