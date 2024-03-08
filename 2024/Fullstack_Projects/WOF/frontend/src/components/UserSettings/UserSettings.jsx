@@ -3,8 +3,11 @@ import "./UserSettings.scss";
 
 function UserSettings() {
   return (
-    <div>
-      <h1>SETTING</h1>
+    <div className='userSettings'>
+        <div className="titles">
+            <h1>My Account</h1>
+            <hr/>
+      </div>
     </div>
   )
 }
