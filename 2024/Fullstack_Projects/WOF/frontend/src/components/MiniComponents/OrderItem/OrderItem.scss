@@ -45,6 +45,11 @@
         }
       }
     }
+    .orderItemTop{
+      width: 100%;
+      height: 10px;
+      background: var(--navGrad);
+    }
   }
 
   @media (max-width: 555px){

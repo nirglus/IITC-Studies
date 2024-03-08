@@ -3,6 +3,7 @@ import { UserContext } from '../../context/User';
 import { useContext, useState ,useEffect} from 'react';
 import AccountSidebar from '../../components/MiniComponents/AccountSidebar/AccountSidebar';
 import Orders from '../../components/Orders/Orders';
+import UserSettings from '../../components/UserSettings/UserSettings';
 import "./UserAcc.scss";
 
 function UserAcc() {
@@ -13,6 +14,8 @@ function UserAcc() {
     switch (selectedComponent) {
       case 'orders':
         return <Orders />;
+      case 'settings':
+        return <UserSettings />;  
       default:
         return null;
     }

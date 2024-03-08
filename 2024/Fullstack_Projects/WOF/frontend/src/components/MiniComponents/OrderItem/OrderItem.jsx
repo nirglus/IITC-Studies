@@ -11,6 +11,7 @@ function OrderItem({order}) {
   
     return (
       <div className={`orderItem ${expanded ? 'expanded' : ''}`} onClick={toggleExpanded}>
+        <div className="orderItemTop"></div>
         <h3><b>Order ID:</b> {order._id}</h3>
         <p><b>Purchased at:</b> {formatDate(order.createdAt)}</p>
         <p><b>Status:</b> {order.status}</p>

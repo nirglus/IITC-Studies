@@ -29,11 +29,15 @@ function Orders() {
         <h1>My Orders</h1>
         <hr />
       </div>
-      <div className="ordersDisp">
-        {orders.map((order, index)=>(
-          <OrderItem order={order} key={index}/>
-        ))}
-      </div>
+      {orders.length > 0 ? (
+          <div className="ordersDisp">
+            {orders.map((order, index)=>(
+              <OrderItem order={order} key={index}/>
+            ))}
+          </div>
+      ): (
+        <h2>No orders yet...</h2>
+      )}
     </div>
   )
 }
