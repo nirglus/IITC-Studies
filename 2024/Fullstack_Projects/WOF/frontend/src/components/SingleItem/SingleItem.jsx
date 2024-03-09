@@ -60,7 +60,7 @@ function SingleItem() {
           <div className="productDescription">
             <h2>{item.title}</h2>
             <hr />
-              <p className="itemDesc">Feel the thrill of the Formula One championship with this detailed diecast model car, a precise replica of George Russell’s 2023 winning ride. Invite the exhilarating world of racing into your life today!</p>
+              <p className="itemDesc">{item.description}</p>
             <div className="productStats">
               <p><span>Scale: </span>{item.scale}</p>
               <p><span>In stock:</span> {item.totalQuantity}</p>
