@@ -15,7 +15,6 @@ function Products() {
     try {
       const response = await axios.get(`${baseURL}/products`);
       setProducts(response.data)
-      console.log(products);
     } catch (error) {
       console.error("Failed to get products", error);
     }
