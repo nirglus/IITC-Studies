@@ -15,7 +15,7 @@ function Footer() {
           <h2>Other Products</h2>
           <a href="https://nirglus.github.io/Movies-Project/html/index.html">MovieNatic</a>
           <a href="https://resumematrix-50ace.web.app/">ResumeMatrix</a>
-          <a href="https://cryptonight-e657d.web.app/">CryptoNight</a>
+          <a href="https://nirglus.github.io/age-calculator-app-main/">Age Calculator</a>
         </div>
       </div>
       <div className="bottomFooter">
