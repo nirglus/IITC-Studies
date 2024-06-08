@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { baseURL } from "../../config/serverConfig";
 import { CartContext } from '../../context/Cart';
+import placeholderImage from '../../assets/no-image.png';
 import "./SingleItem.scss";
 
 function SingleItem() {
@@ -11,6 +12,7 @@ function SingleItem() {
   const [item, setItem] = useState({});
   const [quantity, setQuantity] = useState(1); 
   const {addItemToCart, userCart} = useContext(CartContext);
+  const [imgSrc, setImgSrc] = useState(item.image); 
 
   const getItem = async(itemID) =>{
       try {
@@ -40,20 +42,30 @@ function SingleItem() {
       console.log({productID, cartID, price, quantity});
       addItemToCart({productID, cartID, price, quantity});
     };
+
+    const handleImageError = () => {
+      setImgSrc(placeholderImage);
+    };
     
     useEffect(() =>{
         getItem(itemID);
     }, [itemID]);
 
+    useEffect(() => {
+      if (item.image) {
+        setImgSrc(item.image);
+      }
+    }, [item]);
+
   return (
       <>
         <div className="singleProduct">
           <div className="productImages">
-            <img className='mainImg' src={item.image} alt={item.title} width={600}/>
+            <img className='mainImg' src={imgSrc} alt={item.title} width={600} onError={handleImageError}/>
             <div className="imagesStack">
-              <img src={item.image} alt={item.title} width={200}/>
-              <img src={item.image} alt={item.title} width={200}/>
-              <img src={item.image} alt={item.title} width={200}/>
+              <img src={imgSrc} alt={item.title} width={200} onError={handleImageError}/>
+              <img src={imgSrc} alt={item.title} width={200} onError={handleImageError}/>
+              <img src={imgSrc} alt={item.title} width={200} onError={handleImageError}/>
             </div>
 
           </div>
