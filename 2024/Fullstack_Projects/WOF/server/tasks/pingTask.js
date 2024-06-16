@@ -4,7 +4,7 @@ const axios = require('axios');
 const SERVER_URL = process.env.SERVER_URL;
 
 const keepServerAlive = () => {
-  cron.schedule('*/5 * * * *', async () => {
+  cron.schedule('*/1 * * * *', async () => {
     try {
       await axios.get(`${SERVER_URL}/ping`);
       console.log('Pinged the server to keep it alive');
