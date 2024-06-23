@@ -48,5 +48,48 @@ const quickSort = (arr) =>{
 
 console.log(quickSort([9,1,5,4,8,3,7,2,6]));
 
+// Merge Sort
+
+/* Merge Sort is an out-of-place, stable, and comparison-type sorting algorithm
+
+Out-of-place means that the algorithm requires additional data structures when sorting. This is opposite to in-place sorting algorithms, where the input is simply overwritten and no extra data structures are required.
+
+Stable means that two elements with equal values will appear in the same order in the sorted output as they appear in the unsorted input array.
+
+And finally, a comparison sort is a sorting algorithm that only reads the list of elements through a single abstract comparison operation (usually a “less than” or “equal to”) that determines which of the two elements should occur first in the final sorted output array. */
 
 
+const mergeSort = (arr) =>{
+    // Base case
+    if(arr.length <= 1) return arr;
+
+    let mid = Math.floor(arr.length / 2);
+
+    // Recursive calls
+    let left = mergeSort(arr.slice(0, mid));
+    let right = mergeSort(arr.slice(mid));
+
+    return merge(left, right);
+}
+
+/* In order to implement Merge Sort, it’s useful to first implement a function responsible for merging two sorted arrays.
+
+Given two arrays which are sorted, this helper function should create a new array which is also sorted, and consists of all the elements in the two input arrays. */
+
+const merge = (left ,right) =>{
+    let sortedArr = [];
+
+    while(left.length && right.length){
+        // Insert the smallest item into sortedArr
+        if(left[0] < right[0]){
+            sortedArr.push(left.shift());
+        } else{
+            sortedArr.push(right.shift());
+        }
+    }
+    
+  // Use spread operators to create a new array, combining the three arrays
+  return [...sortedArr, ...left, ...right];
+}
+
+console.log(mergeSort([9,1,5,4,8,3,7,2,6]));
