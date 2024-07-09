@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/Cart';
 import { UserContext } from '../../context/User';
@@ -6,6 +6,7 @@ import axios from 'axios';
 import { baseURL } from '../../config/serverConfig';
 import './ProductItem.scss';
 import placeholderImage from '../../assets/no-image.png';
+import AddToCartModal from '../AddToCartModal/AddToCartModal';
 
 function ProductItem({ product, isAdmin, onDelete, setProducts }) {
   const [quantity, setQuantity] = useState(1);
@@ -14,6 +15,7 @@ function ProductItem({ product, isAdmin, onDelete, setProducts }) {
   const [isEditMode, setIsEditMode] = useState(false);
   const [editedProduct, setEditedProduct] = useState({ ...product });
   const [imgSrc, setImgSrc] = useState(product.image); 
+  const dialog = useRef();
 
   const handleEdit = () => {
     setIsEditMode(!isEditMode);
@@ -70,6 +72,7 @@ function ProductItem({ product, isAdmin, onDelete, setProducts }) {
     const cartID = userCart.id;
     const price = product.price;
     addItemToCart({ productID, cartID, price, quantity });
+    dialog.current.open();
   };
 
   const handleImageError = () => {
@@ -163,6 +166,7 @@ function ProductItem({ product, isAdmin, onDelete, setProducts }) {
           )}
         </div>
       )}
+      <AddToCartModal ref={dialog}/>
     </>
   );
 }
