@@ -27,6 +27,10 @@ function BenefitsSection() {
             <h3><i className="bi bi-fingerprint"></i> Secure Shopping Experience</h3>
             <p>Shop with confidence knowing that your transactions are safe and secure with our robust security measures.</p>
           </div>
+          <div className="benefitItem">
+            <h3><i className="bi bi-truck"></i> Fast Delivery</h3>
+            <p>Get your orders delivered quickly and efficiently with our fast delivery service.</p>
+          </div>
         </div>
       </section>
     );
