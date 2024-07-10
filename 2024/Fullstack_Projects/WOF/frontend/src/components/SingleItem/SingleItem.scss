@@ -1,86 +1,33 @@
-.singleProduct{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    min-height: 100vh;
+.singleProduct {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
 
-    .productImages{
-        width: 600px;
-        height: 400px;
-    }
-
-    .imagesStack{
-        display: flex;
-        justify-content: center;
-    }
-    .productDescription{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    span{
-        font-weight: 500;
-    }
-    .itemDesc{
-        max-width: 30vw;
-    }
-    .quantityBtn{
-        &:hover{
-            background-color: #fff;
-        }
-    }
-    .backToProducts{
-        margin-top: 70px;
-        color: rgb(151, 151, 151);
-        transition: 0.2s;
-        &:hover{
-            color: var(--darkBrownGray);
-            font-weight: 500;
-        }
-    }
-
+  .productImages {
+    width: 600px;
+    height: 400px;
+  }
 }
 
-@media (max-width: 500px){
-    .singleProduct{
-        flex-direction: column;
-        .productImages{
-            margin: 30px;
-            width: 300px;
-            height: 150px;
-        }
-        .mainImg{
-            width: 300px;
-        }
-
-        .imagesStack img{
-            width: 100px;
-        }
-        .itemDesc{
-            max-width: 90vw;
-        }
+@media (max-width: 500px) {
+  .singleProduct {
+    flex-direction: column;
+    .productImages {
+      margin: 30px;
+      width: 300px;
+      height: 150px;
     }
+  }
 }
-@media (min-width: 500px) and (max-width: 950px){
-    .singleProduct{
-        flex-direction: column;
-        .productImages{
-            margin: 30px;
-            width: 400px;
-            height: 300px;
-        }
-
-        .mainImg{
-            width: 550px;
-        }
-
-        .imagesStack img{
-            width: 150px;
-        }
-        .itemDesc{
-            max-width: 60vw;
-        }
-
+@media (min-width: 500px) and (max-width: 950px) {
+  .singleProduct {
+    flex-direction: column;
+    .productImages {
+      margin: 30px;
+      width: 400px;
+      height: 300px;
     }
+  }
 }
