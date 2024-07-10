@@ -140,7 +140,7 @@ function ProductItem({ product, isAdmin, onDelete, setProducts }) {
             <Link to={`/products/${product.id}`}>{product.title}</Link>
           </h2>
           <p className='productQuantity'>In stock: {product.totalQuantity}</p>
-          <p className='price'>${product.price.toFixed(2)}</p>
+          <p className='price'>${(quantity * product.price).toFixed(2)}</p>
           <div className='quantity'>
             <p>Quantity:</p>
             <button className='quantityBtn' onClick={handleDecrement}>

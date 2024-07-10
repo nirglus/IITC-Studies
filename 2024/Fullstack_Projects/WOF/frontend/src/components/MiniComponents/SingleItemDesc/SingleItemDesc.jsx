@@ -1,7 +1,7 @@
 import "./SingleItemDesc.scss";
 import { Link } from "react-router-dom";
 
-function SingleItemDesc({item, quantity, handleDecrement, handleIncrement, handleAddToCart}) {
+function SingleItemDesc({item, quantity, itemPrice, handleDecrement, handleIncrement, handleAddToCart}) {
   return (
     <div className="productDescription">
       <h1>{item.title}</h1>
@@ -26,7 +26,7 @@ function SingleItemDesc({item, quantity, handleDecrement, handleIncrement, handl
             </span>
         </div>
         <button className="addToCartBtn" onClick={handleAddToCart}>
-            <i className="bi bi-cart-plus"></i> Add to cart - <span>${item.price}</span>
+            <i className="bi bi-cart-plus"></i> Add to cart - <span>${itemPrice}</span>
         </button>
       </div>
       <Link to={"/products"} className="backToProducts">

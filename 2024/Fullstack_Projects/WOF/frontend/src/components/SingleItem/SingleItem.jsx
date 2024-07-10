@@ -81,6 +81,7 @@ function SingleItem() {
             <SingleItemDesc
               item={item}
               quantity={quantity}
+              itemPrice={(item.price * quantity).toFixed(2)}
               handleDecrement={handleDecrement}
               handleIncrement={handleIncrement}
               handleAddToCart={handleAddToCart}
