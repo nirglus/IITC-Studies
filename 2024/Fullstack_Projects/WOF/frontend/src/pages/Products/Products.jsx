@@ -1,24 +1,28 @@
 import axios from 'axios';
 import { isAdmin } from '../../config/roles';
-import { UserContext } from '../../context/User'
+import { UserContext } from '../../context/User';
 import { baseURL } from '../../config/serverConfig';
-import { useState, useEffect, useContext } from 'react'
+import { useState, useEffect, useContext } from 'react';
 import ProductItem from '../../components/ProductItem/ProductItem';
 import "./Products.scss";
 import loading from "../../assets/loading.gif";
 
-
 function Products() {
   const [products, setProducts] = useState([]);
-  const {user, headers} = useContext(UserContext);
-  const getProducts = async () =>{
+  const [isLoading, setIsLoading] = useState(true);
+  const { user, headers } = useContext(UserContext);
+
+  const getProducts = async () => {
     try {
       const response = await axios.get(`${baseURL}/products`);
-      setProducts(response.data)
+      setProducts(response.data);
     } catch (error) {
       console.error("Failed to get products", error);
+    } finally {
+      setIsLoading(false);
     }
-  }
+  };
+
   const handleDelete = async (productId) => {
     const shouldDelete = window.confirm("Are you sure you want to disable this item?");
     if (shouldDelete) {
@@ -26,16 +30,17 @@ function Products() {
         await axios.patch(`${baseURL}/products`, {
           id: productId,
           active: false
-        }, {headers});
+        }, { headers });
         setProducts(products.filter(product => product._id !== productId));
       } catch (error) {
         console.error("Failed to disable product", error);
       }
     }
   };
-  useEffect(()=>{
+
+  useEffect(() => {
     getProducts();
-  }, [products.length]);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0); 
@@ -45,27 +50,29 @@ function Products() {
     <div className='products'>
       <div className="titles">
         <h1>Our Products</h1>
-        <hr/>
+        <hr />
       </div>
-      {products.length > 0 ? (
-        <>
-        <div className="productsDisp">
-        {products.map((product, index) =>
-          product.active ? (
-              <ProductItem key={index} product={product} isAdmin={isAdmin(user)} onDelete={handleDelete} setProducts={setProducts} />
-            ) : null
-        )}
-      </div>
-      </>
-
-      ) : (
+      {isLoading ? (
         <div className="loading">
-          <img src={loading} alt="loading"/>
+          <img src={loading} alt="loading" />
+        </div>
+      ) : (
+        <div className="productsDisp">
+          {products.map((product, index) =>
+            product.active ? (
+              <ProductItem
+                key={index}
+                product={product}
+                isAdmin={isAdmin(user)}
+                onDelete={handleDelete}
+                setProducts={setProducts}
+              />
+            ) : null
+          )}
         </div>
       )}
-
     </div>
   );
 }
 
-export default Products
+export default Products;

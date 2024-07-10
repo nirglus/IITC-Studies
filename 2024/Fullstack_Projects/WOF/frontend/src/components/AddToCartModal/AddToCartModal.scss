@@ -4,6 +4,9 @@
     border-radius: 10px;
     box-shadow: var(--navShadow);
     border: 0;
+    &::backdrop{
+        background: rgba(0, 0, 0, 0.7);
+    }
     .modalContent{
         display: flex;
         flex-direction: column;
