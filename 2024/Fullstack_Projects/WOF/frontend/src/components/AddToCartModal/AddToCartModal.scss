@@ -1,0 +1,23 @@
+.addItemModal{
+    width: 300px;
+    height: 30vh;
+    border-radius: 10px;
+    box-shadow: var(--navShadow);
+    border: 0;
+    .modalContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        h2{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        i{
+            color: var(--cartBtnColor);
+            font-size: 40px;
+        }
+    }
+}

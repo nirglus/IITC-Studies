@@ -1,4 +1,5 @@
 import { forwardRef, useRef, useImperativeHandle } from "react";
+import "./AddToCartModal.scss";
 
 const AddToCartModal = forwardRef(function AddToCartModal({}, ref){
     const dialog = useRef();
@@ -12,11 +13,13 @@ const AddToCartModal = forwardRef(function AddToCartModal({}, ref){
       })
 
       return (
-        <dialog ref={dialog}>
-            <h2><i class="bi bi-bookmark-check-fill"></i> Item added to cart!</h2>
-            <form method="dialog">
-                <button>Close</button>
-            </form>
+        <dialog ref={dialog} className="addItemModal">
+            <div className="modalContent">
+                <h2><i class="bi bi-check2-circle"></i> Item added to cart!</h2>
+                <form method="dialog">
+                    <button className='addToCartBtn'>Continue shopping</button>
+                </form>
+            </div>
         </dialog>
       )
 })
