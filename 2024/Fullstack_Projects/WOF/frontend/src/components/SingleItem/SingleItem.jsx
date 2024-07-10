@@ -57,6 +57,10 @@ function SingleItem() {
   }, [itemID]);
 
   useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
+
+  useEffect(() => {
     // if (item.image) {
     //   setImgSrc(item.image);
     // }
