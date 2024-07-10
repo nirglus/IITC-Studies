@@ -5,6 +5,11 @@
     justify-content: space-around;
     min-height: 100vh;
 
+    .productImages{
+        width: 600px;
+        height: 400px;
+    }
+
     .imagesStack{
         display: flex;
         justify-content: center;
@@ -40,7 +45,11 @@
 @media (max-width: 500px){
     .singleProduct{
         flex-direction: column;
-
+        .productImages{
+            margin: 30px;
+            width: 300px;
+            height: 150px;
+        }
         .mainImg{
             width: 300px;
         }
@@ -56,6 +65,11 @@
 @media (min-width: 500px) and (max-width: 950px){
     .singleProduct{
         flex-direction: column;
+        .productImages{
+            margin: 30px;
+            width: 400px;
+            height: 300px;
+        }
 
         .mainImg{
             width: 550px;

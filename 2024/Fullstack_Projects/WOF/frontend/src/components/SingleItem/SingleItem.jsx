@@ -7,6 +7,7 @@ import { CartContext } from '../../context/Cart';
 import placeholderImage from '../../assets/no-image.png';
 import "./SingleItem.scss";
 import AddToCartModal from "../AddToCartModal/AddToCartModal";
+import ImageSlider from "../MiniComponents/ImageSlider/ImageSlider";
 
 function SingleItem() {
   let {id: itemID} = useParams();
@@ -59,17 +60,24 @@ function SingleItem() {
       }
     }, [item]);
 
+    const images = [
+      {url: imgSrc, title: 'test'},
+      {url: imgSrc, title: 'test'},
+      {url: 'https://www.e-sco.com/55148-large_default/mclaren-honda-mp46-f1-1991-ayrton-senna-118.jpg', title: 'test'},
+    ]
+
   return (
       <>
         <AddToCartModal ref={dialog} />
         <div className="singleProduct">
           <div className="productImages">
-            <img className='mainImg' src={imgSrc} alt={item.title} width={600} onError={handleImageError}/>
+            <ImageSlider slides={images}/>
+            {/* <img className='mainImg' src={imgSrc} alt={item.title} width={600} onError={handleImageError}/>
             <div className="imagesStack">
               <img src={imgSrc} alt={item.title} width={200} onError={handleImageError}/>
               <img src={imgSrc} alt={item.title} width={200} onError={handleImageError}/>
               <img src={imgSrc} alt={item.title} width={200} onError={handleImageError}/>
-            </div>
+            </div> */}
 
           </div>
           <div className="productDescription">
