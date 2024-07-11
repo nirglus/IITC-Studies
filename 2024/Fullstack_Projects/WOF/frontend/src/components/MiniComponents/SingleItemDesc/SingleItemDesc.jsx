@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 function SingleItemDesc({item, quantity, itemPrice, handleDecrement, handleIncrement, handleAddToCart}) {
   return (
     <div className="productDescription">
+      <p className="licensed">Officially Licensed product</p>
       <h1>{item.title}</h1>
       <p className="itemDesc">{item.description}</p>
       <div className="productStats">

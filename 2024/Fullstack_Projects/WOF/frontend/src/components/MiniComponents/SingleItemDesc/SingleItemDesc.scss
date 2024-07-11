@@ -3,8 +3,20 @@
   flex-direction: column;
   align-items: center;
 
+  .licensed{
+    background-color: #d63424;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    align-self: flex-start;
+    margin-bottom: 0;
+  }
+
   h1 {
     font-size: 2.3em;
+    align-self: flex-start;
   }
 
   .itemDesc {
@@ -81,6 +93,10 @@
 
 @media (max-width: 500px){
     .productDescription{
+        .licensed{
+            align-self: center;
+            font-size: 8px;
+        }
         h1{
             font-size: 1.7em;
             align-self: center;
@@ -97,6 +113,10 @@
 
 @media (min-width: 500px) and (max-width: 950px){
     .productDescription{
+        .licensed{
+            align-self: center;
+            font-size: 10px;
+        }
         h1{
             align-self: center;
         }
