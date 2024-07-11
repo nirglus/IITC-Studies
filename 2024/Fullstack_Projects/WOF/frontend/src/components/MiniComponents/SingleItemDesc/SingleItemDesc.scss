@@ -5,7 +5,6 @@
 
   h1 {
     font-size: 2.3em;
-    align-self: flex-start;
   }
 
   .itemDesc {
@@ -70,7 +69,7 @@
   }
 
   .backToProducts {
-    margin-top: 70px;
+    margin: 70px 0 20px 0;
     color: rgb(151, 151, 151);
     transition: 0.2s;
     &:hover {
@@ -78,4 +77,32 @@
       font-weight: 500;
     }
   }
+}
+
+@media (max-width: 500px){
+    .productDescription{
+        h1{
+            font-size: 1.7em;
+            align-self: center;
+        }
+        .itemDesc{
+            max-width: 70vw;
+            text-align: center;
+        }
+        .quantity-addToCart{
+            gap: 13px;
+        }
+    }
+}
+
+@media (min-width: 500px) and (max-width: 950px){
+    .productDescription{
+        h1{
+            align-self: center;
+        }
+        .itemDesc{
+            max-width: 70vw;
+            text-align: center;
+        }
+    }
 }

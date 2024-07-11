@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./ImageSlider.scss";
 
 const slideStyles = {
   width: "100%",
@@ -45,7 +46,7 @@ const ImageSlider = ({ slides }) => {
   return (
     <div style={sliderStyles}>
       <div style={slideStylesWidthBackground}></div>
-      <div style={dotsContainerStyles}>
+      <div style={dotsContainerStyles} className="dots">
         {slides.map((slide, slideIndex) => (
           <div
           style={slideIndex === currentIndex ? activeDotStyle : dotStyle}
