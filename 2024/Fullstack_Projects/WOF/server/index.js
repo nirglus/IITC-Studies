@@ -1,6 +1,7 @@
 const { app } = require("./app");
 const mongoose = require("mongoose");
-const { config } = require("./config")
+const { config } = require("./config");
+const keepServerAlive = require('./tasks/pingTask');
 
 
 mongoose.connect(config.MONGO_URL)
@@ -14,4 +15,5 @@ const PORT = process.env.PORT || 2000;
 
 app.listen(PORT, () =>{
     console.log(`Server is running on port ${PORT}`);
+    keepServerAlive();
 })
