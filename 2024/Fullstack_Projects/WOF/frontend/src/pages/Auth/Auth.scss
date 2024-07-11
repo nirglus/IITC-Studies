@@ -1,6 +1,7 @@
 .authContainer {
   display: flex;
   min-height: 100dvh;
+  background-color: #fff;
   .toggleLog {
     transition: color 0.3s ease;
     &:hover {

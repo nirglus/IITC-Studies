@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Auth from './pages/Auth/Auth';
 import UserAcc from "./pages/UserAcc/UserAcc";
@@ -15,11 +15,13 @@ import "./App.scss";
 import "./assets/hr.scss";
 
 function App() {
-const {user} = useContext(UserContext);
+  const { user } = useContext(UserContext);
+  const location = useLocation();
+  const hideNavbarPaths = ['/login'];
+
   return (
     <>
-    <BrowserRouter>
-    <Navbar/>
+      {!hideNavbarPaths.includes(location.pathname) && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/account/:id" element={<UserAcc />} />
@@ -29,10 +31,15 @@ const {user} = useContext(UserContext);
         <Route path="/products/:id" element={<SingleItem />} />
         <Route path="/dashboard" element={isModerator(user) ? <Dashboard /> : <Navigate to="/" />} />
       </Routes>
-    <Footer/>
-    </BrowserRouter>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default function RootApp() {
+  return (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  );
+}
