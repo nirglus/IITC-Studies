@@ -37,19 +37,22 @@ function Auth() {
 
   return (
     <div className="authContainer">
-      {isLoading && (
-      <div className="loading">
-          <img src={loading} alt="loading" />
+      <div className="leftAuth">
+        {isLoading && (
+        <div className="loading">
+            <img src={loading} alt="loading" />
+        </div>
+        )}
+        {!isLoading && (isLoginMode ? (
+          <Login submitHandler={submitHandler} changeHandler={changeHandler} />
+        ) : (
+          <Register submitHandler={submitHandler} changeHandler={changeHandler} />
+        ))}
+        <p className="toggleLog" onClick={handleToggle} >
+          {isLoginMode ? "Don't have an account? Register" : "Have an account? Login"}
+        </p>
       </div>
-      )}
-      {!isLoading && (isLoginMode ? (
-        <Login submitHandler={submitHandler} changeHandler={changeHandler} />
-      ) : (
-        <Register submitHandler={submitHandler} changeHandler={changeHandler} />
-      ))}
-      <p className="toggleLog" onClick={handleToggle} >
-        {isLoginMode ? "Don't have an account? Register" : "Have an account? Login"}
-      </p>
+      <div className="rightAuth"></div>
     </div>
   )
 }

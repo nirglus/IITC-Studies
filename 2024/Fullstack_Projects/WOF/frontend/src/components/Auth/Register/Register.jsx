@@ -1,8 +1,8 @@
 function Register(props) {
   return (
     <div className="loginCont">
-        <h2>World of Formula</h2>
-        <p>Register</p>
+        <h2>Register to <span>World of Formula</span></h2>
+        <p>Join our community to start your collection of exquisite Formula 1 diecast models today.</p>
         <form className="authForm" onSubmit={props.submitHandler}>
             <input
                 onChange={props.changeHandler}

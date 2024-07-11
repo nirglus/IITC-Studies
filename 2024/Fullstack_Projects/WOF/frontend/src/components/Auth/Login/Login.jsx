@@ -1,8 +1,8 @@
 function Login(props) {
   return (
     <div className="loginCont">
-        <h2>World of Formula</h2>
-        <p>Login</p>
+        <h2>Login to <span>World of Formula</span></h2>
+        <p>Access your account to dive into the exhilarating world of Formula 1 diecast models.</p>
         <form className="authForm" onSubmit={props.submitHandler}>
             <input
                 onChange={props.changeHandler}
