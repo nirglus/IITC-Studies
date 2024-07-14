@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./Home.scss";
-import { homeImages } from "../../helpers/images";
 import HomeBrands from "../../components/MiniComponents/HomeBrands/HomeBrands";
 import BenefitsSection from "../../components/MiniComponents/BenefitsSection/BenefitsSection";
 
@@ -9,9 +8,7 @@ function Home() {
   useEffect(() => {
     window.scrollTo(0, 0); 
   }, []);
-
   
-
   return (
     <div className="home">
       <div className="homeContainer">

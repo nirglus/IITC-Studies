@@ -11,7 +11,7 @@ import AddToCartModal from '../AddToCartModal/AddToCartModal';
 function ProductItem({ product, isAdmin, onDelete, setProducts }) {
   const [quantity, setQuantity] = useState(1);
   const { addItemToCart, userCart } = useContext(CartContext);
-  const { headers } = useContext(UserContext);
+  const { headers, user } = useContext(UserContext);
   const [isEditMode, setIsEditMode] = useState(false);
   const [editedProduct, setEditedProduct] = useState({ ...product });
   const [imgSrc, setImgSrc] = useState(product.image); 
@@ -166,7 +166,7 @@ function ProductItem({ product, isAdmin, onDelete, setProducts }) {
           )}
         </div>
       )}
-      <AddToCartModal ref={dialog}/>
+      <AddToCartModal ref={dialog} user={user}/>
     </>
   );
 }
