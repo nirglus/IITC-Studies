@@ -37,7 +37,7 @@ function Auth() {
 
   return (
     <div className="authContainer">
-      <div className="leftAuth">
+      <main className="leftAuth">
         {isLoading && (
         <div className="loading">
             <img src={loading} alt="loading" />
@@ -51,8 +51,8 @@ function Auth() {
         <p className="toggleLog" onClick={handleToggle} >
           {isLoginMode ? "Don't have an account? Register" : "Have an account? Login"}
         </p>
-      </div>
-      <div className="rightAuth"></div>
+      </main>
+      <aside className="rightAuth"></aside>
     </div>
   )
 }
